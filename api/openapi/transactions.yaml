@@ -1,0 +1,174 @@
+openapi: 3.1.0
+info:
+  title: Fintech Platform API
+  version: 1.0.0
+  description: |
+    API for managing financial transactions with strong consistency guarantees and idempotent operations.
+
+servers:
+  - url: https://api.fintech-platform.com
+
+paths:
+  /transactions:
+    post:
+      summary: Create transaction
+      description: Creates a financial transaction in an idempotent way.
+      operationId: createTransaction
+
+      security:
+        - bearerAuth: []
+
+      parameters:
+        - name: Idempotency-Key
+          in: header
+          required: true
+          schema:
+            type: string
+            format: uuid
+          description: Unique key for idempotent request handling
+
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/CreateTransactionRequest'
+
+      responses:
+        '201':
+          description: Transaction created successfully
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/TransactionResponse'
+
+        '400':
+          description: Invalid request
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+
+        '403':
+          description: Forbidden
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+
+        '409':
+          description: Idempotency conflict
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+
+components:
+  securitySchemes:
+    bearerAuth:
+      type: http
+      scheme: bearer
+      bearerFormat: JWT
+
+  schemas:
+
+    CreateTransactionRequest:
+      type: object
+      required:
+        - accountId
+        - type
+        - amountMinor
+        - currency
+        - occurredAt
+        - clientMutationId
+      properties:
+        accountId:
+          type: string
+          format: uuid
+
+        categoryId:
+          type: string
+          format: uuid
+          nullable: true
+
+        type:
+          type: string
+          enum: [debit, credit]
+
+        amountMinor:
+          type: integer
+          minimum: 1
+          example: 1500
+
+        currency:
+          type: string
+          pattern: '^[A-Z]{3}$'
+          example: BRL
+
+        description:
+          type: string
+          maxLength: 255
+          nullable: true
+
+        occurredAt:
+          type: string
+          format: date-time
+
+        clientMutationId:
+          type: string
+          format: uuid
+
+    TransactionResponse:
+      type: object
+      required:
+        - id
+        - accountId
+        - type
+        - amountMinor
+        - currency
+        - occurredAt
+        - createdAt
+      properties:
+        id:
+          type: string
+          format: uuid
+
+        accountId:
+          type: string
+          format: uuid
+
+        type:
+          type: string
+          enum: [debit, credit]
+
+        amountMinor:
+          type: integer
+
+        currency:
+          type: string
+
+        description:
+          type: string
+          nullable: true
+
+        occurredAt:
+          type: string
+          format: date-time
+
+        createdAt:
+          type: string
+          format: date-time
+
+    ErrorResponse:
+      type: object
+      required:
+        - code
+        - message
+      properties:
+        code:
+          type: string
+          example: IDEMPOTENCY_KEY_CONFLICT
+
+        message:
+          type: string
+          example: Idempotency key reused with different payload

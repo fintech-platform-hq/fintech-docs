@@ -1,5 +1,4 @@
 # Domain Definition — Fintech Platform
-# Domain Definition — Fintech Platform
 
 ## 1. Objective
 
