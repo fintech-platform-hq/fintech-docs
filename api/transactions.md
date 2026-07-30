@@ -33,7 +33,7 @@ Content-Type: application/json
 ```json
 {
   "accountId": "uuid",
-  "categoryId": "uuid",
+  "categoryId": "uuid | null",
   "type": "debit",
   "amountMinor": 1500,
   "currency": "BRL",
@@ -57,6 +57,7 @@ Content-Type: application/json
 ### High
 
 - category must belong to user (if provided)
+- occurredAt must be a valid ISO 8601 timestamp (UTC)
 - occurredAt must not be in the future (optional rule)
 
 ---
@@ -86,7 +87,8 @@ Content-Type: application/json
 
 ```json
 {
-  "code": "IDEMPOTENCY_KEY_CONFLICT"
+  "code": "IDEMPOTENCY_KEY_CONFLICT",
+  "message": "Idempotency key already used with different payload"
 }
 ```
 
@@ -117,9 +119,12 @@ Content-Type: application/json
 ## 8. Database Interaction
 
 1. Validate idempotency key
-2. Insert transaction
-3. Store response in idempotency_keys
-4. Return response
+2. BEGIN transaction
+3. Check for existing idempotency key
+4. Insert transaction
+5. Store response in idempotency_keys
+6. COMMIT transaction
+7. Return response
 
 ---
 
@@ -128,3 +133,13 @@ Content-Type: application/json
 - This endpoint must be atomic
 - Must run inside a database transaction
 - Must not allow partial writes
+- Financial data must be immutable after creation
+
+---
+
+## 10. References
+
+- OpenAPI: ./openapi/transactions.yaml
+- Idempotency Strategy: ../backend/idempotency-strategy.md
+- Database Schema: ../database/postgresql-schema.md
+- ADR: ../adr/0003-idempotency-for-writes.md
