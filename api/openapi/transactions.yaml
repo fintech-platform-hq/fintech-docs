@@ -12,7 +12,22 @@ paths:
   /transactions:
     post:
       summary: Create transaction
-      description: Creates a financial transaction in an idempotent way.
+      description: |
+        Creates a financial transaction in an idempotent way.
+
+        Idempotency behavior:
+
+        - Same Idempotency-Key + same payload → returns the same response (no duplicate writes)
+        - Same Idempotency-Key + different payload → returns 409 Conflict
+        - Concurrent requests with same key → only one transaction is persisted
+
+        Implementation details:
+
+        - PostgreSQL transaction (BEGIN / COMMIT / ROLLBACK)
+        - Row-level locking via SELECT ... FOR UPDATE
+        - Request hashing for payload consistency
+        - Response replay from idempotency_keys table
+
       operationId: createTransaction
 
       security:

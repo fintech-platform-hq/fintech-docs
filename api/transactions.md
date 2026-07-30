@@ -143,3 +143,20 @@ Content-Type: application/json
 - Idempotency Strategy: ../backend/idempotency-strategy.md
 - Database Schema: ../database/postgresql-schema.md
 - ADR: ../adr/0003-idempotency-for-writes.md
+
+---
+
+## 11. Idempotency Guarantees
+
+This endpoint guarantees:
+
+- Same Idempotency-Key + same payload → same response (no duplicate writes)
+- Same Idempotency-Key + different payload → 409 Conflict
+- Concurrent requests with same key → only one transaction is persisted
+
+Implementation details:
+
+- Uses PostgreSQL transaction (BEGIN / COMMIT / ROLLBACK)
+- Row-level locking via `SELECT ... FOR UPDATE`
+- Request hashing to detect payload changes
+- Response stored and replayed from `idempotency_keys`
