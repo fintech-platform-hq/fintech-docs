@@ -5,7 +5,7 @@ Accepted
 
 ## Context
 
-The system must support offline-first mobile usage, background sync, and unreliable network conditions.
+The platform target includes offline-first mobile usage, background sync, and unreliable network conditions. The current implemented iOS slice already treats the backend as authoritative for confirmed transaction writes.
 
 Allowing the mobile client to act as the source of truth would lead to:
 
@@ -19,7 +19,7 @@ The backend API will be the single source of truth (SSoT) for all financial data
 
 The mobile application will act as:
 
-- cache layer
+- cache layer when local persistence is introduced
 - UI layer
 - temporary state holder
 
@@ -35,7 +35,7 @@ All financial operations must be confirmed by the backend before being considere
 
 ### Negative
 
-- Requires synchronization layer in mobile
+- Requires synchronization layer in mobile for the future offline-first target
 - Increased backend responsibility
 - Slightly higher latency for confirmation
 

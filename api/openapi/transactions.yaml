@@ -1,94 +1,83 @@
 openapi: 3.1.0
 info:
-  title: Fintech Platform API
-  version: 1.0.0
-  description: |
-    API for managing financial transactions with strong consistency guarantees and idempotent operations.
-
+  title: Fintech API
+  version: 0.0.1
+  description: Public contract for the current unauthenticated transaction API milestone.
 servers:
-  - url: https://api.fintech-platform.com
-
+  - url: https://fintech-api-87yw.onrender.com
+    description: Production
+  - url: http://localhost:3000
+    description: Local development
+security: []
 paths:
   /transactions:
     post:
-      summary: Create transaction
-      description: |
-        Creates a financial transaction in an idempotent way.
-
-        Idempotency behavior:
-
-        - Same Idempotency-Key + same payload → returns the same response (no duplicate writes)
-        - Same Idempotency-Key + different payload → returns 409 Conflict
-        - Concurrent requests with same key → only one transaction is persisted
-
-        Implementation details:
-
-        - PostgreSQL transaction (BEGIN / COMMIT / ROLLBACK)
-        - Row-level locking via SELECT ... FOR UPDATE
-        - Request hashing for payload consistency
-        - Response replay from idempotency_keys table
-
+      summary: Create or replay a transaction
       operationId: createTransaction
-
-      security:
-        - bearerAuth: []
-
       parameters:
         - name: Idempotency-Key
           in: header
           required: true
+          description: UUID that remains stable for every retry of the same complete request payload.
           schema:
             type: string
             format: uuid
-          description: Unique key for idempotent request handling
-
       requestBody:
         required: true
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/CreateTransactionRequest'
-
+              $ref: '#/components/schemas/TransactionRequest'
       responses:
         '201':
-          description: Transaction created successfully
+          description: Transaction created, or the original transaction returned for an identical replay.
+          headers:
+            X-Request-Id:
+              $ref: '#/components/headers/RequestId'
           content:
             application/json:
               schema:
                 $ref: '#/components/schemas/TransactionResponse'
-
         '400':
-          description: Invalid request
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/ErrorResponse'
-
-        '403':
-          description: Forbidden
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/ErrorResponse'
-
+          $ref: '#/components/responses/BadRequest'
         '409':
-          description: Idempotency conflict
+          $ref: '#/components/responses/Conflict'
+        '500':
+          $ref: '#/components/responses/InternalServerError'
+  /health:
+    get:
+      summary: Check process liveness
+      description: Confirms only that the application process is responding; it does not check database readiness.
+      operationId: getHealth
+      responses:
+        '200':
+          description: Application process is responding.
+          headers:
+            X-Request-Id:
+              $ref: '#/components/headers/RequestId'
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/ErrorResponse'
-
+                type: object
+                additionalProperties: false
+                required: [status]
+                properties:
+                  status:
+                    type: string
+                    const: ok
+        '500':
+          $ref: '#/components/responses/InternalServerError'
 components:
-  securitySchemes:
-    bearerAuth:
-      type: http
-      scheme: bearer
-      bearerFormat: JWT
-
+  headers:
+    RequestId:
+      description: Server-generated request correlation UUID.
+      schema:
+        type: string
+        format: uuid
   schemas:
-
-    CreateTransactionRequest:
+    TransactionRequest:
       type: object
+      additionalProperties: false
       required:
         - accountId
         - type
@@ -100,90 +89,109 @@ components:
         accountId:
           type: string
           format: uuid
-
         categoryId:
-          type: string
+          type: [string, 'null']
           format: uuid
-          nullable: true
-
         type:
           type: string
-          enum: [debit, credit]
-
+          enum: [expense, income]
+          description: expense is an outgoing amount; income is an incoming amount.
         amountMinor:
           type: integer
           minimum: 1
-          example: 1500
-
         currency:
           type: string
           pattern: '^[A-Z]{3}$'
-          example: BRL
-
         description:
-          type: string
-          maxLength: 255
-          nullable: true
-
+          type: [string, 'null']
         occurredAt:
           type: string
           format: date-time
-
         clientMutationId:
           type: string
           format: uuid
-
+          description: Stable for retries of one logical operation; not independently persisted or database-unique in this milestone.
     TransactionResponse:
       type: object
+      additionalProperties: false
       required:
         - id
         - accountId
+        - categoryId
         - type
         - amountMinor
         - currency
+        - description
         - occurredAt
         - createdAt
       properties:
         id:
           type: string
           format: uuid
-
         accountId:
           type: string
           format: uuid
-
+        categoryId:
+          type: [string, 'null']
+          format: uuid
         type:
           type: string
-          enum: [debit, credit]
-
+          enum: [expense, income]
+          description: expense is an outgoing amount; income is an incoming amount.
         amountMinor:
           type: integer
-
+          minimum: 1
         currency:
           type: string
-
+          pattern: '^[A-Z]{3}$'
         description:
-          type: string
-          nullable: true
-
+          type: [string, 'null']
         occurredAt:
           type: string
           format: date-time
-
         createdAt:
           type: string
           format: date-time
-
     ErrorResponse:
       type: object
-      required:
-        - code
-        - message
+      additionalProperties: false
+      required: [statusCode, message, error]
       properties:
-        code:
-          type: string
-          example: IDEMPOTENCY_KEY_CONFLICT
-
+        statusCode:
+          type: integer
         message:
+          oneOf:
+            - type: string
+            - type: array
+              items:
+                type: string
+        error:
           type: string
-          example: Idempotency key reused with different payload
+  responses:
+    BadRequest:
+      description: Invalid header or request body.
+      headers:
+        X-Request-Id:
+          $ref: '#/components/headers/RequestId'
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/ErrorResponse'
+    Conflict:
+      description: The idempotency key was previously used with a different complete request payload.
+      headers:
+        X-Request-Id:
+          $ref: '#/components/headers/RequestId'
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/ErrorResponse'
+    InternalServerError:
+      description: Unexpected server or persistence failure.
+      headers:
+        X-Request-Id:
+          $ref: '#/components/headers/RequestId'
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/ErrorResponse'

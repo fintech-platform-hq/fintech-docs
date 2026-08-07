@@ -1,162 +1,161 @@
-# Transactions API — Fintech Platform
+# Transactions API
 
-## 1. Endpoint
+This document describes the currently implemented `POST /transactions` endpoint in `fintech-api`.
 
+## Endpoint
+
+```http
 POST /transactions
-
----
-
-## 2. Purpose
-
-Create a financial transaction in a safe and idempotent way.
-
-This endpoint must:
-
-- prevent duplicate operations
-- validate business rules
-- persist immutable financial events
-
----
-
-## 3. Headers
-
 ```
-Authorization: Bearer <access_token>
-Idempotency-Key: <uuid>
+
+## Implemented Purpose
+
+Create or replay a personal-finance transaction in an idempotent way.
+
+The current public contract uses:
+
+- `expense`: outgoing personal-finance transaction
+- `income`: incoming personal-finance transaction
+
+`amountMinor` is always a positive integer. Transaction direction is represented by `type`, not by a negative amount.
+
+## Headers
+
+The current endpoint does not require authentication.
+
+```http
 Content-Type: application/json
+Idempotency-Key: <uuid>
 ```
 
----
+`Idempotency-Key` is required and must be a UUID.
 
-## 4. Request Body
+## Request Body
+
+The request body is defined by `CreateTransactionDto` in the backend.
 
 ```json
 {
-  "accountId": "uuid",
-  "categoryId": "uuid | null",
-  "type": "debit",
-  "amountMinor": 1500,
+  "accountId": "11111111-1111-4111-8111-111111111111",
+  "categoryId": null,
+  "type": "expense",
+  "amountMinor": 5555,
   "currency": "BRL",
   "description": "Lunch",
   "occurredAt": "2026-01-01T12:00:00Z",
-  "clientMutationId": "uuid"
+  "clientMutationId": "00000000-0000-4000-8000-000000000002"
 }
 ```
 
----
+### Fields
 
-## 5. Validation Rules
+| Field | Required | Current validation |
+| --- | --- | --- |
+| `accountId` | Yes | UUID |
+| `categoryId` | No | UUID when present; may be omitted or `null` |
+| `type` | Yes | `expense` or `income` |
+| `amountMinor` | Yes | Integer, minimum `1` |
+| `currency` | Yes | Three uppercase ASCII letters such as `BRL` |
+| `description` | No | String when present |
+| `occurredAt` | Yes | Strict ISO 8601 timestamp with `T` separator and explicit timezone |
+| `clientMutationId` | Yes | UUID; stable across retries of one logical client operation |
 
-### Critical
+## Response: 201 Created
 
-- account must belong to authenticated user
-- amountMinor > 0
-- currency must match account currency
-- clientMutationId must be unique per user
-
-### High
-
-- category must belong to user (if provided)
-- occurredAt must be a valid ISO 8601 timestamp (UTC)
-- occurredAt must not be in the future (optional rule)
-
----
-
-## 6. Responses
-
-### 201 Created
+The backend returns `201` both for a new transaction and for a replay where the same `Idempotency-Key` is reused with the same complete payload after the original response has been persisted.
 
 ```json
 {
-  "id": "uuid",
-  "accountId": "uuid",
-  "type": "debit",
-  "amountMinor": 1500,
+  "id": "7ce3515c-9f07-4510-80de-20f4f94b6033",
+  "accountId": "11111111-1111-4111-8111-111111111111",
+  "categoryId": null,
+  "type": "expense",
+  "amountMinor": 5555,
   "currency": "BRL",
   "description": "Lunch",
-  "occurredAt": "2026-01-01T12:00:00Z",
-  "createdAt": "2026-01-01T12:00:01Z"
+  "occurredAt": "2026-01-01T12:00:00.000Z",
+  "createdAt": "2026-01-01T12:00:01.000Z"
 }
 ```
 
----
-
-### 409 Conflict
-
-#### Case 1: Idempotency key reused with different payload
+Income uses the same positive amount convention:
 
 ```json
 {
-  "code": "IDEMPOTENCY_KEY_CONFLICT",
-  "message": "Idempotency key already used with different payload"
+  "accountId": "11111111-1111-4111-8111-111111111111",
+  "categoryId": null,
+  "type": "income",
+  "amountMinor": 5555,
+  "currency": "BRL",
+  "description": "Salary",
+  "occurredAt": "2026-01-01T12:00:00Z",
+  "clientMutationId": "00000000-0000-4000-8000-000000000003"
 }
 ```
 
----
+## Response: 400 Bad Request
 
-### 400 Bad Request
+Returned for invalid headers or invalid request bodies. The backend currently uses NestJS error envelopes.
 
-- invalid amount
-- invalid currency
-- invalid payload
+Examples:
 
----
+```json
+{
+  "message": "Idempotency key required",
+  "error": "Bad Request",
+  "statusCode": 400
+}
+```
 
-### 403 Forbidden
+```json
+{
+  "message": [
+    "type must be one of the following values: expense, income"
+  ],
+  "error": "Bad Request",
+  "statusCode": 400
+}
+```
 
-- account does not belong to user
+## Response: 409 Conflict
 
----
+Returned when the same `Idempotency-Key` is reused with a different complete request payload.
 
-## 7. Idempotency Behavior
+```json
+{
+  "message": "Idempotency key was already used with a different request",
+  "error": "Conflict",
+  "statusCode": 409
+}
+```
 
-- Same key + same payload → return same response
-- Same key + different payload → 409
-- Different key → new operation
+## Response: 5xx
 
----
+Unexpected server or persistence failures use the current NestJS error envelope. There is no custom public error code contract for these responses in the implemented API.
 
-## 8. Database Interaction
+## Implemented Idempotency Behavior
 
-1. Validate idempotency key
-2. BEGIN transaction
-3. Check for existing idempotency key
-4. Insert transaction
-5. Store response in idempotency_keys
-6. COMMIT transaction
-7. Return response
+Confirmed behavior:
 
----
+- Same `Idempotency-Key` + same complete payload after a response is persisted -> returns the stored response with `201`
+- Same `Idempotency-Key` + different complete payload -> `409 Conflict`
+- Transaction insert and idempotency response storage occur inside one PostgreSQL transaction
+- Request hashing includes `accountId`, `categoryId`, `type`, `amountMinor`, `currency`, `description`, `occurredAt`, and `clientMutationId`
+- Stored responses are replayed from `idempotency_keys.response`
 
-## 9. Notes
+Compatibility behavior:
 
-- This endpoint must be atomic
-- Must run inside a database transaction
-- Must not allow partial writes
-- Financial data must be immutable after creation
+- The current API accepts only `expense` and `income`.
+- The service still recognizes historical request hashes that used `debit`/`credit` so previously persisted idempotency records can replay after the domain rename.
 
----
+Known gap / future hardening:
 
-## 10. References
+- Concurrent first requests with the same `Idempotency-Key` require explicit concurrency validation and hardening evidence. The current implementation uses a PostgreSQL advisory transaction lock plus `SELECT ... FOR UPDATE`, but this documentation does not claim a verified concurrent first-write guarantee.
 
-- OpenAPI: ./openapi/transactions.yaml
-- Idempotency Strategy: ../backend/idempotency-strategy.md
-- Database Schema: ../database/postgresql-schema.md
-- ADR: ../adr/0003-idempotency-for-writes.md
+## References
 
----
-
-## 11. Idempotency Guarantees
-
-This endpoint guarantees:
-
-- Same Idempotency-Key + same payload → same response (no duplicate writes)
-- Same Idempotency-Key + different payload → 409 Conflict
-- Concurrent requests with same key → only one transaction is persisted
-
-Implementation details:
-
-- Uses PostgreSQL transaction (BEGIN / COMMIT / ROLLBACK)
-- Row-level locking via `SELECT ... FOR UPDATE`
-- Request hashing to detect payload changes
-- Response stored and replayed from `idempotency_keys`
+- [OpenAPI contract](openapi/transactions.yaml)
+- [Backend idempotency strategy](../backend/idempotency-strategy.md)
+- [PostgreSQL schema](../database/postgresql-schema.md)
+- [ADR-0003: Idempotency for Financial Writes](../adr/0003-idempotency-for-writes.md)
+- [ADR-0005: Use Expense and Income as Transaction Types](../adr/0005-personal-finance-transaction-types.md)

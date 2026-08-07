@@ -1,171 +1,99 @@
-# Domain Definition — Fintech Platform
+# Domain Definition - Fintech Platform
 
-## 1. Objective
+## Product Definition
 
-Design a financial platform capable of managing user accounts, transactions, and cashflow with strong consistency guarantees and offline-first mobile support.
+Fintech Platform is a personal finance management product for recording, organizing, and understanding income and expenses.
 
----
+The current implemented slice is intentionally narrow: an iOS client creates a transaction, the backend validates and persists it, and PostgreSQL is the source of truth for confirmed financial writes.
 
-## 2. Core Domain
+## Current MVP Domain
 
-### Entities
+### Transaction
 
-* User
-* Account
-* Transaction
-* Category
+A transaction is a confirmed personal-finance event persisted by the backend.
 
-### Responsibilities
+Current transaction types:
 
-* User owns multiple accounts
-* Account aggregates transactions
-* Transaction represents a financial event (immutable)
-* Category classifies transactions
+- `expense`: outgoing financial transaction
+- `income`: incoming financial transaction
 
----
+The public API and iOS client both use these values directly. There is no current public translation layer from `debit`/`credit`.
 
-## 3. Domain Invariants
+### amountMinor
 
-### Critical (must never be violated)
+Money is represented as positive integer minor units.
 
-1. Transactions are immutable after confirmation
-2. Account balance is derived, never stored directly
-3. Every transaction must belong to exactly one account
-4. All financial operations must be idempotent
-5. Monetary values must use fixed precision (decimal)
+Examples:
 
----
+- `R$ 55,55` -> `amountMinor: 5555`
+- Expense display `-R$ 55,55` -> API payload `{ "type": "expense", "amountMinor": 5555 }`
+- Income display `+R$ 55,55` -> API payload `{ "type": "income", "amountMinor": 5555 }`
 
-### High Priority
+The sign shown in the iOS UI is presentation-only. Transaction direction is carried by `type`.
 
-6. Transactions must be timestamped (event ordering)
-7. A transaction cannot exist without a valid user context
-8. Duplicate transactions must be prevented at system level
+### IdempotencyKey
 
----
+An idempotency key identifies one logical write operation at the API boundary.
 
-### Medium Priority
+Current behavior:
 
-9. Categories are optional but normalized
-10. Users may have multiple accounts with independent balances
+- same key + same complete payload after persistence -> replay stored response
+- same key + different complete payload -> conflict
+- the transaction and stored idempotency response are written in one database transaction
 
----
+Concurrent first-write hardening is a known area for validation and should not be overstated as proven behavior.
 
-## 4. Data Model (3NF)
+## Current MVP Invariants
 
-### users
+- Backend API is the source of truth for confirmed financial writes.
+- `type` is exactly `expense` or `income`.
+- `amountMinor` is always a positive integer.
+- Currency is represented as a three-letter uppercase code.
+- Transaction creation requires an idempotency key.
+- Replays must use the same complete request payload, including `clientMutationId`.
+- Confirmed transaction responses use the canonical backend response shape.
 
-* id (UUID, PK)
-* email (unique)
-* created_at
+## Current End-to-End Flow
 
----
+1. User selects Expense or Income in the iOS Create Transaction flow.
+2. User enters a BRL amount and optional description.
+3. iOS renders `-R$` for Expense and `+R$` for Income.
+4. iOS generates a positive `amountMinor`, a `clientMutationId`, and an `Idempotency-Key`.
+5. iOS sends `POST /transactions`.
+6. NestJS validates the request and idempotency key.
+7. PostgreSQL persists the transaction and idempotency response.
+8. The API returns the canonical transaction response.
+9. iOS transitions to success or error state based on the backend response.
 
-### accounts
+## Target Domain / Future Evolution
 
-* id (UUID, PK)
-* user_id (FK → users.id)
-* name
-* type
-* created_at
+The following concepts are part of the target product architecture, not the current production schema unless a future document marks them as implemented:
 
----
+- User
+- Account ownership and account metadata
+- Category ownership and category hierarchies
+- Derived account balances
+- Authentication identities
+- Refresh tokens and device-bound sessions
+- Offline-first sync and reconciliation
+- Redis or other caching infrastructure
 
-### transactions
+Target balance semantics should use the current domain language:
 
-* id (UUID, PK)
-* account_id (FK → accounts.id)
-* amount (DECIMAL(12,2))
-* type (debit | credit)
-* description
-* created_at
+- `income` contributes positively
+- `expense` contributes negatively
 
----
+`amountMinor` should remain positive; balance calculations apply direction based on transaction type.
 
-### categories
+## Current Non-Goals
 
-* id (UUID, PK)
-* name
+The implemented MVP slice does not currently include:
 
----
-
-### transaction_categories
-
-* transaction_id (FK → transactions.id)
-* category_id (FK → categories.id)
-
----
-
-## 5. Single Source of Truth (SSoT)
-
-* Backend API is the only source of truth
-* Mobile app acts as cache + UI layer
-* Redis is used only for performance optimization
-
----
-
-## 6. Critical Flow — Offline Transaction Sync
-
-### Step 1 — Mobile (Offline)
-
-* User creates transaction
-* Stored locally with:
-
-  * temporary ID
-  * status: pending_sync
-
----
-
-### Step 2 — Sync Trigger
-
-* Network becomes available
-* Background task sends transaction to API
-
----
-
-### Step 3 — Backend Processing
-
-* Validate authentication (JWT)
-* Check idempotency (request_id)
-* Persist transaction
-* Return canonical transaction ID
-
----
-
-### Step 4 — Reconciliation
-
-* Mobile replaces temporary ID
-* Marks transaction as synced
-* Updates local state
-
----
-
-## 7. Engineering Risks
-
-### Critical
-
-* Duplicate transactions (lack of idempotency)
-* Inconsistent balance calculation
-
-### High
-
-* Race conditions in concurrent writes
-* Offline/online conflict resolution
-
----
-
-## 8. Non-Goals (MVP)
-
-* External bank integrations
-* Real-time market data
-* Complex financial instruments
-
----
-
-## 9. Success Criteria
-
-* Transactions remain consistent under offline/online scenarios
-* No duplicate financial operations
-* Balance is always correctly derived
-* System behaves deterministically under concurrency
-
+- public authentication or JWT enforcement
+- user-owned account tables with foreign keys
+- category ownership tables
+- refresh token storage
+- Redis
+- offline-first synchronization
+- external bank integrations
+- transfers, refunds, or double-entry ledger postings

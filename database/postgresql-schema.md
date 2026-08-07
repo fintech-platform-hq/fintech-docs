@@ -1,513 +1,161 @@
-# PostgreSQL Schema — Fintech Platform
+# PostgreSQL Schema
 
-## 1. Goal
+This document separates the current production schema from target architecture.
 
-This document defines the relational data model for the Fintech Platform MVP.
+## Current Production Schema
 
-The schema is designed to support:
+The current schema is defined by `fintech-api/db.sql` plus versioned migrations.
 
-- third normal form (3NF)
-- immutable financial transactions
-- derived account balances
-- offline-first mobile synchronization
-- idempotent financial writes
-- account linking across identity providers
-- secure refresh token management
+Implemented tables:
 
----
+- `transactions`
+- `idempotency_keys`
 
-## 2. Design Principles
+Implemented enum:
 
-### 2.1 Backend as Source of Truth
+- `transaction_type`: `expense`, `income`
 
-The PostgreSQL database is the authoritative source of truth for financial data.
+There are no current production tables for users, accounts, categories, auth identities, refresh tokens, devices, or Redis-backed state in this schema.
 
-The iOS app may cache data locally, but it must reconcile with the backend before considering financial operations confirmed.
+## Current Enum Types
 
-### 2.2 Transactions Are Immutable
+```sql
+CREATE TYPE transaction_type AS ENUM ('expense', 'income');
+```
 
-Confirmed financial transactions must not be updated in place.
+Semantics:
 
-If a transaction needs correction, the system must create a compensating transaction instead of mutating the original record.
+- `expense`: outgoing personal-finance transaction
+- `income`: incoming personal-finance transaction
 
-### 2.3 Balance Is Derived
+## Current Table: transactions
 
-Account balance must not be stored directly in the `accounts` table.
+```sql
+CREATE TABLE transactions (
+  id uuid PRIMARY KEY,
+  account_id uuid NOT NULL,
+  category_id uuid NULL,
+  type transaction_type NOT NULL,
+  amount_minor integer NOT NULL CHECK (amount_minor > 0),
+  currency char(3) NOT NULL CHECK (currency ~ '^[A-Z]{3}$'),
+  description text NULL,
+  occurred_at timestamptz NOT NULL,
+  created_at timestamptz NOT NULL DEFAULT now()
+);
+```
 
-Balance is derived from confirmed transactions:
+Indexes:
+
+```sql
+CREATE INDEX idx_transactions_account_id
+ON transactions (account_id);
+
+CREATE INDEX idx_transactions_occurred_at
+ON transactions (occurred_at);
+```
+
+Notes:
+
+- `amount_minor` is always positive.
+- Transaction direction comes from `type`, not from a negative amount.
+- `account_id` and `category_id` are UUID values in the current table, but there are no current foreign keys to account or category tables.
+- `clientMutationId` is part of the API request hash but is not currently persisted as a transaction column.
+
+## Current Table: idempotency_keys
+
+```sql
+CREATE TABLE idempotency_keys (
+  id uuid PRIMARY KEY,
+  idempotency_key uuid NOT NULL,
+  request_hash text NOT NULL,
+  response jsonb NOT NULL,
+  created_at timestamptz NOT NULL DEFAULT now(),
+  UNIQUE (idempotency_key),
+  UNIQUE (idempotency_key, request_hash)
+);
+```
+
+Index:
+
+```sql
+CREATE INDEX idx_idempotency_keys_key
+ON idempotency_keys (idempotency_key);
+```
+
+Notes:
+
+- `response` stores the canonical API response used for replay.
+- `request_hash` stores the hash of the complete request payload.
+- Replays compare the incoming request hash with the stored hash.
+
+## Migration: 20260805 Rename Transaction Types
+
+`migrations/20260805_rename_transaction_type_values.sql` migrated the PostgreSQL enum and stored idempotency responses:
+
+```sql
+ALTER TYPE transaction_type RENAME VALUE 'debit' TO 'expense';
+ALTER TYPE transaction_type RENAME VALUE 'credit' TO 'income';
+```
+
+The migration also rewrites `idempotency_keys.response->type`:
+
+- `debit` -> `expense`
+- `credit` -> `income`
+
+This preserved existing transaction rows and stored replay responses while moving the public domain language to personal-finance terms.
+
+## Current Balance Semantics
+
+The current schema does not include an implemented balances table or account balance query.
+
+When balance views are implemented, calculations should use the current type semantics:
 
 ```sql
 SUM(
   CASE
-    WHEN type = 'credit' THEN amount_minor
-    WHEN type = 'debit' THEN -amount_minor
+    WHEN type = 'income' THEN amount_minor
+    WHEN type = 'expense' THEN -amount_minor
   END
 )
 ```
 
-### 2.4 Money Representation
+`amount_minor` remains positive in stored transactions.
 
-Financial amounts are stored as integer minor units.
+## Target Schema - Planned / Not Implemented
 
-Example:
+The following schema areas are target architecture and are not part of the current production schema:
 
-- BRL 10.50 → `1050`
-- USD 25.99 → `2599`
+- `users`
+- `accounts`
+- `categories`
+- `auth_identities`
+- `user_devices`
+- `refresh_tokens`
+- richer idempotency state such as `processing`, `completed`, or expiration windows
+- persisted `client_mutation_id` uniqueness scoped by user
+- foreign keys from transactions to users, accounts, and categories
+- derived account balance queries
+- offline sync metadata
 
-This avoids floating-point rounding errors and simplifies synchronization across backend and mobile clients.
+Target account and category modeling should be introduced only when authentication and account ownership are implemented in the backend contract.
 
----
+## Target Design Principles
 
-## 3. PostgreSQL Extensions
+- PostgreSQL remains the source of truth for confirmed financial data.
+- Money remains integer minor units, not floating point.
+- `amount_minor` remains positive.
+- Transaction direction is derived from `type`.
+- Balances are derived from transactions rather than stored as mutable account state.
+- Authentication and refresh-token storage should be documented as implemented only after the backend enforces them.
 
-```sql
-CREATE EXTENSION IF NOT EXISTS pgcrypto;
-```
+## Non-Goals for Current Schema
 
----
-
-## 4. Enum Types
-
-```sql
-CREATE TYPE account_type AS ENUM (
-  'checking',
-  'savings',
-  'cash',
-  'credit_card',
-  'investment',
-  'other'
-);
-
-CREATE TYPE transaction_type AS ENUM (
-  'debit',
-  'credit'
-);
-
-CREATE TYPE transaction_status AS ENUM (
-  'confirmed',
-  'voided'
-);
-
-CREATE TYPE auth_provider AS ENUM (
-  'apple',
-  'google',
-  'email'
-);
-
-CREATE TYPE idempotency_status AS ENUM (
-  'processing',
-  'completed',
-  'failed'
-);
-
-CREATE TYPE device_platform AS ENUM (
-  'ios',
-  'web'
-);
-```
-
----
-
-## 5. Tables
-
-### 5.1 users
-
-```sql
-CREATE TABLE users (
-  id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
-
-  email TEXT UNIQUE,
-  display_name TEXT,
-
-  created_at TIMESTAMPTZ NOT NULL DEFAULT now(),
-  updated_at TIMESTAMPTZ NOT NULL DEFAULT now(),
-
-  CONSTRAINT users_email_not_blank
-    CHECK (email IS NULL OR length(trim(email)) > 0)
-);
-```
-
-#### Notes
-
-- `email` is nullable because Apple login may hide email after first authorization.
-- Identity is not stored directly in `users`; it is normalized into `auth_identities`.
-
----
-
-### 5.2 auth_identities
-
-```sql
-CREATE TABLE auth_identities (
-  id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
-
-  user_id UUID NOT NULL REFERENCES users(id) ON DELETE CASCADE,
-
-  provider auth_provider NOT NULL,
-  provider_subject TEXT NOT NULL,
-
-  email TEXT,
-  email_verified BOOLEAN NOT NULL DEFAULT false,
-
-  created_at TIMESTAMPTZ NOT NULL DEFAULT now(),
-
-  CONSTRAINT auth_identities_provider_subject_not_blank
-    CHECK (length(trim(provider_subject)) > 0),
-
-  CONSTRAINT auth_identities_unique_provider_subject
-    UNIQUE (provider, provider_subject),
-
-  CONSTRAINT auth_identities_unique_user_provider
-    UNIQUE (user_id, provider)
-);
-```
-
-#### Purpose
-
-Supports account linking.
-
-A single user may authenticate through multiple providers, but each external identity must map to exactly one internal user.
-
----
-
-### 5.3 user_devices
-
-```sql
-CREATE TABLE user_devices (
-  id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
-
-  user_id UUID NOT NULL REFERENCES users(id) ON DELETE CASCADE,
-
-  platform device_platform NOT NULL,
-  device_identifier_hash TEXT NOT NULL,
-  device_name TEXT,
-
-  last_seen_at TIMESTAMPTZ,
-  created_at TIMESTAMPTZ NOT NULL DEFAULT now(),
-
-  CONSTRAINT user_devices_identifier_not_blank
-    CHECK (length(trim(device_identifier_hash)) > 0),
-
-  CONSTRAINT user_devices_unique_user_device
-    UNIQUE (user_id, device_identifier_hash)
-);
-```
-
-#### Purpose
-
-Used for refresh token binding, session tracking, and future device-level revocation.
-
-The raw device identifier must not be stored.
-
----
-
-### 5.4 refresh_tokens
-
-```sql
-CREATE TABLE refresh_tokens (
-  id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
-
-  user_id UUID NOT NULL REFERENCES users(id) ON DELETE CASCADE,
-  device_id UUID NOT NULL REFERENCES user_devices(id) ON DELETE CASCADE,
-
-  token_hash TEXT NOT NULL UNIQUE,
-
-  replaced_by_token_id UUID REFERENCES refresh_tokens(id) ON DELETE SET NULL,
-
-  issued_at TIMESTAMPTZ NOT NULL DEFAULT now(),
-  expires_at TIMESTAMPTZ NOT NULL,
-  revoked_at TIMESTAMPTZ,
-
-  created_at TIMESTAMPTZ NOT NULL DEFAULT now(),
-
-  CONSTRAINT refresh_tokens_hash_not_blank
-    CHECK (length(trim(token_hash)) > 0),
-
-  CONSTRAINT refresh_tokens_expiration_valid
-    CHECK (expires_at > issued_at)
-);
-```
-
-#### Purpose
-
-Supports refresh token rotation.
-
-Only token hashes are persisted. Raw refresh tokens must never be stored.
-
----
-
-### 5.5 accounts
-
-```sql
-CREATE TABLE accounts (
-  id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
-
-  user_id UUID NOT NULL REFERENCES users(id) ON DELETE CASCADE,
-
-  name TEXT NOT NULL,
-  type account_type NOT NULL,
-  currency CHAR(3) NOT NULL DEFAULT 'BRL',
-
-  archived_at TIMESTAMPTZ,
-
-  created_at TIMESTAMPTZ NOT NULL DEFAULT now(),
-  updated_at TIMESTAMPTZ NOT NULL DEFAULT now(),
-
-  CONSTRAINT accounts_name_not_blank
-    CHECK (length(trim(name)) > 0),
-
-  CONSTRAINT accounts_currency_iso_like
-    CHECK (currency ~ '^[A-Z]{3}$'),
-
-  CONSTRAINT accounts_unique_name_per_user
-    UNIQUE (user_id, name)
-);
-```
-
-#### Notes
-
-- `currency` stays on the account because each account operates in one currency.
-- Multi-currency transfers are out of scope for the MVP.
-
----
-
-### 5.6 categories
-
-```sql
-CREATE TABLE categories (
-  id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
-
-  user_id UUID NOT NULL REFERENCES users(id) ON DELETE CASCADE,
-
-  name TEXT NOT NULL,
-  parent_category_id UUID REFERENCES categories(id) ON DELETE SET NULL,
-
-  created_at TIMESTAMPTZ NOT NULL DEFAULT now(),
-  updated_at TIMESTAMPTZ NOT NULL DEFAULT now(),
-
-  CONSTRAINT categories_name_not_blank
-    CHECK (length(trim(name)) > 0),
-
-  CONSTRAINT categories_unique_name_per_user
-    UNIQUE (user_id, name),
-
-  CONSTRAINT categories_no_self_parent
-    CHECK (id IS DISTINCT FROM parent_category_id)
-);
-```
-
-#### Notes
-
-- Categories belong to users.
-- Optional parent category allows simple grouping without violating 3NF.
-
----
-
-### 5.7 transactions
-
-```sql
-CREATE TABLE transactions (
-  id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
-
-  user_id UUID NOT NULL REFERENCES users(id) ON DELETE CASCADE,
-  account_id UUID NOT NULL REFERENCES accounts(id) ON DELETE RESTRICT,
-  category_id UUID REFERENCES categories(id) ON DELETE SET NULL,
-
-  type transaction_type NOT NULL,
-  status transaction_status NOT NULL DEFAULT 'confirmed',
-
-  amount_minor BIGINT NOT NULL,
-  currency CHAR(3) NOT NULL,
-
-  description TEXT,
-
-  occurred_at TIMESTAMPTZ NOT NULL,
-  confirmed_at TIMESTAMPTZ NOT NULL DEFAULT now(),
-
-  client_mutation_id UUID NOT NULL,
-
-  created_at TIMESTAMPTZ NOT NULL DEFAULT now(),
-
-  CONSTRAINT transactions_amount_positive
-    CHECK (amount_minor > 0),
-
-  CONSTRAINT transactions_currency_iso_like
-    CHECK (currency ~ '^[A-Z]{3}$'),
-
-  CONSTRAINT transactions_description_not_blank
-    CHECK (description IS NULL OR length(trim(description)) > 0),
-
-  CONSTRAINT transactions_unique_client_mutation
-    UNIQUE (user_id, client_mutation_id)
-);
-```
-
-#### Purpose
-
-Stores confirmed financial events.
-
-#### Important
-
-Transactions are append-only at the domain level.
-
-Do not implement generic update endpoints for this table.
-
----
-
-### 5.8 idempotency_keys
-
-```sql
-CREATE TABLE idempotency_keys (
-  id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
-
-  user_id UUID NOT NULL REFERENCES users(id) ON DELETE CASCADE,
-
-  idempotency_key TEXT NOT NULL,
-  request_method TEXT NOT NULL,
-  request_path TEXT NOT NULL,
-  request_hash TEXT NOT NULL,
-
-  status idempotency_status NOT NULL DEFAULT 'processing',
-
-  response_status INTEGER,
-  response_body JSONB,
-
-  locked_until TIMESTAMPTZ,
-  completed_at TIMESTAMPTZ,
-
-  created_at TIMESTAMPTZ NOT NULL DEFAULT now(),
-
-  CONSTRAINT idempotency_key_not_blank
-    CHECK (length(trim(idempotency_key)) > 0),
-
-  CONSTRAINT idempotency_method_not_blank
-    CHECK (length(trim(request_method)) > 0),
-
-  CONSTRAINT idempotency_path_not_blank
-    CHECK (length(trim(request_path)) > 0),
-
-  CONSTRAINT idempotency_hash_not_blank
-    CHECK (length(trim(request_hash)) > 0),
-
-  CONSTRAINT idempotency_unique_key_scope
-    UNIQUE (user_id, idempotency_key, request_method, request_path)
-);
-```
-
-#### Purpose
-
-Prevents duplicate financial writes during retries, offline sync, flaky networks, and concurrent client requests.
-
----
-
-## 6. Indexes
-
-```sql
-CREATE INDEX idx_auth_identities_user_id
-  ON auth_identities(user_id);
-
-CREATE INDEX idx_user_devices_user_id
-  ON user_devices(user_id);
-
-CREATE INDEX idx_refresh_tokens_user_device
-  ON refresh_tokens(user_id, device_id);
-
-CREATE INDEX idx_refresh_tokens_expires_at
-  ON refresh_tokens(expires_at);
-
-CREATE INDEX idx_accounts_user_id
-  ON accounts(user_id);
-
-CREATE INDEX idx_categories_user_id
-  ON categories(user_id);
-
-CREATE INDEX idx_transactions_user_account_occurred_at
-  ON transactions(user_id, account_id, occurred_at DESC);
-
-CREATE INDEX idx_transactions_user_occurred_at
-  ON transactions(user_id, occurred_at DESC);
-
-CREATE INDEX idx_transactions_category_id
-  ON transactions(category_id);
-
-CREATE INDEX idx_idempotency_keys_user_created_at
-  ON idempotency_keys(user_id, created_at DESC);
-
-CREATE INDEX idx_idempotency_keys_status_locked_until
-  ON idempotency_keys(status, locked_until);
-```
-
----
-
-## 7. Account Balance Query
-
-```sql
-SELECT
-  account_id,
-  COALESCE(
-    SUM(
-      CASE
-        WHEN type = 'credit' THEN amount_minor
-        WHEN type = 'debit' THEN -amount_minor
-      END
-    ),
-    0
-  ) AS balance_minor
-FROM transactions
-WHERE
-  user_id = $1
-  AND account_id = $2
-  AND status = 'confirmed'
-GROUP BY account_id;
-```
-
----
-
-## 8. 3NF Validation
-
-### users
-
-Every non-key attribute depends only on `users.id`.
-
-### auth_identities
-
-Provider-specific identity data is separated from users.
-
-This avoids storing multiple provider identities in the `users` table.
-
-### accounts
-
-Account metadata depends only on `accounts.id`.
-
-Balance is not stored because it is derived from transactions.
-
-### categories
-
-Category data is separated from transactions.
-
-This avoids repeating category names across financial events.
-
-### transactions
-
-Each transaction stores only the facts of a financial event.
-
-Derived values such as balance, monthly summaries, or category totals are not stored.
-
-### idempotency_keys
-
-Idempotency metadata is separated from transactions because idempotency belongs to API request processing, not to the financial event itself.
-
----
-
-## 9. MVP Non-Goals
-
-The schema intentionally does not support:
+The current schema does not support:
 
 - external bank integrations
 - double-entry accounting
+- transfers or ledger postings
 - multi-currency conversion
 - card authorization lifecycle
-- investment products
 - shared family accounts
 - invoice processing
-
-These features would require additional modeling and should not be added before the MVP proves the core financial transaction flow.

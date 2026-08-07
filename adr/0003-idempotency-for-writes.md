@@ -8,7 +8,7 @@ Accepted
 The system must handle retries caused by:
 
 - network failures
-- offline synchronization
+- future offline synchronization
 - duplicated requests
 
 Without protection, financial operations may be executed multiple times.
@@ -27,7 +27,8 @@ All mutating financial endpoints must implement idempotency using:
 ### Positive
 
 - Prevents duplicate financial operations
-- Supports offline-first mobile design
+- Supports safe retry behavior in the current iOS flow
+- Provides a foundation for future offline-first mobile design
 - Enables safe retries
 
 ### Negative
