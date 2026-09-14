@@ -1,166 +1,48 @@
-<<<<<<< HEAD
-# Fintech Platform – Technical Documentation
-
-This repository contains the architectural foundation and technical decisions behind the Fintech Platform.
-
-It is the source of truth for system design, domain modeling, and backend behavior.
-
----
-
-## System Overview
-
-The platform is designed to support reliable financial operations with strong consistency guarantees.
-
-Core principles:
-
-- Idempotent transaction processing
-- Explicit domain modeling
-- PostgreSQL as the source of truth
-- Backend-first architecture
-- Production-oriented design decisions
-
----
-
-## Repositories
-
-- **API**  
-  https://github.com/fintech-platform-hq/fintech-api  
-  NestJS backend responsible for transaction processing and persistence
-
-- **iOS Client (in progress)**  
-  SwiftUI client consuming the API
-
----
-
-## Documentation Structure
-
-- `/domain`  
-  Core business concepts and entities
-
-- `/database`  
-  Schema design and constraints
-
-- `/api`  
-  Endpoint contracts and behavior
-
-- `/backend`  
-  Implementation decisions and architecture
-
-- `/adr`  
-  Architectural Decision Records (trade-offs and reasoning)
-
----
-
-## Key Decisions
-
-- Idempotency enforced at the API level using request hashing
-- PostgreSQL constraints used as a safety layer (not just validation)
-- Stateless API with deterministic responses
-- Separation between domain and transport layers
-
----
-
-## Why this matters
-
-This project focuses on problems commonly found in real financial systems:
-
-- duplicate transaction prevention
-- data consistency under retries
-- predictable API behavior
-- auditability and traceability
-
----
-
-## Status
-
-Current scope:
-
-- Transaction creation endpoint
-- Idempotency guarantees
-- PostgreSQL persistence
-- Production deployment (Render + Neon)
-
-Next steps:
-
-- balance computation
-- transaction querying
-- client integration (iOS)
-=======
 # Fintech Platform - Technical Docs
 
-Fintech Platform is a personal finance platform for recording, organizing, and understanding income and expenses, backed by a production-deployed API and an iOS client.
-
-This repository is the central architectural and product documentation for the platform. It describes the implemented end-to-end slice, the current API contract, and target architecture separately so readers can distinguish shipped behavior from planned evolution.
+Shared architectural and product documentation for fintech-api and fintech-ios.
 
 ## Repositories
 
 - Backend API: https://github.com/fintech-platform-hq/fintech-api
 - iOS client: https://github.com/fintech-platform-hq/fintech-ios
-- Platform documentation: https://github.com/fintech-platform-hq/fintech-docs
+- Documentation: https://github.com/fintech-platform-hq/fintech-docs
 
-## Current Scope
+## Implemented now
 
-### Backend: Implemented
+### Backend
 
-- `POST /transactions`
-- PostgreSQL persistence for transactions and idempotency records
-- `expense` and `income` transaction types in the public contract and PostgreSQL enum
-- Positive `amountMinor` representation for both expenses and income
-- Request validation for UUIDs, transaction type, positive integer amount, uppercase currency, ISO/RFC3339 occurrence time, and `clientMutationId`
-- `Idempotency-Key` header support
-- Replay for the same idempotency key and same complete request payload after a response is persisted
-- `409 Conflict` for the same idempotency key with a different complete request payload
-- Request hashing for idempotency comparison
-- Transaction insert and idempotency response storage in one PostgreSQL transaction
-- Structured request and error logging with `X-Request-Id`
-- Root endpoint and `GET /health` process liveness endpoint
-- Docker support
-- Production deployment on Render
-- Managed PostgreSQL on Neon
+- Email/password registration and login with JWT access tokens and rotating refresh sessions.
+- Apple sign-in at `POST /auth/apple` and explicit linking at `POST /auth/apple/link`.
+- Users, user-owned accounts and categories, ownership checks, and currency checks.
+- Authenticated `GET /accounts` and `POST /accounts`.
+- Authenticated, idempotent `POST /transactions`, scoped by user and backed by PostgreSQL.
+- Apple refresh revalidation with temporary `503` handling and selective revocation.
 
-### iOS: Implemented
+The backend contract, migrations, Apple cryptographic details, and operational configuration remain canonical in [fintech-api](https://github.com/fintech-platform-hq/fintech-api).
 
-- Create Transaction flow
-- Expense / Income selection
-- BRL amount entry using integer minor units
-- Visual signed amount presentation: `-R$` for Expense and `+R$` for Income
-- Optional description entry
-- Request generation for the current backend contract
-- `Idempotency-Key` generation and submission
-- `clientMutationId` generation per logical operation
-- Integration with the production backend base URL
-- Validation, loading, error, retry, and success states covered by deterministic tests
+### iOS
 
-## Current End-to-End Slice
+- One `AuthenticationSession` and one Fintech access/refresh-token store using Keychain.
+- Email/password authentication and native Sign in with Apple infrastructure.
+- 32-byte Base64URL nonce, single Apple authorization POST, and no persistence of Apple identity tokens or authorization codes.
+- Safe refresh behavior: `401` ends the session, `503` preserves credentials, and ambiguous transport failures require reauthentication.
+- Create Transaction flow using positive integer minor units and backend idempotency.
 
-User
--> Create Transaction on iOS
--> `POST /transactions`
--> NestJS API
--> PostgreSQL / Neon
--> canonical transaction response
--> iOS success state
+Implementation status reflects the current repository code. The preceding iOS checkpoint was validated locally on 2026-09-14 (focused and full automated validation); Apple real-device use was not validated, and Apple production deployment/configuration is not proven.
 
-The current slice records one personal finance transaction. `type` carries the semantic direction:
+## Current boundaries
 
-- `expense`: outgoing personal-finance transaction
-- `income`: incoming personal-finance transaction
+Apple linking UI and consent flow are not implemented. Apple capability/provisioning and real-device validation are operational prerequisites, not evidence of implementation. Production migration, environment configuration, and deployment must be verified separately.
 
-`amountMinor` is always positive. The iOS sign (`-R$` or `+R$`) is presentation-only and is not sent as part of the amount.
+Categories, history, balance views, account selection in iOS, and offline reconciliation are not implemented in the iOS client. Server-to-server Apple notifications, Redis, workers, schedulers, and token blacklists remain outside the MVP.
 
-## Planned / Target Architecture
+## Key documents
 
-The broader platform direction includes authenticated users, owned accounts, categories, richer balance views, refresh-token based sessions, device-aware sync, and offline-first reconciliation. These are target architecture topics unless a document explicitly marks them as implemented.
-
-Do not treat planned domain entities such as users, account ownership tables, category ownership, auth identities, refresh tokens, Redis, or offline sync as present in the current production schema or API.
-
-## Key Documents
-
+- [Authentication architecture](architecture/authentication.md)
 - [Transactions API](api/transactions.md)
-- [OpenAPI transaction contract](api/openapi/transactions.yaml)
-- [Current and target PostgreSQL schema](database/postgresql-schema.md)
+- [Current schema and ownership](database/postgresql-schema.md)
 - [Domain definition](domain/domain-definition.md)
 - [Backend idempotency strategy](backend/idempotency-strategy.md)
-- [iOS Create Transaction overview](ios/create-transaction.md)
-- [ADR-0005: Use Expense and Income as Transaction Types](adr/0005-personal-finance-transaction-types.md)
->>>>>>> 5e86115 (docs: align platform documentation with current implementation)
+- [iOS Create Transaction](ios/create-transaction.md)
+- [ADR-0005: Expense and Income](adr/0005-personal-finance-transaction-types.md)

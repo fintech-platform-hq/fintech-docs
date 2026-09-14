@@ -2,45 +2,14 @@
 
 ## Status
 
-Accepted
-
-## Context
-
-`POST /transactions` is the first financial write endpoint in the platform. Retrying the same logical operation must not create duplicate transactions after a response has already been persisted.
+Accepted and implemented in the authenticated transaction API.
 
 ## Decision
 
-The transactions endpoint implements idempotency using:
+Each logical `POST /transactions` operation uses a stable UUID `Idempotency-Key`, stable complete payload (including `clientMutationId`), deterministic request hashing, and an atomic PostgreSQL transaction. Idempotency keys are scoped by authenticated user.
 
-- `Idempotency-Key` HTTP header, currently required to be a UUID
-- deterministic request hash comparison
-- canonical response persistence in `idempotency_keys.response`
-- PostgreSQL transaction wrapping transaction insert and idempotency response insert
-- transaction-scoped advisory locking by idempotency key in the current backend implementation
-- `SELECT ... FOR UPDATE` when reading an existing idempotency row
+Identical persisted requests replay the canonical response. A different payload with the same user and key returns `409 Conflict`.
 
-## Confirmed Behavior
+Concurrency of the first write for a new key requires explicit test coverage and validation evidence.
 
-- Same key + same complete payload after a response is persisted -> replay stored response
-- Same key + different complete payload -> `409 Conflict`
-- Missing or invalid idempotency key -> `400 Bad Request`
-
-## Known Gap
-
-This ADR does not claim a fully validated concurrent first-write guarantee.
-
-`SELECT ... FOR UPDATE` does not lock a row that does not yet exist. The current backend also uses `pg_advisory_xact_lock(hashtext($1))`, but concurrent first-request behavior should be covered by explicit concurrency tests before the platform documentation describes it as a proven guarantee.
-
-## Consequences
-
-Positive:
-
-- Replays can return the original canonical response.
-- Payload mismatches are detected.
-- Transaction and idempotency response storage are atomic in the current implementation.
-
-Trade-offs:
-
-- Additional persistence is required.
-- Request hashing makes the full payload part of retry identity.
-- Concurrency hardening needs explicit validation as the platform matures.
+The backend implementation and its concurrency evidence remain the source of truth for locking details and deployment status.
