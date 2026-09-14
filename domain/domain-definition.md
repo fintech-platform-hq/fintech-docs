@@ -9,7 +9,7 @@
 - `Transaction` is a confirmed backend financial event. `expense` and `income` use positive `amountMinor`; direction is carried by `type`.
 - A refresh session belongs to a user and rotates on refresh.
 
-Apple linking is explicit and backend-supported. The iOS linking experience remains pending.
+Apple linking is explicit, optional, and supported by both the backend and iOS client after password authentication.
 
 ## Implemented flow
 

@@ -20,6 +20,8 @@ Single-flight refresh and generation checks prevent stale operations from changi
 
 ## Pending and operational boundaries
 
-The backend linking contract exists, but iOS linking UI, consent, and `ACCOUNT_LINK_REQUIRED` handling are pending. Apple capability/provisioning and real-device validation remain pending. Migration application, Apple environment secrets, and production deployment require separate operational proof.
+When `POST /auth/apple` returns `ACCOUNT_LINK_REQUIRED`, iOS requires a password login before presenting an optional linking offer. Each linking attempt starts a new Apple authorization and sends its identity token, authorization code, and nonce to `POST /auth/apple/link` with the password session's Bearer token. Linking does not refresh or replay automatically; `204` and `401` preserve the Fintech session and tokens. Choosing “Agora não” abandons linking without invalidating the Fintech session. The client supports specific feedback and guards against concurrent or late results.
+
+The linking flow is implemented and covered by deterministic local tests. Apple capability/provisioning and real-device validation remain pending. Apple production operation, migration application, environment secrets, and deployment require separate operational proof.
 
 Server-to-server Apple notifications, Redis, schedulers, workers, and blacklists are outside the MVP.

@@ -25,6 +25,7 @@ The backend contract, migrations, Apple cryptographic details, and operational c
 
 - One `AuthenticationSession` and one Fintech access/refresh-token store using Keychain.
 - Email/password authentication and native Sign in with Apple infrastructure.
+- Optional Apple account linking after password login, including `ACCOUNT_LINK_REQUIRED` handling and explicit consent.
 - 32-byte Base64URL nonce, single Apple authorization POST, and no persistence of Apple identity tokens or authorization codes.
 - Safe refresh behavior: `401` ends the session, `503` preserves credentials, and ambiguous transport failures require reauthentication.
 - Create Transaction flow using positive integer minor units and backend idempotency.
@@ -33,7 +34,7 @@ Implementation status reflects the current repository code. The preceding iOS ch
 
 ## Current boundaries
 
-Apple linking UI and consent flow are not implemented. Apple capability/provisioning and real-device validation are operational prerequisites, not evidence of implementation. Production migration, environment configuration, and deployment must be verified separately.
+Apple linking is implemented in the iOS client and backend. Apple capability/provisioning and real-device validation are operational prerequisites, not evidence of implementation. Production migration, environment configuration, and deployment must be verified separately.
 
 Categories, history, balance views, account selection in iOS, and offline reconciliation are not implemented in the iOS client. Server-to-server Apple notifications, Redis, workers, schedulers, and token blacklists remain outside the MVP.
 
