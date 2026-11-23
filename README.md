@@ -36,10 +36,11 @@ Implementation status reflects the current repository code. The preceding iOS ch
 
 Apple linking is implemented in the iOS client and backend. Apple capability/provisioning and real-device validation are operational prerequisites, not evidence of implementation. Production migration, environment configuration, and deployment must be verified separately.
 
-Categories, history, balance views, account selection in iOS, and offline reconciliation are not implemented in the iOS client. Server-to-server Apple notifications, Redis, workers, schedulers, and token blacklists remain outside the MVP.
+The iOS Debug MVP opt-in includes the personal balance, account history, dated balance checks, and retroactive expense recovery. Categories and general offline reconciliation are outside that flow. Server-to-server Apple notifications, Redis, workers, schedulers, and token blacklists remain outside the MVP.
 
 ## Key documents
 
+- [I3 retroactive expense recovery](architecture/i3-delivery.md)
 - [Authentication architecture](architecture/authentication.md)
 - [Transactions API](api/transactions.md)
 - [Current schema and ownership](database/postgresql-schema.md)
