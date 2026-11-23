@@ -27,3 +27,10 @@ Decisão do incremento I1-A, derivada de D1–D3 e da especificação v0.2.
 - O registro manual usa chave idempotente e revisão esperada. A API trava a conta própria. O trigger valida o início da cobertura, a hora do servidor, a moeda e o limite de centavos sob lock da conta MVP. O efeito avança a revisão e exige seu próprio recibo na confirmação pelo PostgreSQL.
 - O POST legado mantém o contrato e o replay para contas convencionais. Novas escritas antigas e alterações diretas de movimentos na conta ativa permanecem bloqueadas pelo trigger. A habilitação de adoção legada continua condicionada à auditoria.
 - O histórico devolve resumo, corte, revisão e até 50 registros em uma consulta. O cursor fixa o corte e usa ocorrência com microssegundos e UUID em ordem decrescente. Mudança de revisão invalida a paginação. Para contas legadas sem revisão MVP, a versão de leitura é derivada das versões das linhas e serve somente para detectar alteração entre páginas.
+
+
+## Extensão no I5
+
+- A base tem versões imutáveis. A abertura materializa a versão 1. Suspensão e correção avançam a mesma revisão da conta e condicionam o commit ao recibo canônico. A aplicação da versão atualiza a projeção vigente na mesma transação.
+- As leituras apresentam saldo indisponível durante suspensão e recálculo indisponível quando o corte antecede o início vigente. As conferências preservam valores originais e identificam a base aplicável pela revisão da observação.
+- Se o novo início cruza um dia sem hora, as cifras afetadas da prévia ficam indisponíveis até que o titular confirme uma hora dentro do intervalo original. A decisão usa o intervalo persistido e o relógio do servidor. A suspensão permite essa escrita auditada e protege a cobertura contra novas operações dependentes da base.

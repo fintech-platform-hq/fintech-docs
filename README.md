@@ -36,11 +36,12 @@ Implementation status reflects the current repository code. The preceding iOS ch
 
 Apple linking is implemented in the iOS client and backend. Apple capability/provisioning and real-device validation are operational prerequisites, not evidence of implementation. Production migration, environment configuration, and deployment must be verified separately.
 
-The iOS Debug MVP opt-in includes the personal balance, account history, dated balance checks, retroactive expense recovery, and audited corrections, invalidations and check replacements. Categories and general offline reconciliation are outside that flow. Server-to-server Apple notifications, Redis, workers, schedulers, and token blacklists remain outside the MVP.
+The iOS Debug MVP opt-in includes the personal balance, account history, dated balance checks, retroactive expense recovery, audited corrections, invalidations, check replacements, and opening balance review. Categories and general offline reconciliation are outside that flow. Server-to-server Apple notifications, Redis, workers, schedulers, and token blacklists remain outside the MVP.
 
 ## Key documents
 
 - [I4 audited corrections and check replacement](architecture/i4-delivery.md)
+- [I5 opening balance correction and journey verification](architecture/i5-delivery.md)
 - [I3 retroactive expense recovery](architecture/i3-delivery.md)
 - [Authentication architecture](architecture/authentication.md)
 - [Transactions API](api/transactions.md)
