@@ -22,4 +22,8 @@ Decisão do incremento I1-A, derivada de D1–D3 e da especificação v0.2.
 | Q02/Q03 · Integridade | Recibo canônico, exclusão mútua e bloqueio do escritor legado; integração PostgreSQL e teste de reenvio em memória no iOS |
 | Jornada iOS | Autenticação existente, formulário nativo de confirmação e leitura com estados explícitos; build, testes e fluxo HTTPS isolado |
 
-I1-B contempla lançamento compatível com revisão e cobertura, histórico integrado e recuperação persistente da intenção no iOS. A habilitação legada permanece condicionada à auditoria mesmo após I1-B.
+## Extensão no I1-B
+
+- O registro manual usa chave idempotente e revisão esperada. A API trava a conta própria. O trigger valida o início da cobertura, a hora do servidor, a moeda e o limite de centavos sob lock da conta MVP. O efeito avança a revisão e exige seu próprio recibo na confirmação pelo PostgreSQL.
+- O POST legado mantém o contrato e o replay para contas convencionais. Novas escritas antigas e alterações diretas de movimentos na conta ativa permanecem bloqueadas pelo trigger. A habilitação de adoção legada continua condicionada à auditoria.
+- O histórico devolve resumo, corte, revisão e até 50 registros em uma consulta. O cursor fixa o corte e usa ocorrência com microssegundos e UUID em ordem decrescente. Mudança de revisão invalida a paginação. Para contas legadas sem revisão MVP, a versão de leitura é derivada das versões das linhas e serve somente para detectar alteração entre páginas.
