@@ -13,7 +13,7 @@ Apple linking is explicit, optional, and supported by both the backend and iOS c
 
 ## Implemented flow
 
-Authentication establishes one Fintech session. Authenticated account and transaction requests derive ownership from the JWT principal; client payloads cannot select another user. PostgreSQL is the source of truth for confirmed financial writes.
+Authentication establishes one Lenver session. Authenticated account and transaction requests derive ownership from the JWT principal; client payloads cannot select another user. PostgreSQL is the source of truth for confirmed financial writes.
 
 ## Not implemented in the iOS product
 
