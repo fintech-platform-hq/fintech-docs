@@ -1,0 +1,135 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1430" height="2002" viewBox="0 0 1430 2002" role="img" aria-labelledby="titulo">
+<title id="titulo">AP05 · Accept deletion and coordinate effects</title>
+<rect width="1430" height="2002" fill="#fff"/>
+<g font-family="Arial, sans-serif">
+<text x="48" y="36" fill="#526f83" font-size="14" font-weight="700" text-anchor="start">LENVER / MF03.1     ACTIVITY DIAGRAM</text>
+<text x="48" y="76" fill="#162d43" font-size="30" font-weight="700" text-anchor="start">AP05 · Accept deletion and coordinate effects</text>
+<line x1="702" y1="101" x2="702" y2="1964" stroke="#d9e4ed"/>
+<text x="725" y="106" fill="#162d43" font-size="17" font-weight="700" text-anchor="start">Decisions · branch conditions</text>
+<g id="AP05-01" data-from="i" data-to="s"><path d="M 275 153 V 202" fill="none" stroke="#12605c" stroke-width="2" /><polygon points="275,207 271,198 279,198" fill="#12605c"/><rect x="284" y="187" width="22" height="16" rx="3" fill="#fff"/><text x="286" y="200" fill="#12605c" font-size="12" font-weight="700" text-anchor="start">01</text></g>
+<g id="AP05-02" data-from="s" data-to="v"><path d="M 275 297 V 343" fill="none" stroke="#12605c" stroke-width="2" /><polygon points="275,348 271,339 279,339" fill="#12605c"/><rect x="284" y="299" width="22" height="16" rx="3" fill="#fff"/><text x="286" y="312" fill="#12605c" font-size="12" font-weight="700" text-anchor="start">02</text></g>
+<g id="AP05-03" data-from="v" data-to="p"><path d="M 275 380 V 455" fill="none" stroke="#12605c" stroke-width="2" /><polygon points="275,460 271,451 279,451" fill="#12605c"/><rect x="284" y="411" width="22" height="16" rx="3" fill="#fff"/><text x="286" y="424" fill="#12605c" font-size="12" font-weight="700" text-anchor="start">03</text></g>
+<g id="AP05-04" data-from="v" data-to="m_x"><path d="M 285 370 H 506 V 588 H 296" fill="none" stroke="#536783" stroke-width="2" /><polygon points="291,588 300,584 300,592" fill="#536783"/><rect x="509" y="463" width="22" height="16" rx="3" fill="#fff"/><text x="511" y="476" fill="#536783" font-size="12" font-weight="700" text-anchor="start">04</text></g>
+<g id="AP05-05" data-from="p" data-to="e"><path d="M 285 482 H 638 V 812 H 475" fill="none" stroke="#536783" stroke-width="2" /><polygon points="470,812 479,808 479,816" fill="#536783"/><rect x="641" y="631" width="22" height="16" rx="3" fill="#fff"/><text x="643" y="644" fill="#536783" font-size="12" font-weight="700" text-anchor="start">05</text></g>
+<g id="AP05-06" data-from="p" data-to="m_x"><path d="M 275 492 V 567" fill="none" stroke="#12605c" stroke-width="2" /><polygon points="275,572 271,563 279,563" fill="#12605c"/><rect x="284" y="523" width="22" height="16" rx="3" fill="#fff"/><text x="286" y="536" fill="#12605c" font-size="12" font-weight="700" text-anchor="start">06</text></g>
+<g id="AP05-07" data-from="x" data-to="m_z"><path d="M 470 706 H 660 V 1820 H 296" fill="none" stroke="#536783" stroke-width="2" /><polygon points="291,1820 300,1816 300,1824" fill="#536783"/><rect x="663" y="1247" width="22" height="16" rx="3" fill="#fff"/><text x="665" y="1260" fill="#536783" font-size="12" font-weight="700" text-anchor="start">07</text></g>
+<g id="AP05-08" data-from="e" data-to="g"><path d="M 275 857 V 903" fill="none" stroke="#12605c" stroke-width="2" /><polygon points="275,908 271,899 279,899" fill="#12605c"/><rect x="284" y="859" width="22" height="16" rx="3" fill="#fff"/><text x="286" y="872" fill="#12605c" font-size="12" font-weight="700" text-anchor="start">08</text></g>
+<g id="AP05-09" data-from="g" data-to="b"><path d="M 275 940 V 986" fill="none" stroke="#12605c" stroke-width="2" /><polygon points="275,991 271,982 279,982" fill="#12605c"/><rect x="284" y="971" width="22" height="16" rx="3" fill="#fff"/><text x="286" y="984" fill="#12605c" font-size="12" font-weight="700" text-anchor="start">09</text></g>
+<g id="AP05-10" data-from="g" data-to="r"><path d="M 285 930 H 528 V 1148 H 475" fill="none" stroke="#536783" stroke-width="2" /><polygon points="470,1148 479,1144 479,1152" fill="#536783"/><rect x="531" y="1023" width="22" height="16" rx="3" fill="#fff"/><text x="533" y="1036" fill="#536783" font-size="12" font-weight="700" text-anchor="start">10</text></g>
+<g id="AP05-11" data-from="b" data-to="d"><path d="M 470 1042 H 550 V 1260 H 475" fill="none" stroke="#536783" stroke-width="2" /><polygon points="470,1260 479,1256 479,1264" fill="#536783"/><rect x="553" y="1135" width="22" height="16" rx="3" fill="#fff"/><text x="555" y="1148" fill="#536783" font-size="12" font-weight="700" text-anchor="start">11</text></g>
+<g id="AP05-12" data-from="r" data-to="m_o"><path d="M 470 1154 H 572 V 1372 H 296" fill="none" stroke="#536783" stroke-width="2" /><polygon points="291,1372 300,1368 300,1376" fill="#536783"/><rect x="575" y="1247" width="22" height="16" rx="3" fill="#fff"/><text x="577" y="1260" fill="#536783" font-size="12" font-weight="700" text-anchor="start">12</text></g>
+<g id="AP05-13" data-from="d" data-to="m_o"><path d="M 275 1305 V 1351" fill="none" stroke="#12605c" stroke-width="2" /><polygon points="275,1356 271,1347 279,1347" fill="#12605c"/><rect x="284" y="1307" width="22" height="16" rx="3" fill="#fff"/><text x="286" y="1320" fill="#12605c" font-size="12" font-weight="700" text-anchor="start">13</text></g>
+<g id="AP05-14" data-from="o" data-to="k"><path d="M 275 1500 V 1546" fill="none" stroke="#12605c" stroke-width="2" /><polygon points="275,1551 271,1542 279,1542" fill="#12605c"/><rect x="284" y="1531" width="22" height="16" rx="3" fill="#fff"/><text x="286" y="1544" fill="#12605c" font-size="12" font-weight="700" text-anchor="start">14</text></g>
+<g id="AP05-15" data-from="o" data-to="u"><path d="M 285 1490 H 594 V 1708 H 475" fill="none" stroke="#536783" stroke-width="2" /><polygon points="470,1708 479,1704 479,1712" fill="#536783"/><rect x="597" y="1583" width="22" height="16" rx="3" fill="#fff"/><text x="599" y="1596" fill="#536783" font-size="12" font-weight="700" text-anchor="start">15</text></g>
+<g id="AP05-16" data-from="k" data-to="m_z"><path d="M 470 1602 H 616 V 1815 H 291" fill="none" stroke="#536783" stroke-width="2" /><polygon points="286,1815 295,1811 295,1819" fill="#536783"/><rect x="619" y="1692" width="22" height="16" rx="3" fill="#fff"/><text x="621" y="1705" fill="#536783" font-size="12" font-weight="700" text-anchor="start">16</text></g>
+<g id="AP05-17" data-from="u" data-to="m_z"><path d="M 275 1753 V 1799" fill="none" stroke="#12605c" stroke-width="2" /><polygon points="275,1804 271,1795 279,1795" fill="#12605c"/><rect x="284" y="1755" width="22" height="16" rx="3" fill="#fff"/><text x="286" y="1768" fill="#12605c" font-size="12" font-weight="700" text-anchor="start">17</text></g>
+<g id="AP05-18" data-from="m_x" data-to="x"><path d="M 275 604 V 650" fill="none" stroke="#12605c" stroke-width="2" /><polygon points="275,655 271,646 279,646" fill="#12605c"/><rect x="284" y="635" width="22" height="16" rx="3" fill="#fff"/><text x="286" y="648" fill="#12605c" font-size="12" font-weight="700" text-anchor="start">18</text></g>
+<g id="AP05-19" data-from="m_o" data-to="o"><path d="M 275 1388 V 1463" fill="none" stroke="#12605c" stroke-width="2" /><polygon points="275,1468 271,1459 279,1459" fill="#12605c"/><rect x="284" y="1419" width="22" height="16" rx="3" fill="#fff"/><text x="286" y="1432" fill="#12605c" font-size="12" font-weight="700" text-anchor="start">19</text></g>
+<g id="AP05-20" data-from="m_z" data-to="z"><path d="M 275 1836 V 1913" fill="none" stroke="#12605c" stroke-width="2" /><polygon points="275,1918 271,1909 279,1909" fill="#12605c"/><rect x="284" y="1867" width="22" height="16" rx="3" fill="#fff"/><text x="286" y="1880" fill="#12605c" font-size="12" font-weight="700" text-anchor="start">20</text></g>
+<g id="AP05-i" data-kind="initial">
+<circle cx="275" cy="140" r="12" fill="#162d43" stroke="#162d43" stroke-width="2"/>
+<text x="255" y="146" fill="#162d43" font-size="14" font-weight="400" text-anchor="end">Entry</text>
+</g>
+<g id="AP05-s" data-kind="action">
+<rect x="80" y="207" width="390" height="90" rx="13" fill="#eff6fa" stroke="#355a71" stroke-width="2"/>
+<text x="275" y="228" fill="#526f83" font-size="12" font-weight="700" text-anchor="middle">Account holder</text>
+<text x="275" y="264" fill="#162d43" font-size="15" font-weight="400" text-anchor="middle">Review consequences, reauthenticate and decide</text>
+</g>
+<g id="AP05-v" data-kind="decision">
+<path d="M275 348 l16 16 -16 16 -16 -16 Z" fill="#fff4d4" stroke="#805d19" stroke-width="2"/>
+<text x="249" y="356" fill="#162d43" font-size="14" font-weight="400" text-anchor="end">Explicitly confirmed?</text>
+<text x="249" y="338" fill="#556982" font-size="12" font-weight="700" text-anchor="end">Account holder</text>
+</g>
+<g id="AP05-p" data-kind="decision">
+<path d="M275 460 l16 16 -16 16 -16 -16 Z" fill="#fff4d4" stroke="#805d19" stroke-width="2"/>
+<text x="249" y="468" fill="#162d43" font-size="14" font-weight="400" text-anchor="end">Protected original lookup</text>
+<text x="249" y="484" fill="#162d43" font-size="14" font-weight="400" text-anchor="end">authority established?</text>
+<text x="249" y="450" fill="#556982" font-size="12" font-weight="700" text-anchor="end">Client</text>
+</g>
+<g id="AP05-m_x" data-kind="merge">
+<path d="M275 572 l16 16 -16 16 -16 -16 Z" fill="#fff4d4" stroke="#805d19" stroke-width="2"/>
+<text x="249" y="562" fill="#556982" font-size="12" font-weight="700" text-anchor="end"></text>
+</g>
+<g id="AP05-x" data-kind="action">
+<rect x="80" y="655" width="390" height="90" rx="13" fill="#eff6fa" stroke="#355a71" stroke-width="2"/>
+<text x="275" y="676" fill="#526f83" font-size="12" font-weight="700" text-anchor="middle">Client</text>
+<text x="275" y="705" fill="#162d43" font-size="15" font-weight="400" text-anchor="middle">Stop before sending. Preserve access and data and</text>
+<text x="275" y="720" fill="#162d43" font-size="15" font-weight="400" text-anchor="middle">distinguish cancelation from preparation failure</text>
+</g>
+<g id="AP05-e" data-kind="action">
+<rect x="80" y="767" width="390" height="90" rx="13" fill="#eff6fa" stroke="#355a71" stroke-width="2"/>
+<text x="275" y="788" fill="#526f83" font-size="12" font-weight="700" text-anchor="middle">Client</text>
+<text x="275" y="824" fill="#162d43" font-size="15" font-weight="400" text-anchor="middle">Send the protected original deletion request</text>
+</g>
+<g id="AP05-g" data-kind="decision">
+<path d="M275 908 l16 16 -16 16 -16 -16 Z" fill="#fff4d4" stroke="#805d19" stroke-width="2"/>
+<text x="249" y="916" fill="#162d43" font-size="14" font-weight="400" text-anchor="end">Eligible at the acceptance</text>
+<text x="249" y="932" fill="#162d43" font-size="14" font-weight="400" text-anchor="end">barrier?</text>
+<text x="249" y="898" fill="#556982" font-size="12" font-weight="700" text-anchor="end">Lenver authority</text>
+</g>
+<g id="AP05-b" data-kind="action">
+<rect x="80" y="991" width="390" height="90" rx="13" fill="#eff6fa" stroke="#355a71" stroke-width="2"/>
+<text x="275" y="1012" fill="#526f83" font-size="12" font-weight="700" text-anchor="middle">Lenver authority</text>
+<text x="275" y="1041" fill="#162d43" font-size="15" font-weight="400" text-anchor="middle">Accept and close admission together. Include prior</text>
+<text x="275" y="1056" fill="#162d43" font-size="15" font-weight="400" text-anchor="middle">commits and reject later incompatible effects</text>
+</g>
+<g id="AP05-r" data-kind="action">
+<rect x="80" y="1103" width="390" height="90" rx="13" fill="#eff6fa" stroke="#355a71" stroke-width="2"/>
+<text x="275" y="1124" fill="#526f83" font-size="12" font-weight="700" text-anchor="middle">Lenver authority</text>
+<text x="275" y="1153" fill="#162d43" font-size="15" font-weight="400" text-anchor="middle">Preserve prior admission and record recoverable</text>
+<text x="275" y="1168" fill="#162d43" font-size="15" font-weight="400" text-anchor="middle">rejection without effect</text>
+</g>
+<g id="AP05-d" data-kind="action">
+<rect x="80" y="1215" width="390" height="90" rx="13" fill="#eff6fa" stroke="#355a71" stroke-width="2"/>
+<text x="275" y="1236" fill="#526f83" font-size="12" font-weight="700" text-anchor="middle">Lenver authority</text>
+<text x="275" y="1265" fill="#162d43" font-size="15" font-weight="400" text-anchor="middle">Coordinate sessions, data, local disposal and</text>
+<text x="275" y="1280" fill="#162d43" font-size="15" font-weight="400" text-anchor="middle">Apple. Record progress, partial or completion</text>
+</g>
+<g id="AP05-m_o" data-kind="merge">
+<path d="M275 1356 l16 16 -16 16 -16 -16 Z" fill="#fff4d4" stroke="#805d19" stroke-width="2"/>
+<text x="249" y="1346" fill="#556982" font-size="12" font-weight="700" text-anchor="end"></text>
+</g>
+<g id="AP05-o" data-kind="decision">
+<path d="M275 1468 l16 16 -16 16 -16 -16 Z" fill="#fff4d4" stroke="#805d19" stroke-width="2"/>
+<text x="249" y="1476" fill="#162d43" font-size="14" font-weight="400" text-anchor="end">Authoritative response for</text>
+<text x="249" y="1492" fill="#162d43" font-size="14" font-weight="400" text-anchor="end">this original received?</text>
+<text x="249" y="1458" fill="#556982" font-size="12" font-weight="700" text-anchor="end">Client</text>
+</g>
+<g id="AP05-k" data-kind="action">
+<rect x="80" y="1551" width="390" height="90" rx="13" fill="#eff6fa" stroke="#355a71" stroke-width="2"/>
+<text x="275" y="1572" fill="#526f83" font-size="12" font-weight="700" text-anchor="middle">Client</text>
+<text x="275" y="1601" fill="#162d43" font-size="15" font-weight="400" text-anchor="middle">Show only request status. Completion requires</text>
+<text x="275" y="1616" fill="#162d43" font-size="15" font-weight="400" text-anchor="middle">proof of all applicable effects</text>
+</g>
+<g id="AP05-u" data-kind="action">
+<rect x="80" y="1663" width="390" height="90" rx="13" fill="#eff6fa" stroke="#355a71" stroke-width="2"/>
+<text x="275" y="1684" fill="#526f83" font-size="12" font-weight="700" text-anchor="middle">Client</text>
+<text x="275" y="1713" fill="#162d43" font-size="15" font-weight="400" text-anchor="middle">Keep uncertainty and query through the protected</text>
+<text x="275" y="1728" fill="#162d43" font-size="15" font-weight="400" text-anchor="middle">proof in AP06</text>
+</g>
+<g id="AP05-m_z" data-kind="merge">
+<path d="M275 1804 l16 16 -16 16 -16 -16 Z" fill="#fff4d4" stroke="#805d19" stroke-width="2"/>
+<text x="249" y="1794" fill="#556982" font-size="12" font-weight="700" text-anchor="end"></text>
+</g>
+<g id="AP05-z" data-kind="final">
+<circle cx="275" cy="1932" r="12" fill="#ffffff" stroke="#162d43" stroke-width="2"/>
+<circle cx="275" cy="1932" r="7" fill="#162d43"/>
+<text x="255" y="1938" fill="#162d43" font-size="14" font-weight="400" text-anchor="end">End</text>
+</g>
+<text x="725" y="137" fill="#162d43" font-size="15" font-weight="700" text-anchor="start">03  Explicitly confirmed?</text>
+<text x="739" y="157" fill="#162d43" font-size="15" font-weight="400" text-anchor="start">[Confirmation and valid reauthentication]</text>
+<text x="725" y="188" fill="#162d43" font-size="15" font-weight="700" text-anchor="start">04  Explicitly confirmed?</text>
+<text x="739" y="208" fill="#162d43" font-size="15" font-weight="400" text-anchor="start">[Canceled or reauthentication missing]</text>
+<text x="725" y="239" fill="#162d43" font-size="15" font-weight="700" text-anchor="start">05  Protected original lookup authority established?</text>
+<text x="739" y="259" fill="#162d43" font-size="15" font-weight="400" text-anchor="start">[Proof available before send]</text>
+<text x="725" y="290" fill="#162d43" font-size="15" font-weight="700" text-anchor="start">06  Protected original lookup authority established?</text>
+<text x="739" y="310" fill="#162d43" font-size="15" font-weight="400" text-anchor="start">[No usable proof]</text>
+<text x="725" y="341" fill="#162d43" font-size="15" font-weight="700" text-anchor="start">09  Eligible at the acceptance barrier?</text>
+<text x="739" y="361" fill="#162d43" font-size="15" font-weight="400" text-anchor="start">[Compatible account and proof, admission open]</text>
+<text x="725" y="392" fill="#162d43" font-size="15" font-weight="700" text-anchor="start">10  Eligible at the acceptance barrier?</text>
+<text x="739" y="412" fill="#162d43" font-size="15" font-weight="400" text-anchor="start">[Definitive rejection of original]</text>
+<text x="725" y="443" fill="#162d43" font-size="15" font-weight="700" text-anchor="start">14  Authoritative response for this original received?</text>
+<text x="739" y="463" fill="#162d43" font-size="15" font-weight="400" text-anchor="start">[Original result demonstrated]</text>
+<text x="725" y="494" fill="#162d43" font-size="15" font-weight="700" text-anchor="start">15  Authoritative response for this original received?</text>
+<text x="739" y="514" fill="#162d43" font-size="15" font-weight="400" text-anchor="start">[Absent or inconclusive on either branch]</text>
+</g></svg>

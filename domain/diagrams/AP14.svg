@@ -1,0 +1,96 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1430" height="1442" viewBox="0 0 1430 1442" role="img" aria-labelledby="titulo">
+<title id="titulo">AP14 · Correct or restore a recovery link</title>
+<rect width="1430" height="1442" fill="#fff"/>
+<g font-family="Arial, sans-serif">
+<text x="48" y="36" fill="#526f83" font-size="14" font-weight="700" text-anchor="start">LENVER / MF03.1     ACTIVITY DIAGRAM</text>
+<text x="48" y="76" fill="#162d43" font-size="30" font-weight="700" text-anchor="start">AP14 · Correct or restore a recovery link</text>
+<line x1="702" y1="101" x2="702" y2="1404" stroke="#d9e4ed"/>
+<text x="725" y="106" fill="#162d43" font-size="17" font-weight="700" text-anchor="start">Decisions · branch conditions</text>
+<g id="AP14-01" data-from="i" data-to="s"><path d="M 275 153 V 202" fill="none" stroke="#12605c" stroke-width="2" /><polygon points="275,207 271,198 279,198" fill="#12605c"/><rect x="284" y="187" width="22" height="16" rx="3" fill="#fff"/><text x="286" y="200" fill="#12605c" font-size="12" font-weight="700" text-anchor="start">01</text></g>
+<g id="AP14-02" data-from="s" data-to="t"><path d="M 275 297 V 343" fill="none" stroke="#12605c" stroke-width="2" /><polygon points="275,348 271,339 279,339" fill="#12605c"/><rect x="284" y="299" width="22" height="16" rx="3" fill="#fff"/><text x="286" y="312" fill="#12605c" font-size="12" font-weight="700" text-anchor="start">02</text></g>
+<g id="AP14-03" data-from="t" data-to="q"><path d="M 275 380 V 426" fill="none" stroke="#12605c" stroke-width="2" /><polygon points="275,431 271,422 279,422" fill="#12605c"/><rect x="284" y="411" width="22" height="16" rx="3" fill="#fff"/><text x="286" y="424" fill="#12605c" font-size="12" font-weight="700" text-anchor="start">03</text></g>
+<g id="AP14-04" data-from="t" data-to="v"><path d="M 285 370 H 506 V 588 H 296" fill="none" stroke="#536783" stroke-width="2" /><polygon points="291,588 300,584 300,592" fill="#536783"/><rect x="509" y="463" width="22" height="16" rx="3" fill="#fff"/><text x="511" y="476" fill="#536783" font-size="12" font-weight="700" text-anchor="start">04</text></g>
+<g id="AP14-05" data-from="q" data-to="m_g"><path d="M 470 482 H 550 V 812 H 296" fill="none" stroke="#536783" stroke-width="2" /><polygon points="291,812 300,808 300,816" fill="#536783"/><rect x="553" y="631" width="22" height="16" rx="3" fill="#fff"/><text x="555" y="644" fill="#536783" font-size="12" font-weight="700" text-anchor="start">05</text></g>
+<g id="AP14-06" data-from="v" data-to="c"><path d="M 275 604 V 650" fill="none" stroke="#12605c" stroke-width="2" /><polygon points="275,655 271,646 279,646" fill="#12605c"/><rect x="284" y="635" width="22" height="16" rx="3" fill="#fff"/><text x="286" y="648" fill="#12605c" font-size="12" font-weight="700" text-anchor="start">06</text></g>
+<g id="AP14-07" data-from="v" data-to="r"><path d="M 285 594 H 572 V 1148 H 475" fill="none" stroke="#536783" stroke-width="2" /><polygon points="470,1148 479,1144 479,1152" fill="#536783"/><rect x="575" y="855" width="22" height="16" rx="3" fill="#fff"/><text x="577" y="868" fill="#536783" font-size="12" font-weight="700" text-anchor="start">07</text></g>
+<g id="AP14-08" data-from="c" data-to="m_g"><path d="M 275 745 V 791" fill="none" stroke="#12605c" stroke-width="2" /><polygon points="275,796 271,787 279,787" fill="#12605c"/><rect x="284" y="747" width="22" height="16" rx="3" fill="#fff"/><text x="286" y="760" fill="#12605c" font-size="12" font-weight="700" text-anchor="start">08</text></g>
+<g id="AP14-09" data-from="g" data-to="o"><path d="M 275 969 V 986" fill="none" stroke="#12605c" stroke-width="2" /><polygon points="275,991 271,982 279,982" fill="#12605c"/><rect x="284" y="971" width="22" height="16" rx="3" fill="#fff"/><text x="286" y="984" fill="#12605c" font-size="12" font-weight="700" text-anchor="start">09</text></g>
+<g id="AP14-10" data-from="o" data-to="m_z"><path d="M 470 1042 H 528 V 1260 H 296" fill="none" stroke="#536783" stroke-width="2" /><polygon points="291,1260 300,1256 300,1264" fill="#536783"/><rect x="531" y="1135" width="22" height="16" rx="3" fill="#fff"/><text x="533" y="1148" fill="#536783" font-size="12" font-weight="700" text-anchor="start">10</text></g>
+<g id="AP14-11" data-from="r" data-to="m_z"><path d="M 275 1193 V 1239" fill="none" stroke="#12605c" stroke-width="2" /><polygon points="275,1244 271,1235 279,1235" fill="#12605c"/><rect x="284" y="1195" width="22" height="16" rx="3" fill="#fff"/><text x="286" y="1208" fill="#12605c" font-size="12" font-weight="700" text-anchor="start">11</text></g>
+<g id="AP14-12" data-from="m_g" data-to="g"><path d="M 275 828 V 874" fill="none" stroke="#12605c" stroke-width="2" /><polygon points="275,879 271,870 279,870" fill="#12605c"/><rect x="284" y="859" width="22" height="16" rx="3" fill="#fff"/><text x="286" y="872" fill="#12605c" font-size="12" font-weight="700" text-anchor="start">12</text></g>
+<g id="AP14-13" data-from="m_z" data-to="z"><path d="M 275 1276 V 1353" fill="none" stroke="#12605c" stroke-width="2" /><polygon points="275,1358 271,1349 279,1349" fill="#12605c"/><rect x="284" y="1307" width="22" height="16" rx="3" fill="#fff"/><text x="286" y="1320" fill="#12605c" font-size="12" font-weight="700" text-anchor="start">13</text></g>
+<g id="AP14-i" data-kind="initial">
+<circle cx="275" cy="140" r="12" fill="#162d43" stroke="#162d43" stroke-width="2"/>
+<text x="255" y="146" fill="#162d43" font-size="14" font-weight="400" text-anchor="end">Entry</text>
+</g>
+<g id="AP14-s" data-kind="action">
+<rect x="80" y="207" width="390" height="90" rx="13" fill="#eff6fa" stroke="#355a71" stroke-width="2"/>
+<text x="275" y="228" fill="#526f83" font-size="12" font-weight="700" text-anchor="middle">Account holder</text>
+<text x="275" y="257" fill="#162d43" font-size="15" font-weight="400" text-anchor="middle">Inspect trail, evidence and pair. Propose reasoned</text>
+<text x="275" y="272" fill="#162d43" font-size="15" font-weight="400" text-anchor="middle">decision with expected revision</text>
+</g>
+<g id="AP14-t" data-kind="decision">
+<path d="M275 348 l16 16 -16 16 -16 -16 Z" fill="#fff4d4" stroke="#805d19" stroke-width="2"/>
+<text x="249" y="356" fill="#162d43" font-size="14" font-weight="400" text-anchor="end">Withdrawing a current</text>
+<text x="249" y="372" fill="#162d43" font-size="14" font-weight="400" text-anchor="end">mistaken attribution?</text>
+<text x="249" y="338" fill="#556982" font-size="12" font-weight="700" text-anchor="end">Lenver authority</text>
+</g>
+<g id="AP14-q" data-kind="action">
+<rect x="80" y="431" width="390" height="90" rx="13" fill="#eff6fa" stroke="#355a71" stroke-width="2"/>
+<text x="275" y="452" fill="#526f83" font-size="12" font-weight="700" text-anchor="middle">Account holder</text>
+<text x="275" y="481" fill="#162d43" font-size="15" font-weight="400" text-anchor="middle">Review and confirm withdrawal while preserving</text>
+<text x="275" y="496" fill="#162d43" font-size="15" font-weight="400" text-anchor="middle">expense and evidence</text>
+</g>
+<g id="AP14-v" data-kind="decision">
+<path d="M275 572 l16 16 -16 16 -16 -16 Z" fill="#fff4d4" stroke="#805d19" stroke-width="2"/>
+<text x="249" y="580" fill="#162d43" font-size="14" font-weight="400" text-anchor="end">Same withdrawn pair and</text>
+<text x="249" y="596" fill="#162d43" font-size="14" font-weight="400" text-anchor="end">current calculable check</text>
+<text x="249" y="612" fill="#162d43" font-size="14" font-weight="400" text-anchor="end">with eligible proof?</text>
+<text x="249" y="562" fill="#556982" font-size="12" font-weight="700" text-anchor="end">Lenver authority</text>
+</g>
+<g id="AP14-c" data-kind="action">
+<rect x="80" y="655" width="390" height="90" rx="13" fill="#eff6fa" stroke="#355a71" stroke-width="2"/>
+<text x="275" y="676" fill="#526f83" font-size="12" font-weight="700" text-anchor="middle">Account holder</text>
+<text x="275" y="705" fill="#162d43" font-size="15" font-weight="400" text-anchor="middle">Review and explicitly restore as a new decision on</text>
+<text x="275" y="720" fill="#162d43" font-size="15" font-weight="400" text-anchor="middle">the same pair</text>
+</g>
+<g id="AP14-m_g" data-kind="merge">
+<path d="M275 796 l16 16 -16 16 -16 -16 Z" fill="#fff4d4" stroke="#805d19" stroke-width="2"/>
+<text x="249" y="786" fill="#556982" font-size="12" font-weight="700" text-anchor="end"></text>
+</g>
+<g id="AP14-g" data-kind="action">
+<rect x="80" y="879" width="390" height="90" rx="13" fill="#eff6fa" stroke="#355a71" stroke-width="2"/>
+<text x="275" y="900" fill="#526f83" font-size="12" font-weight="700" text-anchor="middle">Lenver authority</text>
+<text x="275" y="929" fill="#162d43" font-size="15" font-weight="400" text-anchor="middle">AP12 commits audited pair decision or recovers its</text>
+<text x="275" y="944" fill="#162d43" font-size="15" font-weight="400" text-anchor="middle">own receipt without repeating effect</text>
+</g>
+<g id="AP14-o" data-kind="action">
+<rect x="80" y="991" width="390" height="90" rx="13" fill="#eff6fa" stroke="#355a71" stroke-width="2"/>
+<text x="275" y="1012" fill="#526f83" font-size="12" font-weight="700" text-anchor="middle">Client</text>
+<text x="275" y="1041" fill="#162d43" font-size="15" font-weight="400" text-anchor="middle">Receive AP12 result and reread attribution with</text>
+<text x="275" y="1056" fill="#162d43" font-size="15" font-weight="400" text-anchor="middle">balance and residual unchanged</text>
+</g>
+<g id="AP14-r" data-kind="action">
+<rect x="80" y="1103" width="390" height="90" rx="13" fill="#eff6fa" stroke="#355a71" stroke-width="2"/>
+<text x="275" y="1124" fill="#526f83" font-size="12" font-weight="700" text-anchor="middle">Client</text>
+<text x="275" y="1153" fill="#162d43" font-size="15" font-weight="400" text-anchor="middle">Review proof. A different pair requires its own</text>
+<text x="275" y="1168" fill="#162d43" font-size="15" font-weight="400" text-anchor="middle">AP10 decision</text>
+</g>
+<g id="AP14-m_z" data-kind="merge">
+<path d="M275 1244 l16 16 -16 16 -16 -16 Z" fill="#fff4d4" stroke="#805d19" stroke-width="2"/>
+<text x="249" y="1234" fill="#556982" font-size="12" font-weight="700" text-anchor="end"></text>
+</g>
+<g id="AP14-z" data-kind="final">
+<circle cx="275" cy="1372" r="12" fill="#ffffff" stroke="#162d43" stroke-width="2"/>
+<circle cx="275" cy="1372" r="7" fill="#162d43"/>
+<text x="255" y="1378" fill="#162d43" font-size="14" font-weight="400" text-anchor="end">End</text>
+</g>
+<text x="725" y="137" fill="#162d43" font-size="15" font-weight="700" text-anchor="start">03  Withdrawing a current mistaken attribution?</text>
+<text x="739" y="157" fill="#162d43" font-size="15" font-weight="400" text-anchor="start">[Authorized holder and same active pair]</text>
+<text x="725" y="188" fill="#162d43" font-size="15" font-weight="700" text-anchor="start">04  Withdrawing a current mistaken attribution?</text>
+<text x="739" y="208" fill="#162d43" font-size="15" font-weight="400" text-anchor="start">[Proposed restoration]</text>
+<text x="725" y="239" fill="#162d43" font-size="15" font-weight="700" text-anchor="start">06  Same withdrawn pair and current calculable check with eligible proof?</text>
+<text x="739" y="259" fill="#162d43" font-size="15" font-weight="400" text-anchor="start">[Authorized holder, G04 and G09]</text>
+<text x="725" y="290" fill="#162d43" font-size="15" font-weight="700" text-anchor="start">07  Same withdrawn pair and current calculable check with eligible proof?</text>
+<text x="739" y="310" fill="#162d43" font-size="15" font-weight="400" text-anchor="start">[Conflicting proof, pair or state ineligible]</text>
+</g></svg>

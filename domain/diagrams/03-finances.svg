@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="674" viewBox="0 0 1280 674" role="img" aria-labelledby="titulo descricao">
+<title id="titulo">Baseline, transactions and history · Lenver</title>
+<desc id="descricao">UML use cases. Ellipses show objectives, solid lines show actor participation and the rectangle bounds Lenver.</desc>
+<g font-family="Arial, sans-serif">
+<rect width="1280" height="674" fill="#F7F8FA"/>
+<text x="52" y="55" font-size="16" font-weight="700" fill="#4D596A" text-anchor="start">LENVER  /  MF02</text>
+<text x="52" y="100" font-size="34" font-weight="700" fill="#182838" text-anchor="start">Baseline, transactions and history</text>
+<rect id="lenver" x="248" y="130" width="784" height="468" rx="12" fill="#FFFFFF" stroke="#7F8A99" stroke-width="2"/>
+<text x="275" y="165" font-size="18" font-weight="700" fill="#31465A" text-anchor="start">Lenver iOS and Lenver services</text>
+<g id="associacoes" fill="none" stroke="#667587" stroke-width="2.1" stroke-linecap="round">
+<path id="AT02-CU-008" data-actor="AT02" data-case="CU-008" d="M 138 348 L 363.0 215"/>
+<path id="AT02-CU-009" data-actor="AT02" data-case="CU-009" d="M 138 348 L 363.0 311"/>
+<path id="AT02-CU-010" data-actor="AT02" data-case="CU-010" d="M 138 348 L 363.0 407"/>
+<path id="AT02-CU-011" data-actor="AT02" data-case="CU-011" d="M 138 348 L 363.0 503"/>
+</g>
+<g id="CU-008" data-type="use-case">
+<ellipse cx="640" cy="215" rx="279" ry="35" fill="#EDF4F8" stroke="#31556D" stroke-width="2"/>
+<text x="640" y="210" font-size="13" font-weight="700" fill="#37546A" text-anchor="middle">CU-008</text>
+<text x="640" y="232" font-size="18" font-weight="700" fill="#182838" text-anchor="middle">Establish the financial baseline</text>
+</g>
+<g id="CU-009" data-type="use-case">
+<ellipse cx="640" cy="311" rx="279" ry="35" fill="#EDF4F8" stroke="#31556D" stroke-width="2"/>
+<text x="640" y="306" font-size="13" font-weight="700" fill="#37546A" text-anchor="middle">CU-009</text>
+<text x="640" y="328" font-size="18" font-weight="700" fill="#182838" text-anchor="middle">Resume financial tracking</text>
+</g>
+<g id="CU-010" data-type="use-case">
+<ellipse cx="640" cy="407" rx="279" ry="35" fill="#EDF4F8" stroke="#31556D" stroke-width="2"/>
+<text x="640" y="402" font-size="13" font-weight="700" fill="#37546A" text-anchor="middle">CU-010</text>
+<text x="640" y="424" font-size="18" font-weight="700" fill="#182838" text-anchor="middle">Record a routine transaction</text>
+</g>
+<g id="CU-011" data-type="use-case">
+<ellipse cx="640" cy="503" rx="279" ry="35" fill="#EDF4F8" stroke="#31556D" stroke-width="2"/>
+<text x="640" y="498" font-size="13" font-weight="700" fill="#37546A" text-anchor="middle">CU-011</text>
+<text x="640" y="520" font-size="18" font-weight="700" fill="#182838" text-anchor="middle">Read history and transaction versions</text>
+</g>
+<g id="AT02" data-type="actor">
+<circle cx="115" cy="323" r="11" fill="#F7F8FA" stroke="#243B50" stroke-width="2.5"/>
+<path d="M 115 335 V 362 M 92 348 H 138 M 98 386 L 115 362 L 132 386" fill="none" stroke="#243B50" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="115" y="410" font-size="16" font-weight="700" fill="#182838" text-anchor="middle">Authorized account holder</text>
+<text x="115" y="432" font-size="13" font-weight="400" fill="#4D596A" text-anchor="middle">AT02</text>
+</g>
+<g id="legenda">
+<path d="M 54 639 H 87" stroke="#667587" stroke-width="2.1"/>
+<text x="100" y="644" font-size="15" font-weight="400" fill="#4D596A" text-anchor="start">Actor participation</text>
+<text x="1228" y="644" font-size="15" font-weight="400" fill="#4D596A" text-anchor="end">C+A · approved scope</text>
+</g></g></svg>

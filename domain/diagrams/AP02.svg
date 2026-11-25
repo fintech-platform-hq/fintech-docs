@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1430" height="1106" viewBox="0 0 1430 1106" role="img" aria-labelledby="titulo">
+<title id="titulo">AP02 · Verify and recover access</title>
+<rect width="1430" height="1106" fill="#fff"/>
+<g font-family="Arial, sans-serif">
+<text x="48" y="36" fill="#526f83" font-size="14" font-weight="700" text-anchor="start">LENVER / MF03.1     ACTIVITY DIAGRAM</text>
+<text x="48" y="76" fill="#162d43" font-size="30" font-weight="700" text-anchor="start">AP02 · Verify and recover access</text>
+<line x1="702" y1="101" x2="702" y2="1068" stroke="#d9e4ed"/>
+<text x="725" y="106" fill="#162d43" font-size="17" font-weight="700" text-anchor="start">Decisions · branch conditions</text>
+<g id="AP02-01" data-from="i" data-to="s"><path d="M 275 153 V 202" fill="none" stroke="#12605c" stroke-width="2" /><polygon points="275,207 271,198 279,198" fill="#12605c"/><rect x="284" y="187" width="22" height="16" rx="3" fill="#fff"/><text x="286" y="200" fill="#12605c" font-size="12" font-weight="700" text-anchor="start">01</text></g>
+<g id="AP02-02" data-from="s" data-to="e"><path d="M 275 297 V 314" fill="none" stroke="#12605c" stroke-width="2" /><polygon points="275,319 271,310 279,310" fill="#12605c"/><rect x="284" y="299" width="22" height="16" rx="3" fill="#fff"/><text x="286" y="312" fill="#12605c" font-size="12" font-weight="700" text-anchor="start">02</text></g>
+<g id="AP02-03" data-from="e" data-to="v"><path d="M 275 409 V 455" fill="none" stroke="#12605c" stroke-width="2" /><polygon points="275,460 271,451 279,451" fill="#12605c"/><rect x="284" y="411" width="22" height="16" rx="3" fill="#fff"/><text x="286" y="424" fill="#12605c" font-size="12" font-weight="700" text-anchor="start">03</text></g>
+<g id="AP02-04" data-from="v" data-to="c"><path d="M 275 492 V 538" fill="none" stroke="#12605c" stroke-width="2" /><polygon points="275,543 271,534 279,534" fill="#12605c"/><rect x="284" y="523" width="22" height="16" rx="3" fill="#fff"/><text x="286" y="536" fill="#12605c" font-size="12" font-weight="700" text-anchor="start">04</text></g>
+<g id="AP02-05" data-from="v" data-to="r"><path d="M 285 482 H 528 V 812 H 475" fill="none" stroke="#536783" stroke-width="2" /><polygon points="470,812 479,808 479,816" fill="#536783"/><rect x="531" y="631" width="22" height="16" rx="3" fill="#fff"/><text x="533" y="644" fill="#536783" font-size="12" font-weight="700" text-anchor="start">05</text></g>
+<g id="AP02-06" data-from="c" data-to="t"><path d="M 275 633 V 650" fill="none" stroke="#12605c" stroke-width="2" /><polygon points="275,655 271,646 279,646" fill="#12605c"/><rect x="284" y="635" width="22" height="16" rx="3" fill="#fff"/><text x="286" y="648" fill="#12605c" font-size="12" font-weight="700" text-anchor="start">06</text></g>
+<g id="AP02-07" data-from="t" data-to="m_z"><path d="M 470 706 H 506 V 924 H 296" fill="none" stroke="#536783" stroke-width="2" /><polygon points="291,924 300,920 300,928" fill="#536783"/><rect x="509" y="799" width="22" height="16" rx="3" fill="#fff"/><text x="511" y="812" fill="#536783" font-size="12" font-weight="700" text-anchor="start">07</text></g>
+<g id="AP02-08" data-from="r" data-to="m_z"><path d="M 275 857 V 903" fill="none" stroke="#12605c" stroke-width="2" /><polygon points="275,908 271,899 279,899" fill="#12605c"/><rect x="284" y="859" width="22" height="16" rx="3" fill="#fff"/><text x="286" y="872" fill="#12605c" font-size="12" font-weight="700" text-anchor="start">08</text></g>
+<g id="AP02-09" data-from="m_z" data-to="z"><path d="M 275 940 V 1017" fill="none" stroke="#12605c" stroke-width="2" /><polygon points="275,1022 271,1013 279,1013" fill="#12605c"/><rect x="284" y="971" width="22" height="16" rx="3" fill="#fff"/><text x="286" y="984" fill="#12605c" font-size="12" font-weight="700" text-anchor="start">09</text></g>
+<g id="AP02-i" data-kind="initial">
+<circle cx="275" cy="140" r="12" fill="#162d43" stroke="#162d43" stroke-width="2"/>
+<text x="255" y="146" fill="#162d43" font-size="14" font-weight="400" text-anchor="end">Entry</text>
+</g>
+<g id="AP02-s" data-kind="action">
+<rect x="80" y="207" width="390" height="90" rx="13" fill="#eff6fa" stroke="#355a71" stroke-width="2"/>
+<text x="275" y="228" fill="#526f83" font-size="12" font-weight="700" text-anchor="middle">Account holder</text>
+<text x="275" y="257" fill="#162d43" font-size="15" font-weight="400" text-anchor="middle">Request purpose-specific proof or choose a usable</text>
+<text x="275" y="272" fill="#162d43" font-size="15" font-weight="400" text-anchor="middle">method</text>
+</g>
+<g id="AP02-e" data-kind="action">
+<rect x="80" y="319" width="390" height="90" rx="13" fill="#eff6fa" stroke="#355a71" stroke-width="2"/>
+<text x="275" y="340" fill="#526f83" font-size="12" font-weight="700" text-anchor="middle">Lenver authority</text>
+<text x="275" y="369" fill="#162d43" font-size="15" font-weight="400" text-anchor="middle">Return neutral recovery response. Issue proof only</text>
+<text x="275" y="384" fill="#162d43" font-size="15" font-weight="400" text-anchor="middle">when eligible</text>
+</g>
+<g id="AP02-v" data-kind="decision">
+<path d="M275 460 l16 16 -16 16 -16 -16 Z" fill="#fff4d4" stroke="#805d19" stroke-width="2"/>
+<text x="249" y="468" fill="#162d43" font-size="14" font-weight="400" text-anchor="end">Valid unused proof for this</text>
+<text x="249" y="484" fill="#162d43" font-size="14" font-weight="400" text-anchor="end">holder and purpose?</text>
+<text x="249" y="450" fill="#556982" font-size="12" font-weight="700" text-anchor="end">Lenver authority</text>
+</g>
+<g id="AP02-c" data-kind="action">
+<rect x="80" y="543" width="390" height="90" rx="13" fill="#eff6fa" stroke="#355a71" stroke-width="2"/>
+<text x="275" y="564" fill="#526f83" font-size="12" font-weight="700" text-anchor="middle">Lenver authority</text>
+<text x="275" y="593" fill="#162d43" font-size="15" font-weight="400" text-anchor="middle">Consume proof and commit verification or access</text>
+<text x="275" y="608" fill="#162d43" font-size="15" font-weight="400" text-anchor="middle">recovery for the same holder</text>
+</g>
+<g id="AP02-t" data-kind="action">
+<rect x="80" y="655" width="390" height="90" rx="13" fill="#eff6fa" stroke="#355a71" stroke-width="2"/>
+<text x="275" y="676" fill="#526f83" font-size="12" font-weight="700" text-anchor="middle">Client</text>
+<text x="275" y="705" fill="#162d43" font-size="15" font-weight="400" text-anchor="middle">Recheck scope after verification. After recovery</text>
+<text x="275" y="720" fill="#162d43" font-size="15" font-weight="400" text-anchor="middle">return to sign-in</text>
+</g>
+<g id="AP02-r" data-kind="action">
+<rect x="80" y="767" width="390" height="90" rx="13" fill="#eff6fa" stroke="#355a71" stroke-width="2"/>
+<text x="275" y="788" fill="#526f83" font-size="12" font-weight="700" text-anchor="middle">Client</text>
+<text x="275" y="817" fill="#162d43" font-size="15" font-weight="400" text-anchor="middle">Keep access guard and offer eligible proof. Zero</text>
+<text x="275" y="832" fill="#162d43" font-size="15" font-weight="400" text-anchor="middle">usable methods remains LAC-01</text>
+</g>
+<g id="AP02-m_z" data-kind="merge">
+<path d="M275 908 l16 16 -16 16 -16 -16 Z" fill="#fff4d4" stroke="#805d19" stroke-width="2"/>
+<text x="249" y="898" fill="#556982" font-size="12" font-weight="700" text-anchor="end"></text>
+</g>
+<g id="AP02-z" data-kind="final">
+<circle cx="275" cy="1036" r="12" fill="#ffffff" stroke="#162d43" stroke-width="2"/>
+<circle cx="275" cy="1036" r="7" fill="#162d43"/>
+<text x="255" y="1042" fill="#162d43" font-size="14" font-weight="400" text-anchor="end">End</text>
+</g>
+<text x="725" y="137" fill="#162d43" font-size="15" font-weight="700" text-anchor="start">04  Valid unused proof for this holder and purpose?</text>
+<text x="739" y="157" fill="#162d43" font-size="15" font-weight="400" text-anchor="start">[Yes]</text>
+<text x="725" y="188" fill="#162d43" font-size="15" font-weight="700" text-anchor="start">05  Valid unused proof for this holder and purpose?</text>
+<text x="739" y="208" fill="#162d43" font-size="15" font-weight="400" text-anchor="start">[No or unconfirmed]</text>
+</g></svg>

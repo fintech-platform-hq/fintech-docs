@@ -11,12 +11,23 @@ The published source includes email/password authentication, Sign in with Apple 
 
 Live deployment, legacy-data adoption, and Apple capability and physical-device checks have separate verification requirements. The [backend OpenAPI contract](https://github.com/lenver-hq/lenver-backend/blob/main/openapi.yaml) describes the published API.
 
-## Documents
+## Approved functional modeling
+
+- [MF01.1 domain, relationships and invariants](domain/functional-model.md)
+- [Bilingual glossary and UX terms](domain/glossary.md)
+- [A01–A12 decisions and S01–S11 scenarios](domain/functional-scenarios.md)
+- [MF02 use-case catalog and editable UML](domain/use-cases.md)
+- [MF03.1 v1.0.0 behavioral model](domain/behavior.md)
+- [Traceability, implementation evidence and open validation](domain/functional-traceability.md)
+
+The models record approved product behavior. The technical documents below describe implementation at their respective delivery stages. Release and operational validation have separate evidence.
+
+## Technical and historical documents
 
 - [Authentication architecture](architecture/authentication.md)
 - [Transactions API](api/transactions.md)
 - [PostgreSQL schema and ownership](database/postgresql-schema.md)
-- [Domain definition](domain/domain-definition.md)
+- [Early implementation domain snapshot](domain/domain-definition.md)
 - [Backend idempotency](backend/idempotency-strategy.md)
 - [iOS transaction creation](ios/create-transaction.md)
 - [I3 retroactive expense recovery](architecture/i3-delivery.md)
@@ -25,4 +36,4 @@ Live deployment, legacy-data adoption, and Apple capability and physical-device 
 
 ## Documentation policy
 
-Private product decisions, planning, and evidence are maintained in Brazilian Portuguese in Confluence. This repository is intended for selected public documentation in English after editorial and sensitivity review. The approved bilingual glossary governs term equivalence. Full translation and subsequent publication are separate deliverables.
+Private product decisions, planning, and evidence are maintained in Brazilian Portuguese in Confluence. This repository is intended for selected public documentation in English after editorial and sensitivity review. The approved bilingual glossary governs term equivalence. The functional models above are the curated English reference for the approved baseline.

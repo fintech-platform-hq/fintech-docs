@@ -1,0 +1,100 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1430" height="1442" viewBox="0 0 1430 1442" role="img" aria-labelledby="titulo">
+<title id="titulo">AP08 · Record or change a transaction</title>
+<rect width="1430" height="1442" fill="#fff"/>
+<g font-family="Arial, sans-serif">
+<text x="48" y="36" fill="#526f83" font-size="14" font-weight="700" text-anchor="start">LENVER / MF03.1     ACTIVITY DIAGRAM</text>
+<text x="48" y="76" fill="#162d43" font-size="30" font-weight="700" text-anchor="start">AP08 · Record or change a transaction</text>
+<line x1="702" y1="101" x2="702" y2="1404" stroke="#d9e4ed"/>
+<text x="725" y="106" fill="#162d43" font-size="17" font-weight="700" text-anchor="start">Decisions · branch conditions</text>
+<g id="AP08-01" data-from="i" data-to="s"><path d="M 275 153 V 231" fill="none" stroke="#12605c" stroke-width="2" /><polygon points="275,236 271,227 279,227" fill="#12605c"/><rect x="284" y="187" width="22" height="16" rx="3" fill="#fff"/><text x="286" y="200" fill="#12605c" font-size="12" font-weight="700" text-anchor="start">01</text></g>
+<g id="AP08-02" data-from="s" data-to="p"><path d="M 275 268 V 343" fill="none" stroke="#12605c" stroke-width="2" /><polygon points="275,348 271,339 279,339" fill="#12605c"/><rect x="284" y="299" width="22" height="16" rx="3" fill="#fff"/><text x="286" y="312" fill="#12605c" font-size="12" font-weight="700" text-anchor="start">02</text></g>
+<g id="AP08-03" data-from="s" data-to="v"><path d="M 285 258 H 506 V 476 H 296" fill="none" stroke="#536783" stroke-width="2" /><polygon points="291,476 300,472 300,480" fill="#536783"/><rect x="509" y="351" width="22" height="16" rx="3" fill="#fff"/><text x="511" y="364" fill="#536783" font-size="12" font-weight="700" text-anchor="start">03</text></g>
+<g id="AP08-04" data-from="p" data-to="m_f"><path d="M 285 370 H 528 V 588 H 296" fill="none" stroke="#536783" stroke-width="2" /><polygon points="291,588 300,584 300,592" fill="#536783"/><rect x="531" y="463" width="22" height="16" rx="3" fill="#fff"/><text x="533" y="476" fill="#536783" font-size="12" font-weight="700" text-anchor="start">04</text></g>
+<g id="AP08-05" data-from="p" data-to="m_r"><path d="M 281 374 H 594 V 1036 H 296" fill="none" stroke="#536783" stroke-width="2" /><polygon points="291,1036 300,1032 300,1040" fill="#536783"/><rect x="597" y="689" width="22" height="16" rx="3" fill="#fff"/><text x="599" y="702" fill="#536783" font-size="12" font-weight="700" text-anchor="start">05</text></g>
+<g id="AP08-06" data-from="v" data-to="m_f"><path d="M 275 492 V 567" fill="none" stroke="#12605c" stroke-width="2" /><polygon points="275,572 271,563 279,563" fill="#12605c"/><rect x="284" y="523" width="22" height="16" rx="3" fill="#fff"/><text x="286" y="536" fill="#12605c" font-size="12" font-weight="700" text-anchor="start">06</text></g>
+<g id="AP08-07" data-from="v" data-to="m_r"><path d="M 285 482 H 572 V 1031 H 291" fill="none" stroke="#536783" stroke-width="2" /><polygon points="286,1031 295,1027 295,1035" fill="#536783"/><rect x="575" y="740" width="22" height="16" rx="3" fill="#fff"/><text x="577" y="753" fill="#536783" font-size="12" font-weight="700" text-anchor="start">07</text></g>
+<g id="AP08-08" data-from="f" data-to="a"><path d="M 275 745 V 762" fill="none" stroke="#12605c" stroke-width="2" /><polygon points="275,767 271,758 279,758" fill="#12605c"/><rect x="284" y="747" width="22" height="16" rx="3" fill="#fff"/><text x="286" y="760" fill="#12605c" font-size="12" font-weight="700" text-anchor="start">08</text></g>
+<g id="AP08-09" data-from="a" data-to="o"><path d="M 275 857 V 874" fill="none" stroke="#12605c" stroke-width="2" /><polygon points="275,879 271,870 279,870" fill="#12605c"/><rect x="284" y="859" width="22" height="16" rx="3" fill="#fff"/><text x="286" y="872" fill="#12605c" font-size="12" font-weight="700" text-anchor="start">09</text></g>
+<g id="AP08-10" data-from="o" data-to="m_z"><path d="M 470 930 H 550 V 1260 H 296" fill="none" stroke="#536783" stroke-width="2" /><polygon points="291,1260 300,1256 300,1264" fill="#536783"/><rect x="553" y="1079" width="22" height="16" rx="3" fill="#fff"/><text x="555" y="1092" fill="#536783" font-size="12" font-weight="700" text-anchor="start">10</text></g>
+<g id="AP08-11" data-from="r" data-to="m_z"><path d="M 275 1193 V 1239" fill="none" stroke="#12605c" stroke-width="2" /><polygon points="275,1244 271,1235 279,1235" fill="#12605c"/><rect x="284" y="1195" width="22" height="16" rx="3" fill="#fff"/><text x="286" y="1208" fill="#12605c" font-size="12" font-weight="700" text-anchor="start">11</text></g>
+<g id="AP08-12" data-from="m_f" data-to="f"><path d="M 275 604 V 650" fill="none" stroke="#12605c" stroke-width="2" /><polygon points="275,655 271,646 279,646" fill="#12605c"/><rect x="284" y="635" width="22" height="16" rx="3" fill="#fff"/><text x="286" y="648" fill="#12605c" font-size="12" font-weight="700" text-anchor="start">12</text></g>
+<g id="AP08-13" data-from="m_r" data-to="r"><path d="M 275 1052 V 1098" fill="none" stroke="#12605c" stroke-width="2" /><polygon points="275,1103 271,1094 279,1094" fill="#12605c"/><rect x="284" y="1083" width="22" height="16" rx="3" fill="#fff"/><text x="286" y="1096" fill="#12605c" font-size="12" font-weight="700" text-anchor="start">13</text></g>
+<g id="AP08-14" data-from="m_z" data-to="z"><path d="M 275 1276 V 1353" fill="none" stroke="#12605c" stroke-width="2" /><polygon points="275,1358 271,1349 279,1349" fill="#12605c"/><rect x="284" y="1307" width="22" height="16" rx="3" fill="#fff"/><text x="286" y="1320" fill="#12605c" font-size="12" font-weight="700" text-anchor="start">14</text></g>
+<g id="AP08-i" data-kind="initial">
+<circle cx="275" cy="140" r="12" fill="#162d43" stroke="#162d43" stroke-width="2"/>
+<text x="255" y="146" fill="#162d43" font-size="14" font-weight="400" text-anchor="end">Entry</text>
+</g>
+<g id="AP08-s" data-kind="decision">
+<path d="M275 236 l16 16 -16 16 -16 -16 Z" fill="#fff4d4" stroke="#805d19" stroke-width="2"/>
+<text x="249" y="244" fill="#162d43" font-size="14" font-weight="400" text-anchor="end">Refining an existing</text>
+<text x="249" y="260" fill="#162d43" font-size="14" font-weight="400" text-anchor="end">occurrence?</text>
+<text x="249" y="226" fill="#556982" font-size="12" font-weight="700" text-anchor="end">Account holder</text>
+</g>
+<g id="AP08-p" data-kind="decision">
+<path d="M275 348 l16 16 -16 16 -16 -16 Z" fill="#fff4d4" stroke="#805d19" stroke-width="2"/>
+<text x="249" y="356" fill="#162d43" font-size="14" font-weight="400" text-anchor="end">Eligible refinement</text>
+<text x="249" y="372" fill="#162d43" font-size="14" font-weight="400" text-anchor="end">including during</text>
+<text x="249" y="388" fill="#162d43" font-size="14" font-weight="400" text-anchor="end">suspension?</text>
+<text x="249" y="338" fill="#556982" font-size="12" font-weight="700" text-anchor="end">Lenver authority</text>
+</g>
+<g id="AP08-v" data-kind="decision">
+<path d="M275 460 l16 16 -16 16 -16 -16 Z" fill="#fff4d4" stroke="#805d19" stroke-width="2"/>
+<text x="249" y="468" fill="#162d43" font-size="14" font-weight="400" text-anchor="end">Authorized change with</text>
+<text x="249" y="484" fill="#162d43" font-size="14" font-weight="400" text-anchor="end">baseline available where</text>
+<text x="249" y="500" fill="#162d43" font-size="14" font-weight="400" text-anchor="end">required?</text>
+<text x="249" y="450" fill="#556982" font-size="12" font-weight="700" text-anchor="end">Lenver authority</text>
+</g>
+<g id="AP08-m_f" data-kind="merge">
+<path d="M275 572 l16 16 -16 16 -16 -16 Z" fill="#fff4d4" stroke="#805d19" stroke-width="2"/>
+<text x="249" y="562" fill="#556982" font-size="12" font-weight="700" text-anchor="end"></text>
+</g>
+<g id="AP08-f" data-kind="action">
+<rect x="80" y="655" width="390" height="90" rx="13" fill="#eff6fa" stroke="#355a71" stroke-width="2"/>
+<text x="275" y="676" fill="#526f83" font-size="12" font-weight="700" text-anchor="middle">Account holder</text>
+<text x="275" y="705" fill="#162d43" font-size="15" font-weight="400" text-anchor="middle">Review effect and revision, give applicable reason</text>
+<text x="275" y="720" fill="#162d43" font-size="15" font-weight="400" text-anchor="middle">and confirm for AP12</text>
+</g>
+<g id="AP08-a" data-kind="action">
+<rect x="80" y="767" width="390" height="90" rx="13" fill="#eff6fa" stroke="#355a71" stroke-width="2"/>
+<text x="275" y="788" fill="#526f83" font-size="12" font-weight="700" text-anchor="middle">Lenver authority</text>
+<text x="275" y="817" fill="#162d43" font-size="15" font-weight="400" text-anchor="middle">Use AP12 to record, version, invalidate or refine.</text>
+<text x="275" y="832" fill="#162d43" font-size="15" font-weight="400" text-anchor="middle">Refinement preserves suspension</text>
+</g>
+<g id="AP08-o" data-kind="action">
+<rect x="80" y="879" width="390" height="90" rx="13" fill="#eff6fa" stroke="#355a71" stroke-width="2"/>
+<text x="275" y="900" fill="#526f83" font-size="12" font-weight="700" text-anchor="middle">Client</text>
+<text x="275" y="929" fill="#162d43" font-size="15" font-weight="400" text-anchor="middle">Receive AP12 result. After refinement, replace</text>
+<text x="275" y="944" fill="#162d43" font-size="15" font-weight="400" text-anchor="middle">dependent preview at new revision</text>
+</g>
+<g id="AP08-m_r" data-kind="merge">
+<path d="M275 1020 l16 16 -16 16 -16 -16 Z" fill="#fff4d4" stroke="#805d19" stroke-width="2"/>
+<text x="249" y="1010" fill="#556982" font-size="12" font-weight="700" text-anchor="end"></text>
+</g>
+<g id="AP08-r" data-kind="action">
+<rect x="80" y="1103" width="390" height="90" rx="13" fill="#eff6fa" stroke="#355a71" stroke-width="2"/>
+<text x="275" y="1124" fill="#526f83" font-size="12" font-weight="700" text-anchor="middle">Client</text>
+<text x="275" y="1153" fill="#162d43" font-size="15" font-weight="400" text-anchor="middle">Ask for precision, review or defer without</text>
+<text x="275" y="1168" fill="#162d43" font-size="15" font-weight="400" text-anchor="middle">creating a version</text>
+</g>
+<g id="AP08-m_z" data-kind="merge">
+<path d="M275 1244 l16 16 -16 16 -16 -16 Z" fill="#fff4d4" stroke="#805d19" stroke-width="2"/>
+<text x="249" y="1234" fill="#556982" font-size="12" font-weight="700" text-anchor="end"></text>
+</g>
+<g id="AP08-z" data-kind="final">
+<circle cx="275" cy="1372" r="12" fill="#ffffff" stroke="#162d43" stroke-width="2"/>
+<circle cx="275" cy="1372" r="7" fill="#162d43"/>
+<text x="255" y="1378" fill="#162d43" font-size="14" font-weight="400" text-anchor="end">End</text>
+</g>
+<text x="725" y="137" fill="#162d43" font-size="15" font-weight="700" text-anchor="start">02  Refining an existing occurrence?</text>
+<text x="739" y="157" fill="#162d43" font-size="15" font-weight="400" text-anchor="start">[CU-019 refinement]</text>
+<text x="725" y="188" fill="#162d43" font-size="15" font-weight="700" text-anchor="start">03  Refining an existing occurrence?</text>
+<text x="739" y="208" fill="#162d43" font-size="15" font-weight="400" text-anchor="start">[Create, correct or invalidate]</text>
+<text x="725" y="239" fill="#162d43" font-size="15" font-weight="700" text-anchor="start">04  Eligible refinement including during suspension?</text>
+<text x="739" y="259" fill="#162d43" font-size="15" font-weight="400" text-anchor="start">[Unambiguous nonfuture instant in original interval, other terms preserved]</text>
+<text x="725" y="290" fill="#162d43" font-size="15" font-weight="700" text-anchor="start">05  Eligible refinement including during suspension?</text>
+<text x="739" y="310" fill="#162d43" font-size="15" font-weight="400" text-anchor="start">[Authority or precision proof missing]</text>
+<text x="725" y="341" fill="#162d43" font-size="15" font-weight="700" text-anchor="start">06  Authorized change with baseline available where required?</text>
+<text x="739" y="361" fill="#162d43" font-size="15" font-weight="400" text-anchor="start">[Eligible BRL and occurrence, G09 on correction]</text>
+<text x="725" y="392" fill="#162d43" font-size="15" font-weight="700" text-anchor="start">07  Authorized change with baseline available where required?</text>
+<text x="739" y="412" fill="#162d43" font-size="15" font-weight="400" text-anchor="start">[Ambiguous or incompatible target or baseline]</text>
+</g></svg>

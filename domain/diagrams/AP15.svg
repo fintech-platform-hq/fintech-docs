@@ -1,0 +1,133 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1430" height="1890" viewBox="0 0 1430 1890" role="img" aria-labelledby="titulo">
+<title id="titulo">AP15 · Manage password and method outcomes</title>
+<rect width="1430" height="1890" fill="#fff"/>
+<g font-family="Arial, sans-serif">
+<text x="48" y="36" fill="#526f83" font-size="14" font-weight="700" text-anchor="start">LENVER / MF03.1     ACTIVITY DIAGRAM</text>
+<text x="48" y="76" fill="#162d43" font-size="30" font-weight="700" text-anchor="start">AP15 · Manage password and method outcomes</text>
+<line x1="711" y1="101" x2="711" y2="1852" stroke="#d9e4ed"/>
+<text x="734" y="106" fill="#162d43" font-size="17" font-weight="700" text-anchor="start">Decisions · branch conditions</text>
+<g id="AP15-01" data-from="i" data-to="s"><path d="M 275 153 V 231" fill="none" stroke="#12605c" stroke-width="2" /><polygon points="275,236 271,227 279,227" fill="#12605c"/><rect x="284" y="187" width="22" height="16" rx="3" fill="#fff"/><text x="286" y="200" fill="#12605c" font-size="12" font-weight="700" text-anchor="start">01</text></g>
+<g id="AP15-02" data-from="s" data-to="u"><path d="M 275 268 V 343" fill="none" stroke="#12605c" stroke-width="2" /><polygon points="275,348 271,339 279,339" fill="#12605c"/><rect x="284" y="299" width="22" height="16" rx="3" fill="#fff"/><text x="286" y="312" fill="#12605c" font-size="12" font-weight="700" text-anchor="start">02</text></g>
+<g id="AP15-03" data-from="s" data-to="a"><path d="M 285 258 H 550 V 588 H 296" fill="none" stroke="#536783" stroke-width="2" /><polygon points="291,588 300,584 300,592" fill="#536783"/><rect x="553" y="407" width="22" height="16" rx="3" fill="#fff"/><text x="555" y="420" fill="#536783" font-size="12" font-weight="700" text-anchor="start">03</text></g>
+<g id="AP15-04" data-from="u" data-to="q"><path d="M 275 380 V 426" fill="none" stroke="#12605c" stroke-width="2" /><polygon points="275,431 271,422 279,422" fill="#12605c"/><rect x="284" y="411" width="22" height="16" rx="3" fill="#fff"/><text x="286" y="424" fill="#12605c" font-size="12" font-weight="700" text-anchor="start">04</text></g>
+<g id="AP15-05" data-from="u" data-to="m_r"><path d="M 285 370 H 660 V 1484 H 296" fill="none" stroke="#536783" stroke-width="2" /><polygon points="291,1484 300,1480 300,1488" fill="#536783"/><rect x="663" y="911" width="22" height="16" rx="3" fill="#fff"/><text x="665" y="924" fill="#536783" font-size="12" font-weight="700" text-anchor="start">05</text></g>
+<g id="AP15-06" data-from="q" data-to="m_z"><path d="M 470 482 H 682 V 1708 H 296" fill="none" stroke="#536783" stroke-width="2" /><polygon points="291,1708 300,1704 300,1712" fill="#536783"/><rect x="685" y="1079" width="22" height="16" rx="3" fill="#fff"/><text x="687" y="1092" fill="#536783" font-size="12" font-weight="700" text-anchor="start">06</text></g>
+<g id="AP15-07" data-from="a" data-to="p"><path d="M 275 604 V 679" fill="none" stroke="#12605c" stroke-width="2" /><polygon points="275,684 271,675 279,675" fill="#12605c"/><rect x="284" y="635" width="22" height="16" rx="3" fill="#fff"/><text x="286" y="648" fill="#12605c" font-size="12" font-weight="700" text-anchor="start">07</text></g>
+<g id="AP15-08" data-from="a" data-to="d"><path d="M 285 594 H 572 V 924 H 475" fill="none" stroke="#536783" stroke-width="2" /><polygon points="470,924 479,920 479,928" fill="#536783"/><rect x="575" y="743" width="22" height="16" rx="3" fill="#fff"/><text x="577" y="756" fill="#536783" font-size="12" font-weight="700" text-anchor="start">08</text></g>
+<g id="AP15-09" data-from="p" data-to="c"><path d="M 275 716 V 762" fill="none" stroke="#12605c" stroke-width="2" /><polygon points="275,767 271,758 279,758" fill="#12605c"/><rect x="284" y="747" width="22" height="16" rx="3" fill="#fff"/><text x="286" y="760" fill="#12605c" font-size="12" font-weight="700" text-anchor="start">09</text></g>
+<g id="AP15-10" data-from="p" data-to="m_r"><path d="M 285 706 H 638 V 1479 H 291" fill="none" stroke="#536783" stroke-width="2" /><polygon points="286,1479 295,1475 295,1483" fill="#536783"/><rect x="641" y="1076" width="22" height="16" rx="3" fill="#fff"/><text x="643" y="1089" fill="#536783" font-size="12" font-weight="700" text-anchor="start">10</text></g>
+<g id="AP15-11" data-from="c" data-to="m_o"><path d="M 470 818 H 506 V 1036 H 296" fill="none" stroke="#536783" stroke-width="2" /><polygon points="291,1036 300,1032 300,1040" fill="#536783"/><rect x="509" y="911" width="22" height="16" rx="3" fill="#fff"/><text x="511" y="924" fill="#536783" font-size="12" font-weight="700" text-anchor="start">11</text></g>
+<g id="AP15-12" data-from="d" data-to="m_o"><path d="M 275 969 V 1015" fill="none" stroke="#12605c" stroke-width="2" /><polygon points="275,1020 271,1011 279,1011" fill="#12605c"/><rect x="284" y="971" width="22" height="16" rx="3" fill="#fff"/><text x="286" y="984" fill="#12605c" font-size="12" font-weight="700" text-anchor="start">12</text></g>
+<g id="AP15-13" data-from="o" data-to="k"><path d="M 275 1164 V 1210" fill="none" stroke="#12605c" stroke-width="2" /><polygon points="275,1215 271,1206 279,1206" fill="#12605c"/><rect x="284" y="1195" width="22" height="16" rx="3" fill="#fff"/><text x="286" y="1208" fill="#12605c" font-size="12" font-weight="700" text-anchor="start">13</text></g>
+<g id="AP15-14" data-from="o" data-to="n"><path d="M 285 1154 H 528 V 1372 H 475" fill="none" stroke="#536783" stroke-width="2" /><polygon points="470,1372 479,1368 479,1376" fill="#536783"/><rect x="531" y="1247" width="22" height="16" rx="3" fill="#fff"/><text x="533" y="1260" fill="#536783" font-size="12" font-weight="700" text-anchor="start">14</text></g>
+<g id="AP15-15" data-from="k" data-to="m_z"><path d="M 470 1266 H 616 V 1703 H 291" fill="none" stroke="#536783" stroke-width="2" /><polygon points="286,1703 295,1699 295,1707" fill="#536783"/><rect x="619" y="1468" width="22" height="16" rx="3" fill="#fff"/><text x="621" y="1481" fill="#536783" font-size="12" font-weight="700" text-anchor="start">15</text></g>
+<g id="AP15-16" data-from="n" data-to="m_z"><path d="M 470 1378 H 594 V 1698 H 286" fill="none" stroke="#536783" stroke-width="2" /><polygon points="281,1698 290,1694 290,1702" fill="#536783"/><rect x="597" y="1522" width="22" height="16" rx="3" fill="#fff"/><text x="599" y="1535" fill="#536783" font-size="12" font-weight="700" text-anchor="start">16</text></g>
+<g id="AP15-17" data-from="r" data-to="m_z"><path d="M 275 1641 V 1687" fill="none" stroke="#12605c" stroke-width="2" /><polygon points="275,1692 271,1683 279,1683" fill="#12605c"/><rect x="284" y="1643" width="22" height="16" rx="3" fill="#fff"/><text x="286" y="1656" fill="#12605c" font-size="12" font-weight="700" text-anchor="start">17</text></g>
+<g id="AP15-18" data-from="m_o" data-to="o"><path d="M 275 1052 V 1127" fill="none" stroke="#12605c" stroke-width="2" /><polygon points="275,1132 271,1123 279,1123" fill="#12605c"/><rect x="284" y="1083" width="22" height="16" rx="3" fill="#fff"/><text x="286" y="1096" fill="#12605c" font-size="12" font-weight="700" text-anchor="start">18</text></g>
+<g id="AP15-19" data-from="m_r" data-to="r"><path d="M 275 1500 V 1546" fill="none" stroke="#12605c" stroke-width="2" /><polygon points="275,1551 271,1542 279,1542" fill="#12605c"/><rect x="284" y="1531" width="22" height="16" rx="3" fill="#fff"/><text x="286" y="1544" fill="#12605c" font-size="12" font-weight="700" text-anchor="start">19</text></g>
+<g id="AP15-20" data-from="m_z" data-to="z"><path d="M 275 1724 V 1801" fill="none" stroke="#12605c" stroke-width="2" /><polygon points="275,1806 271,1797 279,1797" fill="#12605c"/><rect x="284" y="1755" width="22" height="16" rx="3" fill="#fff"/><text x="286" y="1768" fill="#12605c" font-size="12" font-weight="700" text-anchor="start">20</text></g>
+<g id="AP15-i" data-kind="initial">
+<circle cx="275" cy="140" r="12" fill="#162d43" stroke="#162d43" stroke-width="2"/>
+<text x="255" y="146" fill="#162d43" font-size="14" font-weight="400" text-anchor="end">Entry</text>
+</g>
+<g id="AP15-s" data-kind="decision">
+<path d="M275 236 l16 16 -16 16 -16 -16 Z" fill="#fff4d4" stroke="#805d19" stroke-width="2"/>
+<text x="249" y="244" fill="#162d43" font-size="14" font-weight="400" text-anchor="end">Is this an outcome lookup</text>
+<text x="249" y="260" fill="#162d43" font-size="14" font-weight="400" text-anchor="end">for a management act?</text>
+<text x="249" y="226" fill="#556982" font-size="12" font-weight="700" text-anchor="end">Client</text>
+</g>
+<g id="AP15-u" data-kind="decision">
+<path d="M275 348 l16 16 -16 16 -16 -16 Z" fill="#fff4d4" stroke="#805d19" stroke-width="2"/>
+<text x="249" y="356" fill="#162d43" font-size="14" font-weight="400" text-anchor="end">Authorized for original act</text>
+<text x="249" y="372" fill="#162d43" font-size="14" font-weight="400" text-anchor="end">and method?</text>
+<text x="249" y="338" fill="#556982" font-size="12" font-weight="700" text-anchor="end">Lenver authority</text>
+</g>
+<g id="AP15-q" data-kind="action">
+<rect x="80" y="431" width="390" height="90" rx="13" fill="#eff6fa" stroke="#355a71" stroke-width="2"/>
+<text x="275" y="452" fill="#526f83" font-size="12" font-weight="700" text-anchor="middle">Client</text>
+<text x="275" y="481" fill="#162d43" font-size="15" font-weight="400" text-anchor="middle">Show demonstrated result or keep uncertainty, with</text>
+<text x="275" y="496" fill="#162d43" font-size="15" font-weight="400" text-anchor="middle">zero mutations</text>
+</g>
+<g id="AP15-a" data-kind="decision">
+<path d="M275 572 l16 16 -16 16 -16 -16 Z" fill="#fff4d4" stroke="#805d19" stroke-width="2"/>
+<text x="249" y="580" fill="#162d43" font-size="14" font-weight="400" text-anchor="end">Applicable password change?</text>
+<text x="249" y="562" fill="#556982" font-size="12" font-weight="700" text-anchor="end">Account holder</text>
+</g>
+<g id="AP15-p" data-kind="decision">
+<path d="M275 684 l16 16 -16 16 -16 -16 Z" fill="#fff4d4" stroke="#805d19" stroke-width="2"/>
+<text x="249" y="692" fill="#162d43" font-size="14" font-weight="400" text-anchor="end">Valid contextual proof and</text>
+<text x="249" y="708" fill="#162d43" font-size="14" font-weight="400" text-anchor="end">proposed password at</text>
+<text x="249" y="724" fill="#162d43" font-size="14" font-weight="400" text-anchor="end">commitment?</text>
+<text x="249" y="674" fill="#556982" font-size="12" font-weight="700" text-anchor="end">Lenver authority</text>
+</g>
+<g id="AP15-c" data-kind="action">
+<rect x="80" y="767" width="390" height="90" rx="13" fill="#eff6fa" stroke="#355a71" stroke-width="2"/>
+<text x="275" y="788" fill="#526f83" font-size="12" font-weight="700" text-anchor="middle">Lenver authority</text>
+<text x="275" y="817" fill="#162d43" font-size="15" font-weight="400" text-anchor="middle">Change credential for same holder. Session policy</text>
+<text x="275" y="832" fill="#162d43" font-size="15" font-weight="400" text-anchor="middle">follows LAC-01</text>
+</g>
+<g id="AP15-d" data-kind="action">
+<rect x="80" y="879" width="390" height="90" rx="13" fill="#eff6fa" stroke="#355a71" stroke-width="2"/>
+<text x="275" y="900" fill="#526f83" font-size="12" font-weight="700" text-anchor="middle">Lenver authority</text>
+<text x="275" y="936" fill="#162d43" font-size="15" font-weight="400" text-anchor="middle">Apply AP04 and revalidate the last usable method</text>
+</g>
+<g id="AP15-m_o" data-kind="merge">
+<path d="M275 1020 l16 16 -16 16 -16 -16 Z" fill="#fff4d4" stroke="#805d19" stroke-width="2"/>
+<text x="249" y="1010" fill="#556982" font-size="12" font-weight="700" text-anchor="end"></text>
+</g>
+<g id="AP15-o" data-kind="decision">
+<path d="M275 1132 l16 16 -16 16 -16 -16 Z" fill="#fff4d4" stroke="#805d19" stroke-width="2"/>
+<text x="249" y="1140" fill="#162d43" font-size="14" font-weight="400" text-anchor="end">Outcome demonstrated?</text>
+<text x="249" y="1122" fill="#556982" font-size="12" font-weight="700" text-anchor="end">Client</text>
+</g>
+<g id="AP15-k" data-kind="action">
+<rect x="80" y="1215" width="390" height="90" rx="13" fill="#eff6fa" stroke="#355a71" stroke-width="2"/>
+<text x="275" y="1236" fill="#526f83" font-size="12" font-weight="700" text-anchor="middle">Client</text>
+<text x="275" y="1272" fill="#162d43" font-size="15" font-weight="400" text-anchor="middle">Show outcome and remaining authorized methods</text>
+</g>
+<g id="AP15-n" data-kind="action">
+<rect x="80" y="1327" width="390" height="90" rx="13" fill="#eff6fa" stroke="#355a71" stroke-width="2"/>
+<text x="275" y="1348" fill="#526f83" font-size="12" font-weight="700" text-anchor="middle">Client</text>
+<text x="275" y="1377" fill="#162d43" font-size="15" font-weight="400" text-anchor="middle">Keep uncertainty and use separate lookup. Avoid</text>
+<text x="275" y="1392" fill="#162d43" font-size="15" font-weight="400" text-anchor="middle">automatic repeat</text>
+</g>
+<g id="AP15-m_r" data-kind="merge">
+<path d="M275 1468 l16 16 -16 16 -16 -16 Z" fill="#fff4d4" stroke="#805d19" stroke-width="2"/>
+<text x="249" y="1458" fill="#556982" font-size="12" font-weight="700" text-anchor="end"></text>
+</g>
+<g id="AP15-r" data-kind="action">
+<rect x="80" y="1551" width="390" height="90" rx="13" fill="#eff6fa" stroke="#355a71" stroke-width="2"/>
+<text x="275" y="1572" fill="#526f83" font-size="12" font-weight="700" text-anchor="middle">Client</text>
+<text x="275" y="1601" fill="#162d43" font-size="15" font-weight="400" text-anchor="middle">Keep prior state with no additional disclosure or</text>
+<text x="275" y="1616" fill="#162d43" font-size="15" font-weight="400" text-anchor="middle">authorization</text>
+</g>
+<g id="AP15-m_z" data-kind="merge">
+<path d="M275 1692 l16 16 -16 16 -16 -16 Z" fill="#fff4d4" stroke="#805d19" stroke-width="2"/>
+<text x="249" y="1682" fill="#556982" font-size="12" font-weight="700" text-anchor="end"></text>
+</g>
+<g id="AP15-z" data-kind="final">
+<circle cx="275" cy="1820" r="12" fill="#ffffff" stroke="#162d43" stroke-width="2"/>
+<circle cx="275" cy="1820" r="7" fill="#162d43"/>
+<text x="255" y="1826" fill="#162d43" font-size="14" font-weight="400" text-anchor="end">End</text>
+</g>
+<text x="734" y="137" fill="#162d43" font-size="15" font-weight="700" text-anchor="start">02  Is this an outcome lookup for a management act?</text>
+<text x="748" y="157" fill="#162d43" font-size="15" font-weight="400" text-anchor="start">[Read-only lookup]</text>
+<text x="734" y="188" fill="#162d43" font-size="15" font-weight="700" text-anchor="start">03  Is this an outcome lookup for a management act?</text>
+<text x="748" y="208" fill="#162d43" font-size="15" font-weight="400" text-anchor="start">[New act]</text>
+<text x="734" y="239" fill="#162d43" font-size="15" font-weight="700" text-anchor="start">04  Authorized for original act and method?</text>
+<text x="748" y="259" fill="#162d43" font-size="15" font-weight="400" text-anchor="start">[Authenticated holder with outcome authority]</text>
+<text x="734" y="290" fill="#162d43" font-size="15" font-weight="700" text-anchor="start">05  Authorized for original act and method?</text>
+<text x="748" y="310" fill="#162d43" font-size="15" font-weight="400" text-anchor="start">[Missing or different scope]</text>
+<text x="734" y="341" fill="#162d43" font-size="15" font-weight="700" text-anchor="start">07  Applicable password change?</text>
+<text x="748" y="361" fill="#162d43" font-size="15" font-weight="400" text-anchor="start">[Usable password method]</text>
+<text x="734" y="392" fill="#162d43" font-size="15" font-weight="700" text-anchor="start">08  Applicable password change?</text>
+<text x="748" y="412" fill="#162d43" font-size="15" font-weight="400" text-anchor="start">[Voluntary unlinking]</text>
+<text x="734" y="443" fill="#162d43" font-size="15" font-weight="700" text-anchor="start">09  Valid contextual proof and proposed password at commitment?</text>
+<text x="748" y="463" fill="#162d43" font-size="15" font-weight="400" text-anchor="start">[Correct holder and method, current proof and confirmation]</text>
+<text x="734" y="494" fill="#162d43" font-size="15" font-weight="700" text-anchor="start">10  Valid contextual proof and proposed password at commitment?</text>
+<text x="748" y="514" fill="#162d43" font-size="15" font-weight="400" text-anchor="start">[Canceled, invalid, expired or refused]</text>
+<text x="734" y="545" fill="#162d43" font-size="15" font-weight="700" text-anchor="start">13  Outcome demonstrated?</text>
+<text x="748" y="565" fill="#162d43" font-size="15" font-weight="400" text-anchor="start">[Authorized confirmation or refusal]</text>
+<text x="734" y="596" fill="#162d43" font-size="15" font-weight="700" text-anchor="start">14  Outcome demonstrated?</text>
+<text x="748" y="616" fill="#162d43" font-size="15" font-weight="400" text-anchor="start">[Missing or incomplete response]</text>
+</g></svg>

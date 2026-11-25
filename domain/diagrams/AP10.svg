@@ -1,0 +1,124 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1430" height="1778" viewBox="0 0 1430 1778" role="img" aria-labelledby="titulo">
+<title id="titulo">AP10 · Recover retroactive expense</title>
+<rect width="1430" height="1778" fill="#fff"/>
+<g font-family="Arial, sans-serif">
+<text x="48" y="36" fill="#526f83" font-size="14" font-weight="700" text-anchor="start">LENVER / MF03.1     ACTIVITY DIAGRAM</text>
+<text x="48" y="76" fill="#162d43" font-size="30" font-weight="700" text-anchor="start">AP10 · Recover retroactive expense</text>
+<line x1="702" y1="101" x2="702" y2="1740" stroke="#d9e4ed"/>
+<text x="725" y="106" fill="#162d43" font-size="17" font-weight="700" text-anchor="start">Decisions · branch conditions</text>
+<g id="AP10-01" data-from="i" data-to="s"><path d="M 275 153 V 202" fill="none" stroke="#12605c" stroke-width="2" /><polygon points="275,207 271,198 279,198" fill="#12605c"/><rect x="284" y="187" width="22" height="16" rx="3" fill="#fff"/><text x="286" y="200" fill="#12605c" font-size="12" font-weight="700" text-anchor="start">01</text></g>
+<g id="AP10-02" data-from="s" data-to="v"><path d="M 275 297 V 343" fill="none" stroke="#12605c" stroke-width="2" /><polygon points="275,348 271,339 279,339" fill="#12605c"/><rect x="284" y="299" width="22" height="16" rx="3" fill="#fff"/><text x="286" y="312" fill="#12605c" font-size="12" font-weight="700" text-anchor="start">02</text></g>
+<g id="AP10-03" data-from="v" data-to="t"><path d="M 275 380 V 455" fill="none" stroke="#12605c" stroke-width="2" /><polygon points="275,460 271,451 279,451" fill="#12605c"/><rect x="284" y="411" width="22" height="16" rx="3" fill="#fff"/><text x="286" y="424" fill="#12605c" font-size="12" font-weight="700" text-anchor="start">03</text></g>
+<g id="AP10-04" data-from="v" data-to="m_r"><path d="M 285 370 H 616 V 1372 H 296" fill="none" stroke="#536783" stroke-width="2" /><polygon points="291,1372 300,1368 300,1376" fill="#536783"/><rect x="619" y="855" width="22" height="16" rx="3" fill="#fff"/><text x="621" y="868" fill="#536783" font-size="12" font-weight="700" text-anchor="start">04</text></g>
+<g id="AP10-05" data-from="t" data-to="e"><path d="M 275 492 V 567" fill="none" stroke="#12605c" stroke-width="2" /><polygon points="275,572 271,563 279,563" fill="#12605c"/><rect x="284" y="523" width="22" height="16" rx="3" fill="#fff"/><text x="286" y="536" fill="#12605c" font-size="12" font-weight="700" text-anchor="start">05</text></g>
+<g id="AP10-06" data-from="t" data-to="d"><path d="M 285 482 H 506 V 812 H 296" fill="none" stroke="#536783" stroke-width="2" /><polygon points="291,812 300,808 300,816" fill="#536783"/><rect x="509" y="631" width="22" height="16" rx="3" fill="#fff"/><text x="511" y="644" fill="#536783" font-size="12" font-weight="700" text-anchor="start">06</text></g>
+<g id="AP10-07" data-from="e" data-to="k"><path d="M 275 604 V 650" fill="none" stroke="#12605c" stroke-width="2" /><polygon points="275,655 271,646 279,646" fill="#12605c"/><rect x="284" y="635" width="22" height="16" rx="3" fill="#fff"/><text x="286" y="648" fill="#12605c" font-size="12" font-weight="700" text-anchor="start">07</text></g>
+<g id="AP10-08" data-from="e" data-to="m_r"><path d="M 285 594 H 594 V 1367 H 291" fill="none" stroke="#536783" stroke-width="2" /><polygon points="286,1367 295,1363 295,1371" fill="#536783"/><rect x="597" y="964" width="22" height="16" rx="3" fill="#fff"/><text x="599" y="977" fill="#536783" font-size="12" font-weight="700" text-anchor="start">08</text></g>
+<g id="AP10-09" data-from="k" data-to="m_a"><path d="M 470 706 H 528 V 1036 H 296" fill="none" stroke="#536783" stroke-width="2" /><polygon points="291,1036 300,1032 300,1040" fill="#536783"/><rect x="531" y="855" width="22" height="16" rx="3" fill="#fff"/><text x="533" y="868" fill="#536783" font-size="12" font-weight="700" text-anchor="start">09</text></g>
+<g id="AP10-10" data-from="d" data-to="n"><path d="M 275 828 V 874" fill="none" stroke="#12605c" stroke-width="2" /><polygon points="275,879 271,870 279,870" fill="#12605c"/><rect x="284" y="859" width="22" height="16" rx="3" fill="#fff"/><text x="286" y="872" fill="#12605c" font-size="12" font-weight="700" text-anchor="start">10</text></g>
+<g id="AP10-11" data-from="d" data-to="m_r"><path d="M 285 818 H 572 V 1362 H 286" fill="none" stroke="#536783" stroke-width="2" /><polygon points="281,1362 290,1358 290,1366" fill="#536783"/><rect x="575" y="1074" width="22" height="16" rx="3" fill="#fff"/><text x="577" y="1087" fill="#536783" font-size="12" font-weight="700" text-anchor="start">11</text></g>
+<g id="AP10-12" data-from="n" data-to="m_a"><path d="M 275 969 V 1015" fill="none" stroke="#12605c" stroke-width="2" /><polygon points="275,1020 271,1011 279,1011" fill="#12605c"/><rect x="284" y="971" width="22" height="16" rx="3" fill="#fff"/><text x="286" y="984" fill="#12605c" font-size="12" font-weight="700" text-anchor="start">12</text></g>
+<g id="AP10-13" data-from="a" data-to="o"><path d="M 275 1193 V 1210" fill="none" stroke="#12605c" stroke-width="2" /><polygon points="275,1215 271,1206 279,1206" fill="#12605c"/><rect x="284" y="1195" width="22" height="16" rx="3" fill="#fff"/><text x="286" y="1208" fill="#12605c" font-size="12" font-weight="700" text-anchor="start">13</text></g>
+<g id="AP10-14" data-from="o" data-to="m_z"><path d="M 470 1266 H 550 V 1596 H 296" fill="none" stroke="#536783" stroke-width="2" /><polygon points="291,1596 300,1592 300,1600" fill="#536783"/><rect x="553" y="1415" width="22" height="16" rx="3" fill="#fff"/><text x="555" y="1428" fill="#536783" font-size="12" font-weight="700" text-anchor="start">14</text></g>
+<g id="AP10-15" data-from="r" data-to="m_z"><path d="M 275 1529 V 1575" fill="none" stroke="#12605c" stroke-width="2" /><polygon points="275,1580 271,1571 279,1571" fill="#12605c"/><rect x="284" y="1531" width="22" height="16" rx="3" fill="#fff"/><text x="286" y="1544" fill="#12605c" font-size="12" font-weight="700" text-anchor="start">15</text></g>
+<g id="AP10-16" data-from="m_a" data-to="a"><path d="M 275 1052 V 1098" fill="none" stroke="#12605c" stroke-width="2" /><polygon points="275,1103 271,1094 279,1094" fill="#12605c"/><rect x="284" y="1083" width="22" height="16" rx="3" fill="#fff"/><text x="286" y="1096" fill="#12605c" font-size="12" font-weight="700" text-anchor="start">16</text></g>
+<g id="AP10-17" data-from="m_r" data-to="r"><path d="M 275 1388 V 1434" fill="none" stroke="#12605c" stroke-width="2" /><polygon points="275,1439 271,1430 279,1430" fill="#12605c"/><rect x="284" y="1419" width="22" height="16" rx="3" fill="#fff"/><text x="286" y="1432" fill="#12605c" font-size="12" font-weight="700" text-anchor="start">17</text></g>
+<g id="AP10-18" data-from="m_z" data-to="z"><path d="M 275 1612 V 1689" fill="none" stroke="#12605c" stroke-width="2" /><polygon points="275,1694 271,1685 279,1685" fill="#12605c"/><rect x="284" y="1643" width="22" height="16" rx="3" fill="#fff"/><text x="286" y="1656" fill="#12605c" font-size="12" font-weight="700" text-anchor="start">18</text></g>
+<g id="AP10-i" data-kind="initial">
+<circle cx="275" cy="140" r="12" fill="#162d43" stroke="#162d43" stroke-width="2"/>
+<text x="255" y="146" fill="#162d43" font-size="14" font-weight="400" text-anchor="end">Entry</text>
+</g>
+<g id="AP10-s" data-kind="action">
+<rect x="80" y="207" width="390" height="90" rx="13" fill="#eff6fa" stroke="#355a71" stroke-width="2"/>
+<text x="275" y="228" fill="#526f83" font-size="12" font-weight="700" text-anchor="middle">Account holder</text>
+<text x="275" y="257" fill="#162d43" font-size="15" font-weight="400" text-anchor="middle">Review comparison and identify fact and proof.</text>
+<text x="275" y="272" fill="#162d43" font-size="15" font-weight="400" text-anchor="middle">Similarity proposes candidates</text>
+</g>
+<g id="AP10-v" data-kind="decision">
+<path d="M275 348 l16 16 -16 16 -16 -16 Z" fill="#fff4d4" stroke="#805d19" stroke-width="2"/>
+<text x="249" y="356" fill="#162d43" font-size="14" font-weight="400" text-anchor="end">Owned current calculable</text>
+<text x="249" y="372" fill="#162d43" font-size="14" font-weight="400" text-anchor="end">check with identifiable</text>
+<text x="249" y="388" fill="#162d43" font-size="14" font-weight="400" text-anchor="end">evidence?</text>
+<text x="249" y="338" fill="#556982" font-size="12" font-weight="700" text-anchor="end">Lenver authority</text>
+</g>
+<g id="AP10-t" data-kind="decision">
+<path d="M275 460 l16 16 -16 16 -16 -16 Z" fill="#fff4d4" stroke="#805d19" stroke-width="2"/>
+<text x="249" y="468" fill="#162d43" font-size="14" font-weight="400" text-anchor="end">Confirm an existing</text>
+<text x="249" y="484" fill="#162d43" font-size="14" font-weight="400" text-anchor="end">candidate as the same fact?</text>
+<text x="249" y="450" fill="#556982" font-size="12" font-weight="700" text-anchor="end">Account holder</text>
+</g>
+<g id="AP10-e" data-kind="decision">
+<path d="M275 572 l16 16 -16 16 -16 -16 Z" fill="#fff4d4" stroke="#805d19" stroke-width="2"/>
+<text x="249" y="580" fill="#162d43" font-size="14" font-weight="400" text-anchor="end">Expense effective at cutoff</text>
+<text x="249" y="596" fill="#162d43" font-size="14" font-weight="400" text-anchor="end">and pair eligible?</text>
+<text x="249" y="562" fill="#556982" font-size="12" font-weight="700" text-anchor="end">Lenver authority</text>
+</g>
+<g id="AP10-k" data-kind="action">
+<rect x="80" y="655" width="390" height="90" rx="13" fill="#eff6fa" stroke="#355a71" stroke-width="2"/>
+<text x="275" y="676" fill="#526f83" font-size="12" font-weight="700" text-anchor="middle">Account holder</text>
+<text x="275" y="705" fill="#162d43" font-size="15" font-weight="400" text-anchor="middle">Confirm existing pair, including explicit eligible</text>
+<text x="275" y="720" fill="#162d43" font-size="15" font-weight="400" text-anchor="middle">reuse. No new fact</text>
+</g>
+<g id="AP10-d" data-kind="decision">
+<path d="M275 796 l16 16 -16 16 -16 -16 Z" fill="#fff4d4" stroke="#805d19" stroke-width="2"/>
+<text x="249" y="804" fill="#162d43" font-size="14" font-weight="400" text-anchor="end">Open discrepancy and valid</text>
+<text x="249" y="820" fill="#162d43" font-size="14" font-weight="400" text-anchor="end">distinct fact at cutoff?</text>
+<text x="249" y="786" fill="#556982" font-size="12" font-weight="700" text-anchor="end">Lenver authority</text>
+</g>
+<g id="AP10-n" data-kind="action">
+<rect x="80" y="879" width="390" height="90" rx="13" fill="#eff6fa" stroke="#355a71" stroke-width="2"/>
+<text x="275" y="900" fill="#526f83" font-size="12" font-weight="700" text-anchor="middle">Account holder</text>
+<text x="275" y="929" fill="#162d43" font-size="15" font-weight="400" text-anchor="middle">Review and confirm the distinct expense and</text>
+<text x="275" y="944" fill="#162d43" font-size="15" font-weight="400" text-anchor="middle">originating link</text>
+</g>
+<g id="AP10-m_a" data-kind="merge">
+<path d="M275 1020 l16 16 -16 16 -16 -16 Z" fill="#fff4d4" stroke="#805d19" stroke-width="2"/>
+<text x="249" y="1010" fill="#556982" font-size="12" font-weight="700" text-anchor="end"></text>
+</g>
+<g id="AP10-a" data-kind="action">
+<rect x="80" y="1103" width="390" height="90" rx="13" fill="#eff6fa" stroke="#355a71" stroke-width="2"/>
+<text x="275" y="1124" fill="#526f83" font-size="12" font-weight="700" text-anchor="middle">Lenver authority</text>
+<text x="275" y="1153" fill="#162d43" font-size="15" font-weight="400" text-anchor="middle">AP12 confirms existing link with no monetary</text>
+<text x="275" y="1168" fill="#162d43" font-size="15" font-weight="400" text-anchor="middle">change or distinct expense and link together</text>
+</g>
+<g id="AP10-o" data-kind="action">
+<rect x="80" y="1215" width="390" height="90" rx="13" fill="#eff6fa" stroke="#355a71" stroke-width="2"/>
+<text x="275" y="1236" fill="#526f83" font-size="12" font-weight="700" text-anchor="middle">Client</text>
+<text x="275" y="1265" fill="#162d43" font-size="15" font-weight="400" text-anchor="middle">Receive AP12 result for requested effect and pair.</text>
+<text x="275" y="1280" fill="#162d43" font-size="15" font-weight="400" text-anchor="middle">Reread balance and residual separately</text>
+</g>
+<g id="AP10-m_r" data-kind="merge">
+<path d="M275 1356 l16 16 -16 16 -16 -16 Z" fill="#fff4d4" stroke="#805d19" stroke-width="2"/>
+<text x="249" y="1346" fill="#556982" font-size="12" font-weight="700" text-anchor="end"></text>
+</g>
+<g id="AP10-r" data-kind="action">
+<rect x="80" y="1439" width="390" height="90" rx="13" fill="#eff6fa" stroke="#355a71" stroke-width="2"/>
+<text x="275" y="1460" fill="#526f83" font-size="12" font-weight="700" text-anchor="middle">Client</text>
+<text x="275" y="1496" fill="#162d43" font-size="15" font-weight="400" text-anchor="middle">Reject or defer and preserve facts and links</text>
+</g>
+<g id="AP10-m_z" data-kind="merge">
+<path d="M275 1580 l16 16 -16 16 -16 -16 Z" fill="#fff4d4" stroke="#805d19" stroke-width="2"/>
+<text x="249" y="1570" fill="#556982" font-size="12" font-weight="700" text-anchor="end"></text>
+</g>
+<g id="AP10-z" data-kind="final">
+<circle cx="275" cy="1708" r="12" fill="#ffffff" stroke="#162d43" stroke-width="2"/>
+<circle cx="275" cy="1708" r="7" fill="#162d43"/>
+<text x="255" y="1714" fill="#162d43" font-size="14" font-weight="400" text-anchor="end">End</text>
+</g>
+<text x="725" y="137" fill="#162d43" font-size="15" font-weight="700" text-anchor="start">03  Owned current calculable check with identifiable evidence?</text>
+<text x="739" y="157" fill="#162d43" font-size="15" font-weight="400" text-anchor="start">[Yes]</text>
+<text x="725" y="188" fill="#162d43" font-size="15" font-weight="700" text-anchor="start">04  Owned current calculable check with identifiable evidence?</text>
+<text x="739" y="208" fill="#162d43" font-size="15" font-weight="400" text-anchor="start">[No, including conflicting reference]</text>
+<text x="725" y="239" fill="#162d43" font-size="15" font-weight="700" text-anchor="start">05  Confirm an existing candidate as the same fact?</text>
+<text x="739" y="259" fill="#162d43" font-size="15" font-weight="400" text-anchor="start">[Existing expense]</text>
+<text x="725" y="290" fill="#162d43" font-size="15" font-weight="700" text-anchor="start">06  Confirm an existing candidate as the same fact?</text>
+<text x="739" y="310" fill="#162d43" font-size="15" font-weight="400" text-anchor="start">[Distinct expense or deferral]</text>
+<text x="725" y="341" fill="#162d43" font-size="15" font-weight="700" text-anchor="start">07  Expense effective at cutoff and pair eligible?</text>
+<text x="739" y="361" fill="#162d43" font-size="15" font-weight="400" text-anchor="start">[Open with evidence, or match with nonzero original and proved contribution]</text>
+<text x="725" y="392" fill="#162d43" font-size="15" font-weight="700" text-anchor="start">08  Expense effective at cutoff and pair eligible?</text>
+<text x="739" y="412" fill="#162d43" font-size="15" font-weight="400" text-anchor="start">[Zero original, missing match contribution or incompatible pair or proof]</text>
+<text x="725" y="443" fill="#162d43" font-size="15" font-weight="700" text-anchor="start">10  Open discrepancy and valid distinct fact at cutoff?</text>
+<text x="739" y="463" fill="#162d43" font-size="15" font-weight="400" text-anchor="start">[Identifiable nonduplicate in coverage, confirmation requested]</text>
+<text x="725" y="494" fill="#162d43" font-size="15" font-weight="700" text-anchor="start">11  Open discrepancy and valid distinct fact at cutoff?</text>
+<text x="739" y="514" fill="#162d43" font-size="15" font-weight="400" text-anchor="start">[Match, outside cutoff, insufficient proof or defer]</text>
+</g></svg>

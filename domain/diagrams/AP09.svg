@@ -1,0 +1,92 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1430" height="1330" viewBox="0 0 1430 1330" role="img" aria-labelledby="titulo">
+<title id="titulo">AP09 · Record or replace a balance check</title>
+<rect width="1430" height="1330" fill="#fff"/>
+<g font-family="Arial, sans-serif">
+<text x="48" y="36" fill="#526f83" font-size="14" font-weight="700" text-anchor="start">LENVER / MF03.1     ACTIVITY DIAGRAM</text>
+<text x="48" y="76" fill="#162d43" font-size="30" font-weight="700" text-anchor="start">AP09 · Record or replace a balance check</text>
+<line x1="702" y1="101" x2="702" y2="1292" stroke="#d9e4ed"/>
+<text x="725" y="106" fill="#162d43" font-size="17" font-weight="700" text-anchor="start">Decisions · branch conditions</text>
+<g id="AP09-01" data-from="i" data-to="s"><path d="M 275 153 V 202" fill="none" stroke="#12605c" stroke-width="2" /><polygon points="275,207 271,198 279,198" fill="#12605c"/><rect x="284" y="187" width="22" height="16" rx="3" fill="#fff"/><text x="286" y="200" fill="#12605c" font-size="12" font-weight="700" text-anchor="start">01</text></g>
+<g id="AP09-02" data-from="s" data-to="v"><path d="M 275 297 V 343" fill="none" stroke="#12605c" stroke-width="2" /><polygon points="275,348 271,339 279,339" fill="#12605c"/><rect x="284" y="299" width="22" height="16" rx="3" fill="#fff"/><text x="286" y="312" fill="#12605c" font-size="12" font-weight="700" text-anchor="start">02</text></g>
+<g id="AP09-03" data-from="v" data-to="c"><path d="M 285 370 H 528 V 700 H 475" fill="none" stroke="#536783" stroke-width="2" /><polygon points="470,700 479,696 479,704" fill="#536783"/><rect x="531" y="519" width="22" height="16" rx="3" fill="#fff"/><text x="533" y="532" fill="#536783" font-size="12" font-weight="700" text-anchor="start">03</text></g>
+<g id="AP09-04" data-from="v" data-to="q"><path d="M 275 380 V 455" fill="none" stroke="#12605c" stroke-width="2" /><polygon points="275,460 271,451 279,451" fill="#12605c"/><rect x="284" y="411" width="22" height="16" rx="3" fill="#fff"/><text x="286" y="424" fill="#12605c" font-size="12" font-weight="700" text-anchor="start">04</text></g>
+<g id="AP09-05" data-from="q" data-to="p"><path d="M 275 492 V 538" fill="none" stroke="#12605c" stroke-width="2" /><polygon points="275,543 271,534 279,534" fill="#12605c"/><rect x="284" y="523" width="22" height="16" rx="3" fill="#fff"/><text x="286" y="536" fill="#12605c" font-size="12" font-weight="700" text-anchor="start">05</text></g>
+<g id="AP09-06" data-from="q" data-to="r"><path d="M 285 482 H 550 V 1036 H 475" fill="none" stroke="#536783" stroke-width="2" /><polygon points="470,1036 479,1032 479,1040" fill="#536783"/><rect x="553" y="743" width="22" height="16" rx="3" fill="#fff"/><text x="555" y="756" fill="#536783" font-size="12" font-weight="700" text-anchor="start">06</text></g>
+<g id="AP09-07" data-from="p" data-to="m_z"><path d="M 470 594 H 572 V 1148 H 296" fill="none" stroke="#536783" stroke-width="2" /><polygon points="291,1148 300,1144 300,1152" fill="#536783"/><rect x="575" y="855" width="22" height="16" rx="3" fill="#fff"/><text x="577" y="868" fill="#536783" font-size="12" font-weight="700" text-anchor="start">07</text></g>
+<g id="AP09-08" data-from="c" data-to="g"><path d="M 275 745 V 762" fill="none" stroke="#12605c" stroke-width="2" /><polygon points="275,767 271,758 279,758" fill="#12605c"/><rect x="284" y="747" width="22" height="16" rx="3" fill="#fff"/><text x="286" y="760" fill="#12605c" font-size="12" font-weight="700" text-anchor="start">08</text></g>
+<g id="AP09-09" data-from="g" data-to="o"><path d="M 275 857 V 874" fill="none" stroke="#12605c" stroke-width="2" /><polygon points="275,879 271,870 279,870" fill="#12605c"/><rect x="284" y="859" width="22" height="16" rx="3" fill="#fff"/><text x="286" y="872" fill="#12605c" font-size="12" font-weight="700" text-anchor="start">09</text></g>
+<g id="AP09-10" data-from="o" data-to="m_z"><path d="M 470 930 H 506 V 1143 H 291" fill="none" stroke="#536783" stroke-width="2" /><polygon points="286,1143 295,1139 295,1147" fill="#536783"/><rect x="509" y="1020" width="22" height="16" rx="3" fill="#fff"/><text x="511" y="1033" fill="#536783" font-size="12" font-weight="700" text-anchor="start">10</text></g>
+<g id="AP09-11" data-from="r" data-to="m_z"><path d="M 275 1081 V 1127" fill="none" stroke="#12605c" stroke-width="2" /><polygon points="275,1132 271,1123 279,1123" fill="#12605c"/><rect x="284" y="1083" width="22" height="16" rx="3" fill="#fff"/><text x="286" y="1096" fill="#12605c" font-size="12" font-weight="700" text-anchor="start">11</text></g>
+<g id="AP09-12" data-from="m_z" data-to="z"><path d="M 275 1164 V 1241" fill="none" stroke="#12605c" stroke-width="2" /><polygon points="275,1246 271,1237 279,1237" fill="#12605c"/><rect x="284" y="1195" width="22" height="16" rx="3" fill="#fff"/><text x="286" y="1208" fill="#12605c" font-size="12" font-weight="700" text-anchor="start">12</text></g>
+<g id="AP09-i" data-kind="initial">
+<circle cx="275" cy="140" r="12" fill="#162d43" stroke="#162d43" stroke-width="2"/>
+<text x="255" y="146" fill="#162d43" font-size="14" font-weight="400" text-anchor="end">Entry</text>
+</g>
+<g id="AP09-s" data-kind="action">
+<rect x="80" y="207" width="390" height="90" rx="13" fill="#eff6fa" stroke="#355a71" stroke-width="2"/>
+<text x="275" y="228" fill="#526f83" font-size="12" font-weight="700" text-anchor="middle">Account holder</text>
+<text x="275" y="257" fill="#162d43" font-size="15" font-weight="400" text-anchor="middle">Enter a real observation or propose a reasoned</text>
+<text x="275" y="272" fill="#162d43" font-size="15" font-weight="400" text-anchor="middle">replacement</text>
+</g>
+<g id="AP09-v" data-kind="decision">
+<path d="M275 348 l16 16 -16 16 -16 -16 Z" fill="#fff4d4" stroke="#805d19" stroke-width="2"/>
+<text x="249" y="356" fill="#162d43" font-size="14" font-weight="400" text-anchor="end">Cutoff, coverage, amount</text>
+<text x="249" y="372" fill="#162d43" font-size="14" font-weight="400" text-anchor="end">and target allow preview?</text>
+<text x="249" y="338" fill="#556982" font-size="12" font-weight="700" text-anchor="end">Lenver authority</text>
+</g>
+<g id="AP09-q" data-kind="decision">
+<path d="M275 460 l16 16 -16 16 -16 -16 Z" fill="#fff4d4" stroke="#805d19" stroke-width="2"/>
+<text x="249" y="468" fill="#162d43" font-size="14" font-weight="400" text-anchor="end">Can precision of an</text>
+<text x="249" y="484" fill="#162d43" font-size="14" font-weight="400" text-anchor="end">existing fact resolve the</text>
+<text x="249" y="500" fill="#162d43" font-size="14" font-weight="400" text-anchor="end">cutoff?</text>
+<text x="249" y="450" fill="#556982" font-size="12" font-weight="700" text-anchor="end">Lenver authority</text>
+</g>
+<g id="AP09-p" data-kind="action">
+<rect x="80" y="543" width="390" height="90" rx="13" fill="#eff6fa" stroke="#355a71" stroke-width="2"/>
+<text x="275" y="564" fill="#526f83" font-size="12" font-weight="700" text-anchor="middle">Client</text>
+<text x="275" y="593" fill="#162d43" font-size="15" font-weight="400" text-anchor="middle">Offer authorized refinement or deferral. Create</text>
+<text x="275" y="608" fill="#162d43" font-size="15" font-weight="400" text-anchor="middle">fresh preview after refinement</text>
+</g>
+<g id="AP09-c" data-kind="action">
+<rect x="80" y="655" width="390" height="90" rx="13" fill="#eff6fa" stroke="#355a71" stroke-width="2"/>
+<text x="275" y="676" fill="#526f83" font-size="12" font-weight="700" text-anchor="middle">Account holder</text>
+<text x="275" y="705" fill="#162d43" font-size="15" font-weight="400" text-anchor="middle">Review comparison and revision. Use G09 for</text>
+<text x="275" y="720" fill="#162d43" font-size="15" font-weight="400" text-anchor="middle">replacement and confirm</text>
+</g>
+<g id="AP09-g" data-kind="action">
+<rect x="80" y="767" width="390" height="90" rx="13" fill="#eff6fa" stroke="#355a71" stroke-width="2"/>
+<text x="275" y="788" fill="#526f83" font-size="12" font-weight="700" text-anchor="middle">Lenver authority</text>
+<text x="275" y="810" fill="#162d43" font-size="15" font-weight="400" text-anchor="middle">AP12 commits new identity and original.</text>
+<text x="275" y="825" fill="#162d43" font-size="15" font-weight="400" text-anchor="middle">Replacement requires no successor and commits the</text>
+<text x="275" y="840" fill="#162d43" font-size="15" font-weight="400" text-anchor="middle">replacement edge together</text>
+</g>
+<g id="AP09-o" data-kind="action">
+<rect x="80" y="879" width="390" height="90" rx="13" fill="#eff6fa" stroke="#355a71" stroke-width="2"/>
+<text x="275" y="900" fill="#526f83" font-size="12" font-weight="700" text-anchor="middle">Client</text>
+<text x="275" y="929" fill="#162d43" font-size="15" font-weight="400" text-anchor="middle">Receive AP12 result and reread without overwriting</text>
+<text x="275" y="944" fill="#162d43" font-size="15" font-weight="400" text-anchor="middle">the old observation</text>
+</g>
+<g id="AP09-r" data-kind="action">
+<rect x="80" y="991" width="390" height="90" rx="13" fill="#eff6fa" stroke="#355a71" stroke-width="2"/>
+<text x="275" y="1012" fill="#526f83" font-size="12" font-weight="700" text-anchor="middle">Client</text>
+<text x="275" y="1041" fill="#162d43" font-size="15" font-weight="400" text-anchor="middle">Show unavailability or deferral and preserve</text>
+<text x="275" y="1056" fill="#162d43" font-size="15" font-weight="400" text-anchor="middle">observations</text>
+</g>
+<g id="AP09-m_z" data-kind="merge">
+<path d="M275 1132 l16 16 -16 16 -16 -16 Z" fill="#fff4d4" stroke="#805d19" stroke-width="2"/>
+<text x="249" y="1122" fill="#556982" font-size="12" font-weight="700" text-anchor="end"></text>
+</g>
+<g id="AP09-z" data-kind="final">
+<circle cx="275" cy="1260" r="12" fill="#ffffff" stroke="#162d43" stroke-width="2"/>
+<circle cx="275" cy="1260" r="7" fill="#162d43"/>
+<text x="255" y="1266" fill="#162d43" font-size="14" font-weight="400" text-anchor="end">End</text>
+</g>
+<text x="725" y="137" fill="#162d43" font-size="15" font-weight="700" text-anchor="start">03  Cutoff, coverage, amount and target allow preview?</text>
+<text x="739" y="157" fill="#162d43" font-size="15" font-weight="400" text-anchor="start">[Yes, all relevant facts classify unambiguously]</text>
+<text x="725" y="188" fill="#162d43" font-size="15" font-weight="700" text-anchor="start">04  Cutoff, coverage, amount and target allow preview?</text>
+<text x="739" y="208" fill="#162d43" font-size="15" font-weight="400" text-anchor="start">[Ambiguity or other ineligibility]</text>
+<text x="725" y="239" fill="#162d43" font-size="15" font-weight="700" text-anchor="start">05  Can precision of an existing fact resolve the cutoff?</text>
+<text x="739" y="259" fill="#162d43" font-size="15" font-weight="400" text-anchor="start">[Yes, CU-019 through AP08]</text>
+<text x="725" y="290" fill="#162d43" font-size="15" font-weight="700" text-anchor="start">06  Can precision of an existing fact resolve the cutoff?</text>
+<text x="739" y="310" fill="#162d43" font-size="15" font-weight="400" text-anchor="start">[Other impediment or defer]</text>
+</g></svg>
