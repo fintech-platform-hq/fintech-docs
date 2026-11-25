@@ -1,0 +1,104 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1430" height="1442" viewBox="0 0 1430 1442" role="img" aria-labelledby="titulo">
+<title id="titulo">AP16 · View the Lenver account, privacy and return</title>
+<rect width="1430" height="1442" fill="#fff"/>
+<g font-family="Arial, sans-serif">
+<text x="48" y="36" fill="#526f83" font-size="14" font-weight="700" text-anchor="start">LENVER / MF03.1     ACTIVITY DIAGRAM</text>
+<text x="48" y="76" fill="#162d43" font-size="30" font-weight="700" text-anchor="start">AP16 · View the Lenver account, privacy and return</text>
+<line x1="702" y1="101" x2="702" y2="1404" stroke="#d9e4ed"/>
+<text x="725" y="106" fill="#162d43" font-size="17" font-weight="700" text-anchor="start">Decisions · branch conditions</text>
+<g id="AP16-01" data-from="i" data-to="s"><path d="M 275 153 V 231" fill="none" stroke="#12605c" stroke-width="2" /><polygon points="275,236 271,227 279,227" fill="#12605c"/><rect x="284" y="187" width="22" height="16" rx="3" fill="#fff"/><text x="286" y="200" fill="#12605c" font-size="12" font-weight="700" text-anchor="start">01</text></g>
+<g id="AP16-02" data-from="s" data-to="a"><path d="M 275 268 V 314" fill="none" stroke="#12605c" stroke-width="2" /><polygon points="275,319 271,310 279,310" fill="#12605c"/><rect x="284" y="299" width="22" height="16" rx="3" fill="#fff"/><text x="286" y="312" fill="#12605c" font-size="12" font-weight="700" text-anchor="start">02</text></g>
+<g id="AP16-03" data-from="s" data-to="m_h"><path d="M 285 258 H 616 V 1036 H 296" fill="none" stroke="#536783" stroke-width="2" /><polygon points="291,1036 300,1032 300,1040" fill="#536783"/><rect x="619" y="631" width="22" height="16" rx="3" fill="#fff"/><text x="621" y="644" fill="#536783" font-size="12" font-weight="700" text-anchor="start">03</text></g>
+<g id="AP16-04" data-from="a" data-to="v"><path d="M 275 409 V 455" fill="none" stroke="#12605c" stroke-width="2" /><polygon points="275,460 271,451 279,451" fill="#12605c"/><rect x="284" y="411" width="22" height="16" rx="3" fill="#fff"/><text x="286" y="424" fill="#12605c" font-size="12" font-weight="700" text-anchor="start">04</text></g>
+<g id="AP16-05" data-from="v" data-to="t"><path d="M 275 492 V 567" fill="none" stroke="#12605c" stroke-width="2" /><polygon points="275,572 271,563 279,563" fill="#12605c"/><rect x="284" y="523" width="22" height="16" rx="3" fill="#fff"/><text x="286" y="536" fill="#12605c" font-size="12" font-weight="700" text-anchor="start">05</text></g>
+<g id="AP16-06" data-from="v" data-to="m_h"><path d="M 285 482 H 594 V 1031 H 291" fill="none" stroke="#536783" stroke-width="2" /><polygon points="286,1031 295,1027 295,1035" fill="#536783"/><rect x="597" y="740" width="22" height="16" rx="3" fill="#fff"/><text x="599" y="753" fill="#536783" font-size="12" font-weight="700" text-anchor="start">06</text></g>
+<g id="AP16-07" data-from="t" data-to="g"><path d="M 275 604 V 679" fill="none" stroke="#12605c" stroke-width="2" /><polygon points="275,684 271,675 279,675" fill="#12605c"/><rect x="284" y="635" width="22" height="16" rx="3" fill="#fff"/><text x="286" y="648" fill="#12605c" font-size="12" font-weight="700" text-anchor="start">07</text></g>
+<g id="AP16-08" data-from="t" data-to="e"><path d="M 285 594 H 506 V 924 H 475" fill="none" stroke="#536783" stroke-width="2" /><polygon points="470,924 479,920 479,928" fill="#536783"/><rect x="509" y="743" width="22" height="16" rx="3" fill="#fff"/><text x="511" y="756" fill="#536783" font-size="12" font-weight="700" text-anchor="start">08</text></g>
+<g id="AP16-09" data-from="g" data-to="o"><path d="M 275 716 V 762" fill="none" stroke="#12605c" stroke-width="2" /><polygon points="275,767 271,758 279,758" fill="#12605c"/><rect x="284" y="747" width="22" height="16" rx="3" fill="#fff"/><text x="286" y="760" fill="#12605c" font-size="12" font-weight="700" text-anchor="start">09</text></g>
+<g id="AP16-10" data-from="g" data-to="m_h"><path d="M 285 706 H 528 V 1026 H 286" fill="none" stroke="#536783" stroke-width="2" /><polygon points="281,1026 290,1022 290,1030" fill="#536783"/><rect x="531" y="850" width="22" height="16" rx="3" fill="#fff"/><text x="533" y="863" fill="#536783" font-size="12" font-weight="700" text-anchor="start">10</text></g>
+<g id="AP16-11" data-from="o" data-to="m_z"><path d="M 470 818 H 572 V 1260 H 296" fill="none" stroke="#536783" stroke-width="2" /><polygon points="291,1260 300,1256 300,1264" fill="#536783"/><rect x="575" y="1023" width="22" height="16" rx="3" fill="#fff"/><text x="577" y="1036" fill="#536783" font-size="12" font-weight="700" text-anchor="start">11</text></g>
+<g id="AP16-12" data-from="e" data-to="m_z"><path d="M 470 930 H 550 V 1255 H 291" fill="none" stroke="#536783" stroke-width="2" /><polygon points="286,1255 295,1251 295,1259" fill="#536783"/><rect x="553" y="1076" width="22" height="16" rx="3" fill="#fff"/><text x="555" y="1089" fill="#536783" font-size="12" font-weight="700" text-anchor="start">12</text></g>
+<g id="AP16-13" data-from="h" data-to="m_z"><path d="M 275 1193 V 1239" fill="none" stroke="#12605c" stroke-width="2" /><polygon points="275,1244 271,1235 279,1235" fill="#12605c"/><rect x="284" y="1195" width="22" height="16" rx="3" fill="#fff"/><text x="286" y="1208" fill="#12605c" font-size="12" font-weight="700" text-anchor="start">13</text></g>
+<g id="AP16-14" data-from="m_h" data-to="h"><path d="M 275 1052 V 1098" fill="none" stroke="#12605c" stroke-width="2" /><polygon points="275,1103 271,1094 279,1094" fill="#12605c"/><rect x="284" y="1083" width="22" height="16" rx="3" fill="#fff"/><text x="286" y="1096" fill="#12605c" font-size="12" font-weight="700" text-anchor="start">14</text></g>
+<g id="AP16-15" data-from="m_z" data-to="z"><path d="M 275 1276 V 1353" fill="none" stroke="#12605c" stroke-width="2" /><polygon points="275,1358 271,1349 279,1349" fill="#12605c"/><rect x="284" y="1307" width="22" height="16" rx="3" fill="#fff"/><text x="286" y="1320" fill="#12605c" font-size="12" font-weight="700" text-anchor="start">15</text></g>
+<g id="AP16-i" data-kind="initial">
+<circle cx="275" cy="140" r="12" fill="#162d43" stroke="#162d43" stroke-width="2"/>
+<text x="255" y="146" fill="#162d43" font-size="14" font-weight="400" text-anchor="end">Entry</text>
+</g>
+<g id="AP16-s" data-kind="decision">
+<path d="M275 236 l16 16 -16 16 -16 -16 Z" fill="#fff4d4" stroke="#805d19" stroke-width="2"/>
+<text x="249" y="244" fill="#162d43" font-size="14" font-weight="400" text-anchor="end">Opened in an authorized</text>
+<text x="249" y="260" fill="#162d43" font-size="14" font-weight="400" text-anchor="end">context of this holder?</text>
+<text x="249" y="226" fill="#556982" font-size="12" font-weight="700" text-anchor="end">Client</text>
+</g>
+<g id="AP16-a" data-kind="action">
+<rect x="80" y="319" width="390" height="90" rx="13" fill="#eff6fa" stroke="#355a71" stroke-width="2"/>
+<text x="275" y="340" fill="#526f83" font-size="12" font-weight="700" text-anchor="middle">Client</text>
+<text x="275" y="369" fill="#162d43" font-size="15" font-weight="400" text-anchor="middle">Open from Home in native hierarchical sheet. Offer</text>
+<text x="275" y="384" fill="#162d43" font-size="15" font-weight="400" text-anchor="middle">identity, methods, privacy and support</text>
+</g>
+<g id="AP16-v" data-kind="decision">
+<path d="M275 460 l16 16 -16 16 -16 -16 Z" fill="#fff4d4" stroke="#805d19" stroke-width="2"/>
+<text x="249" y="468" fill="#162d43" font-size="14" font-weight="400" text-anchor="end">Is exposure still</text>
+<text x="249" y="484" fill="#162d43" font-size="14" font-weight="400" text-anchor="end">authorized?</text>
+<text x="249" y="450" fill="#556982" font-size="12" font-weight="700" text-anchor="end">Client</text>
+</g>
+<g id="AP16-t" data-kind="decision">
+<path d="M275 572 l16 16 -16 16 -16 -16 Z" fill="#fff4d4" stroke="#805d19" stroke-width="2"/>
+<text x="249" y="580" fill="#162d43" font-size="14" font-weight="400" text-anchor="end">Return to the originating</text>
+<text x="249" y="596" fill="#162d43" font-size="14" font-weight="400" text-anchor="end">context?</text>
+<text x="249" y="562" fill="#556982" font-size="12" font-weight="700" text-anchor="end">Account holder</text>
+</g>
+<g id="AP16-g" data-kind="decision">
+<path d="M275 684 l16 16 -16 16 -16 -16 Z" fill="#fff4d4" stroke="#805d19" stroke-width="2"/>
+<text x="249" y="692" fill="#162d43" font-size="14" font-weight="400" text-anchor="end">Is the origin still</text>
+<text x="249" y="708" fill="#162d43" font-size="14" font-weight="400" text-anchor="end">authorized?</text>
+<text x="249" y="674" fill="#556982" font-size="12" font-weight="700" text-anchor="end">Client</text>
+</g>
+<g id="AP16-o" data-kind="action">
+<rect x="80" y="767" width="390" height="90" rx="13" fill="#eff6fa" stroke="#355a71" stroke-width="2"/>
+<text x="275" y="788" fill="#526f83" font-size="12" font-weight="700" text-anchor="middle">Client</text>
+<text x="275" y="824" fill="#162d43" font-size="15" font-weight="400" text-anchor="middle">Restore authorized origin without mutation</text>
+</g>
+<g id="AP16-e" data-kind="action">
+<rect x="80" y="879" width="390" height="90" rx="13" fill="#eff6fa" stroke="#355a71" stroke-width="2"/>
+<text x="275" y="900" fill="#526f83" font-size="12" font-weight="700" text-anchor="middle">Client</text>
+<text x="275" y="929" fill="#162d43" font-size="15" font-weight="400" text-anchor="middle">Show own information or route methods, sign-out</text>
+<text x="275" y="944" fill="#162d43" font-size="15" font-weight="400" text-anchor="middle">and deletion to their flows</text>
+</g>
+<g id="AP16-m_h" data-kind="merge">
+<path d="M275 1020 l16 16 -16 16 -16 -16 Z" fill="#fff4d4" stroke="#805d19" stroke-width="2"/>
+<text x="249" y="1010" fill="#556982" font-size="12" font-weight="700" text-anchor="end"></text>
+</g>
+<g id="AP16-h" data-kind="action">
+<rect x="80" y="1103" width="390" height="90" rx="13" fill="#eff6fa" stroke="#355a71" stroke-width="2"/>
+<text x="275" y="1124" fill="#526f83" font-size="12" font-weight="700" text-anchor="middle">Client</text>
+<text x="275" y="1153" fill="#162d43" font-size="15" font-weight="400" text-anchor="middle">Hide sensitive content and intents in transition.</text>
+<text x="275" y="1168" fill="#162d43" font-size="15" font-weight="400" text-anchor="middle">Show expiry or unavailability where applicable</text>
+</g>
+<g id="AP16-m_z" data-kind="merge">
+<path d="M275 1244 l16 16 -16 16 -16 -16 Z" fill="#fff4d4" stroke="#805d19" stroke-width="2"/>
+<text x="249" y="1234" fill="#556982" font-size="12" font-weight="700" text-anchor="end"></text>
+</g>
+<g id="AP16-z" data-kind="final">
+<circle cx="275" cy="1372" r="12" fill="#ffffff" stroke="#162d43" stroke-width="2"/>
+<circle cx="275" cy="1372" r="7" fill="#162d43"/>
+<text x="255" y="1378" fill="#162d43" font-size="14" font-weight="400" text-anchor="end">End</text>
+</g>
+<text x="725" y="137" fill="#162d43" font-size="15" font-weight="700" text-anchor="start">02  Opened in an authorized context of this holder?</text>
+<text x="739" y="157" fill="#162d43" font-size="15" font-weight="400" text-anchor="start">[Valid origin and session]</text>
+<text x="725" y="188" fill="#162d43" font-size="15" font-weight="700" text-anchor="start">03  Opened in an authorized context of this holder?</text>
+<text x="739" y="208" fill="#162d43" font-size="15" font-weight="400" text-anchor="start">[Expired, different holder or unavailable]</text>
+<text x="725" y="239" fill="#162d43" font-size="15" font-weight="700" text-anchor="start">05  Is exposure still authorized?</text>
+<text x="739" y="259" fill="#162d43" font-size="15" font-weight="400" text-anchor="start">[Session, holder and privacy transition allow]</text>
+<text x="725" y="290" fill="#162d43" font-size="15" font-weight="700" text-anchor="start">06  Is exposure still authorized?</text>
+<text x="739" y="310" fill="#162d43" font-size="15" font-weight="400" text-anchor="start">[Background, app switcher, expiration or holder changed]</text>
+<text x="725" y="341" fill="#162d43" font-size="15" font-weight="700" text-anchor="start">07  Return to the originating context?</text>
+<text x="739" y="361" fill="#162d43" font-size="15" font-weight="400" text-anchor="start">[Return]</text>
+<text x="725" y="392" fill="#162d43" font-size="15" font-weight="700" text-anchor="start">08  Return to the originating context?</text>
+<text x="739" y="412" fill="#162d43" font-size="15" font-weight="400" text-anchor="start">[Read a group or choose an applicable action]</text>
+<text x="725" y="443" fill="#162d43" font-size="15" font-weight="700" text-anchor="start">09  Is the origin still authorized?</text>
+<text x="739" y="463" fill="#162d43" font-size="15" font-weight="400" text-anchor="start">[Same revalidated context]</text>
+<text x="725" y="494" fill="#162d43" font-size="15" font-weight="700" text-anchor="start">10  Is the origin still authorized?</text>
+<text x="739" y="514" fill="#162d43" font-size="15" font-weight="400" text-anchor="start">[Context changed or expired]</text>
+</g></svg>

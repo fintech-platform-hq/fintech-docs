@@ -1,5 +1,7 @@
 # Domain Definition
 
+This page records the early transaction implementation before I1–I5. For the approved conceptual baseline see the [functional model](functional-model.md). The [I5 delivery record](../architecture/i5-delivery.md) and [current implementation scope](functional-traceability.md#implementation-and-operational-validation) document later capabilities and outstanding checks.
+
 ## Implemented domain
 
 - `User` is the internal principal identified by `users.id`.
@@ -15,6 +17,6 @@ Apple linking is explicit, optional, and supported by both the backend and iOS c
 
 Authentication establishes one Lenver session. Authenticated account and transaction requests derive ownership from the JWT principal; client payloads cannot select another user. PostgreSQL is the source of truth for confirmed financial writes.
 
-## Not implemented in the iOS product
+## iOS scope at the time of this snapshot
 
-The current client has no account selection/creation UI, category UI, history, balance view, or offline reconciliation. These are future product work, even where backend schema support already exists.
+At this stage, the client had no account selection/creation UI, category UI, history, balance view, or offline reconciliation. Some of these capabilities already had backend schema support at the time.

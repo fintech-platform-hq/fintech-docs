@@ -1,0 +1,94 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1430" height="1330" viewBox="0 0 1430 1330" role="img" aria-labelledby="titulo">
+<title id="titulo">AP04 · Unlink, revoke and sign out</title>
+<rect width="1430" height="1330" fill="#fff"/>
+<g font-family="Arial, sans-serif">
+<text x="48" y="36" fill="#526f83" font-size="14" font-weight="700" text-anchor="start">LENVER / MF03.1     ACTIVITY DIAGRAM</text>
+<text x="48" y="76" fill="#162d43" font-size="30" font-weight="700" text-anchor="start">AP04 · Unlink, revoke and sign out</text>
+<line x1="702" y1="101" x2="702" y2="1292" stroke="#d9e4ed"/>
+<text x="725" y="106" fill="#162d43" font-size="17" font-weight="700" text-anchor="start">Decisions · branch conditions</text>
+<g id="AP04-01" data-from="i" data-to="v"><path d="M 275 153 V 231" fill="none" stroke="#12605c" stroke-width="2" /><polygon points="275,236 271,227 279,227" fill="#12605c"/><rect x="284" y="187" width="22" height="16" rx="3" fill="#fff"/><text x="286" y="200" fill="#12605c" font-size="12" font-weight="700" text-anchor="start">01</text></g>
+<g id="AP04-02" data-from="v" data-to="e"><path d="M 275 268 V 314" fill="none" stroke="#12605c" stroke-width="2" /><polygon points="275,319 271,310 279,310" fill="#12605c"/><rect x="284" y="299" width="22" height="16" rx="3" fill="#fff"/><text x="286" y="312" fill="#12605c" font-size="12" font-weight="700" text-anchor="start">02</text></g>
+<g id="AP04-03" data-from="v" data-to="t"><path d="M 285 258 H 506 V 476 H 296" fill="none" stroke="#536783" stroke-width="2" /><polygon points="291,476 300,472 300,480" fill="#536783"/><rect x="509" y="351" width="22" height="16" rx="3" fill="#fff"/><text x="511" y="364" fill="#536783" font-size="12" font-weight="700" text-anchor="start">03</text></g>
+<g id="AP04-04" data-from="e" data-to="m_z"><path d="M 470 370 H 616 V 1148 H 296" fill="none" stroke="#536783" stroke-width="2" /><polygon points="291,1148 300,1144 300,1152" fill="#536783"/><rect x="619" y="743" width="22" height="16" rx="3" fill="#fff"/><text x="621" y="756" fill="#536783" font-size="12" font-weight="700" text-anchor="start">04</text></g>
+<g id="AP04-05" data-from="t" data-to="l"><path d="M 275 492 V 538" fill="none" stroke="#12605c" stroke-width="2" /><polygon points="275,543 271,534 279,534" fill="#12605c"/><rect x="284" y="523" width="22" height="16" rx="3" fill="#fff"/><text x="286" y="536" fill="#12605c" font-size="12" font-weight="700" text-anchor="start">05</text></g>
+<g id="AP04-06" data-from="t" data-to="d"><path d="M 285 482 H 572 V 812 H 296" fill="none" stroke="#536783" stroke-width="2" /><polygon points="291,812 300,808 300,816" fill="#536783"/><rect x="575" y="631" width="22" height="16" rx="3" fill="#fff"/><text x="577" y="644" fill="#536783" font-size="12" font-weight="700" text-anchor="start">06</text></g>
+<g id="AP04-07" data-from="l" data-to="m"><path d="M 275 633 V 650" fill="none" stroke="#12605c" stroke-width="2" /><polygon points="275,655 271,646 279,646" fill="#12605c"/><rect x="284" y="635" width="22" height="16" rx="3" fill="#fff"/><text x="286" y="648" fill="#12605c" font-size="12" font-weight="700" text-anchor="start">07</text></g>
+<g id="AP04-08" data-from="m" data-to="m_z"><path d="M 470 706 H 594 V 1143 H 291" fill="none" stroke="#536783" stroke-width="2" /><polygon points="286,1143 295,1139 295,1147" fill="#536783"/><rect x="597" y="908" width="22" height="16" rx="3" fill="#fff"/><text x="599" y="921" fill="#536783" font-size="12" font-weight="700" text-anchor="start">08</text></g>
+<g id="AP04-09" data-from="d" data-to="c"><path d="M 275 828 V 874" fill="none" stroke="#12605c" stroke-width="2" /><polygon points="275,879 271,870 279,870" fill="#12605c"/><rect x="284" y="859" width="22" height="16" rx="3" fill="#fff"/><text x="286" y="872" fill="#12605c" font-size="12" font-weight="700" text-anchor="start">09</text></g>
+<g id="AP04-10" data-from="d" data-to="r"><path d="M 285 818 H 528 V 1036 H 475" fill="none" stroke="#536783" stroke-width="2" /><polygon points="470,1036 479,1032 479,1040" fill="#536783"/><rect x="531" y="911" width="22" height="16" rx="3" fill="#fff"/><text x="533" y="924" fill="#536783" font-size="12" font-weight="700" text-anchor="start">10</text></g>
+<g id="AP04-11" data-from="c" data-to="m_z"><path d="M 470 930 H 550 V 1138 H 286" fill="none" stroke="#536783" stroke-width="2" /><polygon points="281,1138 290,1134 290,1142" fill="#536783"/><rect x="553" y="1018" width="22" height="16" rx="3" fill="#fff"/><text x="555" y="1031" fill="#536783" font-size="12" font-weight="700" text-anchor="start">11</text></g>
+<g id="AP04-12" data-from="r" data-to="m_z"><path d="M 275 1081 V 1127" fill="none" stroke="#12605c" stroke-width="2" /><polygon points="275,1132 271,1123 279,1123" fill="#12605c"/><rect x="284" y="1083" width="22" height="16" rx="3" fill="#fff"/><text x="286" y="1096" fill="#12605c" font-size="12" font-weight="700" text-anchor="start">12</text></g>
+<g id="AP04-13" data-from="m_z" data-to="z"><path d="M 275 1164 V 1241" fill="none" stroke="#12605c" stroke-width="2" /><polygon points="275,1246 271,1237 279,1237" fill="#12605c"/><rect x="284" y="1195" width="22" height="16" rx="3" fill="#fff"/><text x="286" y="1208" fill="#12605c" font-size="12" font-weight="700" text-anchor="start">13</text></g>
+<g id="AP04-i" data-kind="initial">
+<circle cx="275" cy="140" r="12" fill="#162d43" stroke="#162d43" stroke-width="2"/>
+<text x="255" y="146" fill="#162d43" font-size="14" font-weight="400" text-anchor="end">Entry</text>
+</g>
+<g id="AP04-v" data-kind="decision">
+<path d="M275 236 l16 16 -16 16 -16 -16 Z" fill="#fff4d4" stroke="#805d19" stroke-width="2"/>
+<text x="249" y="244" fill="#162d43" font-size="14" font-weight="400" text-anchor="end">Is this a proved external</text>
+<text x="249" y="260" fill="#162d43" font-size="14" font-weight="400" text-anchor="end">revocation?</text>
+<text x="249" y="226" fill="#556982" font-size="12" font-weight="700" text-anchor="end">Lenver authority</text>
+</g>
+<g id="AP04-e" data-kind="action">
+<rect x="80" y="319" width="390" height="90" rx="13" fill="#eff6fa" stroke="#355a71" stroke-width="2"/>
+<text x="275" y="340" fill="#526f83" font-size="12" font-weight="700" text-anchor="middle">Lenver authority</text>
+<text x="275" y="369" fill="#162d43" font-size="15" font-weight="400" text-anchor="middle">Invalidate external proof. Zero methods may</text>
+<text x="275" y="384" fill="#162d43" font-size="15" font-weight="400" text-anchor="middle">remain. Sessions follow LAC-01</text>
+</g>
+<g id="AP04-t" data-kind="decision">
+<path d="M275 460 l16 16 -16 16 -16 -16 Z" fill="#fff4d4" stroke="#805d19" stroke-width="2"/>
+<text x="249" y="468" fill="#162d43" font-size="14" font-weight="400" text-anchor="end">Is the local goal sign-out?</text>
+<text x="249" y="450" fill="#556982" font-size="12" font-weight="700" text-anchor="end">Account holder</text>
+</g>
+<g id="AP04-l" data-kind="action">
+<rect x="80" y="543" width="390" height="90" rx="13" fill="#eff6fa" stroke="#355a71" stroke-width="2"/>
+<text x="275" y="564" fill="#526f83" font-size="12" font-weight="700" text-anchor="middle">Client</text>
+<text x="275" y="593" fill="#162d43" font-size="15" font-weight="400" text-anchor="middle">End local authority, hide data and intents, and</text>
+<text x="275" y="608" fill="#162d43" font-size="15" font-weight="400" text-anchor="middle">preserve eligible protected intent</text>
+</g>
+<g id="AP04-m" data-kind="action">
+<rect x="80" y="655" width="390" height="90" rx="13" fill="#eff6fa" stroke="#355a71" stroke-width="2"/>
+<text x="275" y="676" fill="#526f83" font-size="12" font-weight="700" text-anchor="middle">Lenver authority</text>
+<text x="275" y="705" fill="#162d43" font-size="15" font-weight="400" text-anchor="middle">Determine remote revocation separately. Reply loss</text>
+<text x="275" y="720" fill="#162d43" font-size="15" font-weight="400" text-anchor="middle">leaves local access closed</text>
+</g>
+<g id="AP04-d" data-kind="decision">
+<path d="M275 796 l16 16 -16 16 -16 -16 Z" fill="#fff4d4" stroke="#805d19" stroke-width="2"/>
+<text x="249" y="804" fill="#162d43" font-size="14" font-weight="400" text-anchor="end">Does another method remain</text>
+<text x="249" y="820" fill="#162d43" font-size="14" font-weight="400" text-anchor="end">usable at commitment?</text>
+<text x="249" y="786" fill="#556982" font-size="12" font-weight="700" text-anchor="end">Lenver authority</text>
+</g>
+<g id="AP04-c" data-kind="action">
+<rect x="80" y="879" width="390" height="90" rx="13" fill="#eff6fa" stroke="#355a71" stroke-width="2"/>
+<text x="275" y="900" fill="#526f83" font-size="12" font-weight="700" text-anchor="middle">Lenver authority</text>
+<text x="275" y="929" fill="#162d43" font-size="15" font-weight="400" text-anchor="middle">Unlink and handle sessions under LAC-01. Reply</text>
+<text x="275" y="944" fill="#162d43" font-size="15" font-weight="400" text-anchor="middle">loss goes to AP15</text>
+</g>
+<g id="AP04-r" data-kind="action">
+<rect x="80" y="991" width="390" height="90" rx="13" fill="#eff6fa" stroke="#355a71" stroke-width="2"/>
+<text x="275" y="1012" fill="#526f83" font-size="12" font-weight="700" text-anchor="middle">Client</text>
+<text x="275" y="1041" fill="#162d43" font-size="15" font-weight="400" text-anchor="middle">Show remaining authorized methods and preserve</text>
+<text x="275" y="1056" fill="#162d43" font-size="15" font-weight="400" text-anchor="middle">existing links</text>
+</g>
+<g id="AP04-m_z" data-kind="merge">
+<path d="M275 1132 l16 16 -16 16 -16 -16 Z" fill="#fff4d4" stroke="#805d19" stroke-width="2"/>
+<text x="249" y="1122" fill="#556982" font-size="12" font-weight="700" text-anchor="end"></text>
+</g>
+<g id="AP04-z" data-kind="final">
+<circle cx="275" cy="1260" r="12" fill="#ffffff" stroke="#162d43" stroke-width="2"/>
+<circle cx="275" cy="1260" r="7" fill="#162d43"/>
+<text x="255" y="1266" fill="#162d43" font-size="14" font-weight="400" text-anchor="end">End</text>
+</g>
+<text x="725" y="137" fill="#162d43" font-size="15" font-weight="700" text-anchor="start">02  Is this a proved external revocation?</text>
+<text x="739" y="157" fill="#162d43" font-size="15" font-weight="400" text-anchor="start">[External revocation confirmed]</text>
+<text x="725" y="188" fill="#162d43" font-size="15" font-weight="700" text-anchor="start">03  Is this a proved external revocation?</text>
+<text x="739" y="208" fill="#162d43" font-size="15" font-weight="400" text-anchor="start">[Authorized local action]</text>
+<text x="725" y="239" fill="#162d43" font-size="15" font-weight="700" text-anchor="start">05  Is the local goal sign-out?</text>
+<text x="739" y="259" fill="#162d43" font-size="15" font-weight="400" text-anchor="start">[Sign out]</text>
+<text x="725" y="290" fill="#162d43" font-size="15" font-weight="700" text-anchor="start">06  Is the local goal sign-out?</text>
+<text x="739" y="310" fill="#162d43" font-size="15" font-weight="400" text-anchor="start">[Unlink method]</text>
+<text x="725" y="341" fill="#162d43" font-size="15" font-weight="700" text-anchor="start">09  Does another method remain usable at commitment?</text>
+<text x="739" y="361" fill="#162d43" font-size="15" font-weight="400" text-anchor="start">[Yes, with valid proof and account]</text>
+<text x="725" y="392" fill="#162d43" font-size="15" font-weight="700" text-anchor="start">10  Does another method remain usable at commitment?</text>
+<text x="739" y="412" fill="#162d43" font-size="15" font-weight="400" text-anchor="start">[No or concurrent act won]</text>
+</g></svg>

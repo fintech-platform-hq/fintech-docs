@@ -1,0 +1,189 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1500" height="1340" viewBox="0 0 1500 1340" role="img" aria-labelledby="title description">
+<title id="title">Lenver · Conceptual domain model</title>
+<desc id="description">Three views show associations and multiplicities for identity, financial calculation and checks, and submissions. Each check has one original comparison and revision-scoped recalculated readings. Replacement is directional from predecessor to successor.</desc>
+<style>
+text { font-family: system-ui, -apple-system, Arial, sans-serif; fill: #252b2f }
+.title { font-size: 40px; font-weight: 700; letter-spacing: -1px }
+.subtitle { font-size: 18px; fill: #4c555a }
+.heading { font-size: 23px; font-weight: 650 }
+.name { font-size: 19px; font-weight: 650 }
+.code { font-size: 13px; font-weight: 650; fill: #694640 }
+.body { font-size: 16px; fill: #414c51 }
+.label { font-size: 14px; fill: #3c5058 }
+.mult { font-size: 14px; font-weight: 650; fill: #243a43 }
+.edge { fill: none; stroke: #71838b; stroke-width: 1.6 }
+.dependency { stroke-dasharray: 6 5 }
+</style>
+<rect width="1500" height="1340" fill="#f7f4ef"/>
+
+<text x="52" y="65" class="title" text-anchor="start">Lenver · Conceptual domain model</text>
+<text x="54" y="98" class="subtitle" text-anchor="start">MF01.1   /   Manual C+A   /   Up to one active personal BRL account per holder   /   Approved</text>
+<rect x="36" y="128" width="1428" height="300" rx="18" fill="#fffdf9" stroke="#ded7ce"/>
+<text x="64" y="166" class="heading" text-anchor="start">Identity and ownership</text>
+<g id="C01"><rect x="70" y="193" width="282" height="111" rx="10" fill="#f6e7e2" stroke="#b1bfbe"/>
+<text x="85" y="214" class="code" text-anchor="start">C01</text>
+<text x="85" y="239" class="name" text-anchor="start">Holder · Lenver account</text>
+<text x="85" y="265" class="body" text-anchor="start">Stable internal identity</text>
+<text x="85" y="286" class="body" text-anchor="start">Data ownership</text>
+</g>
+<g id="C02"><rect x="435" y="193" width="282" height="111" rx="10" fill="#f1f5f4" stroke="#b1bfbe"/>
+<text x="450" y="214" class="code" text-anchor="start">C02</text>
+<text x="450" y="239" class="name" text-anchor="start">Sign-in method</text>
+<text x="450" y="265" class="body" text-anchor="start">Email and password or Apple</text>
+<text x="450" y="286" class="body" text-anchor="start">Zero to two usable</text>
+</g>
+<g id="C03"><rect x="800" y="193" width="282" height="111" rx="10" fill="#f1f5f4" stroke="#b1bfbe"/>
+<text x="815" y="214" class="code" text-anchor="start">C03</text>
+<text x="815" y="239" class="name" text-anchor="start">Lenver session</text>
+<text x="815" y="265" class="body" text-anchor="start">Temporary authorization</text>
+<text x="815" y="286" class="body" text-anchor="start">Same holder signs in again</text>
+</g>
+<g id="C04-acesso"><rect x="1165" y="193" width="258" height="111" rx="10" fill="#f6e7e2" stroke="#b1bfbe"/>
+<text x="1180" y="214" class="code" text-anchor="start">C04</text>
+<text x="1180" y="239" class="name" text-anchor="start">Financial account</text>
+<text x="1180" y="265" class="body" text-anchor="start">Owned BRL account</text>
+<text x="1180" y="286" class="body" text-anchor="start">Baseline and coverage below</text>
+</g>
+<path d="M352 237 H435" class="edge"/>
+<text x="358" y="230" class="mult" text-anchor="start">1</text>
+<text x="429" y="230" class="mult" text-anchor="end">1..2</text>
+<text x="393" y="259" class="label" text-anchor="middle">links</text>
+<path d="M200 193 V177 H941 V193" class="edge"/>
+<text x="207" y="191" class="mult" text-anchor="start">1</text>
+<text x="948" y="191" class="mult" text-anchor="start">0..*</text>
+<text x="571" y="173" class="label" text-anchor="middle">has sessions</text>
+<path d="M200 304 V327 H1294 V304" class="edge"/>
+<text x="207" y="322" class="mult" text-anchor="start">1</text>
+<text x="1300" y="322" class="mult" text-anchor="start">0..*</text>
+<text x="747" y="350" class="label" text-anchor="middle">owns · up to one active personal C+A account · owned legacy account may lack baseline</text>
+<g id="C13">
+<text x="70" y="387" class="body" text-anchor="start">C13 · Password requires verified email for financial access. Valid Apple proof grants its own access.</text>
+<text x="70" y="409" class="body" text-anchor="start">Deletion acceptance closes write admission. Protected lookup works after session invalidation.</text>
+</g>
+<rect x="36" y="448" width="1428" height="532" rx="18" fill="#fffdf9" stroke="#ded7ce"/>
+<text x="64" y="486" class="heading" text-anchor="start">Financial position, balance checks and recovery</text>
+<g id="C04"><rect x="70" y="519" width="282" height="111" rx="10" fill="#f6e7e2" stroke="#b1bfbe"/>
+<text x="85" y="540" class="code" text-anchor="start">C04</text>
+<text x="85" y="565" class="name" text-anchor="start">Financial account</text>
+<text x="85" y="591" class="body" text-anchor="start">BRL and coherent revision</text>
+<text x="85" y="612" class="body" text-anchor="start">One account holder</text>
+</g>
+<g id="C05"><rect x="435" y="519" width="282" height="111" rx="10" fill="#f1f5f4" stroke="#b1bfbe"/>
+<text x="450" y="540" class="code" text-anchor="start">C05</text>
+<text x="450" y="565" class="name" text-anchor="start">Financial baseline version</text>
+<text x="450" y="591" class="body" text-anchor="start">Balance immediately before T0</text>
+<text x="450" y="612" class="body" text-anchor="start">At most one current set</text>
+</g>
+<g id="C08"><rect x="800" y="519" width="282" height="111" rx="10" fill="#f6e7e2" stroke="#b1bfbe"/>
+<text x="815" y="540" class="code" text-anchor="start">C08</text>
+<text x="815" y="565" class="name" text-anchor="start">Balance check</text>
+<text x="815" y="591" class="body" text-anchor="start">Observation, cutoff and validity</text>
+<text x="815" y="612" class="body" text-anchor="start">Audited replacement to new ID</text>
+</g>
+<g id="C09">
+<rect x="1165" y="519" width="258" height="51" rx="8" fill="#f1f5f4" stroke="#b1bfbe"/>
+<text x="1178" y="536" class="code">C09 · COMPARISON AT CUTOFF</text>
+<text x="1178" y="558" class="body">Immutable original comparison</text>
+<rect x="1165" y="579" width="258" height="51" rx="8" fill="#f1f5f4" stroke="#b1bfbe"/>
+<text x="1178" y="599" class="body">Recalculated reading at cutoff</text>
+<text x="1178" y="619" class="label">0..1 per revision · may be unavailable</text>
+</g>
+<g id="C07"><rect x="70" y="702" width="282" height="111" rx="10" fill="#f1f5f4" stroke="#b1bfbe"/>
+<text x="85" y="723" class="code" text-anchor="start">C07</text>
+<text x="85" y="748" class="name" text-anchor="start">Transaction</text>
+<text x="85" y="774" class="body" text-anchor="start">Confirmed income or expense</text>
+<text x="85" y="795" class="body" text-anchor="start">Stable ID across all versions</text>
+</g>
+<g id="C06"><rect x="435" y="702" width="282" height="111" rx="10" fill="#f1f5f4" stroke="#b1bfbe"/>
+<text x="450" y="723" class="code" text-anchor="start">C06</text>
+<text x="450" y="748" class="name" text-anchor="start">Values and time</text>
+<text x="450" y="774" class="body" text-anchor="start">BRL, T0, zone and inclusive cutoff</text>
+<text x="450" y="795" class="body" text-anchor="start">Exact occurrence or interval</text>
+</g>
+<g id="C10"><rect x="800" y="702" width="282" height="111" rx="10" fill="#f1f5f4" stroke="#b1bfbe"/>
+<text x="815" y="723" class="code" text-anchor="start">C10</text>
+<text x="815" y="748" class="name" text-anchor="start">Recovery link</text>
+<text x="815" y="774" class="body" text-anchor="start">Identified expense and evidence</text>
+<text x="815" y="795" class="body" text-anchor="start">One link per pair</text>
+</g>
+<g id="C11"><rect x="1165" y="702" width="258" height="111" rx="10" fill="#f1f5f4" stroke="#b1bfbe"/>
+<text x="1180" y="723" class="code" text-anchor="start">C11</text>
+<text x="1180" y="748" class="name" text-anchor="start">Audited change</text>
+<text x="1180" y="774" class="body" text-anchor="start">Target, author, revision, reason</text>
+<text x="1180" y="795" class="body" text-anchor="start">Original retained</text>
+</g>
+<path d="M352 572 H435" class="edge"/>
+<text x="358" y="565" class="mult" text-anchor="start">1</text>
+<text x="429" y="565" class="mult" text-anchor="end">0..*</text>
+<text x="393" y="594" class="label" text-anchor="middle">versions</text>
+<path d="M200 519 V500 H941 V519" class="edge"/>
+<text x="207" y="515" class="mult" text-anchor="start">1</text>
+<text x="948" y="515" class="mult" text-anchor="start">0..*</text>
+<text x="690" y="495" class="label" text-anchor="middle">records checks</text>
+<path d="M1082 551 H1165" class="edge"/>
+<text x="1088" y="546" class="mult">1</text>
+<text x="1159" y="546" class="mult" text-anchor="end">1</text>
+<path d="M1082 608 H1165" class="edge"/>
+<text x="1088" y="603" class="mult">1</text>
+<text x="1159" y="603" class="mult" text-anchor="end">0..*</text>
+<path d="M830 630 V659 H764 V602 H790" class="edge"/>
+<polygon points="790,597 800,602 790,607" fill="#71838b"/>
+<text x="744" y="684" class="label">prior → successor</text>
+<path d="M210 630 V702" class="edge"/>
+<text x="218" y="646" class="mult" text-anchor="start">1</text>
+<text x="218" y="695" class="mult" text-anchor="start">0..*</text>
+<text x="201" y="671" class="label" text-anchor="end">records</text>
+<path d="M941 630 V702" class="edge"/>
+<text x="949" y="646" class="mult" text-anchor="start">1</text>
+<text x="949" y="695" class="mult" text-anchor="start">0..*</text>
+<text x="932" y="671" class="label" text-anchor="end">links</text>
+<path d="M575 630 V702" class="edge dependency"/>
+<text x="584" y="671" class="label" text-anchor="start">defines T0</text>
+<path d="M210 813 V848 H941 V813" class="edge"/>
+<text x="217" y="831" class="mult" text-anchor="start">1</text>
+<text x="948" y="831" class="mult" text-anchor="start">0..*</text>
+<text x="576" y="871" class="label" text-anchor="middle">links expense without changing balance or remaining difference</text>
+<path d="M1294 702 V630" class="edge dependency"/>
+<text x="1303" y="671" class="label" text-anchor="start">recalculates</text>
+<text x="70" y="909" class="body" text-anchor="start">Replacement stays in the account at a later revision, with 0..1 immediate predecessor and successor and one reason per edge.</text>
+<text x="70" y="935" class="body" text-anchor="start">A recovered new expense has one originating link. Correcting an erroneous link removes attribution and preserves the expense.</text>
+<text x="70" y="959" class="body" text-anchor="start">Missing or suspended baseline, or cutoff before T0, makes calculations unavailable. Authorized originals remain readable.</text>
+<rect x="36" y="1000" width="1428" height="274" rx="18" fill="#fffdf9" stroke="#ded7ce"/>
+<text x="64" y="1038" class="heading" text-anchor="start">Submission intent, confirmation and re-entry</text>
+<g id="C01-envio"><rect x="70" y="1062" width="282" height="111" rx="10" fill="#f1f5f4" stroke="#b1bfbe"/>
+<text x="85" y="1083" class="code" text-anchor="start">C01</text>
+<text x="85" y="1108" class="name" text-anchor="start">Account holder</text>
+<text x="85" y="1134" class="body" text-anchor="start">Environment and authority</text>
+<text x="85" y="1155" class="body" text-anchor="start">Same holder signs in again</text>
+</g>
+<g id="C12"><rect x="435" y="1062" width="282" height="111" rx="10" fill="#f6e7e2" stroke="#b1bfbe"/>
+<text x="450" y="1083" class="code" text-anchor="start">C12</text>
+<text x="450" y="1108" class="name" text-anchor="start">Submission intent</text>
+<text x="450" y="1134" class="body" text-anchor="start">Fixed operation, key and terms</text>
+<text x="450" y="1155" class="body" text-anchor="start">Opening target or account</text>
+</g>
+<g id="C12-recibo"><rect x="800" y="1062" width="282" height="111" rx="10" fill="#f1f5f4" stroke="#b1bfbe"/>
+<text x="815" y="1083" class="code" text-anchor="start">C12</text>
+<text x="815" y="1108" class="name" text-anchor="start">Confirmation receipt</text>
+<text x="815" y="1134" class="body" text-anchor="start">Original confirmation</text>
+<text x="815" y="1155" class="body" text-anchor="start">Refresh after recovery</text>
+</g>
+<g id="C12-incerto"><rect x="1165" y="1062" width="258" height="111" rx="10" fill="#f1f5f4" stroke="#b1bfbe"/>
+<text x="1180" y="1083" class="code" text-anchor="start">C12</text>
+<text x="1180" y="1108" class="name" text-anchor="start">Uncertain outcome</text>
+<text x="1180" y="1134" class="body" text-anchor="start">Outcome still unknown</text>
+<text x="1180" y="1155" class="body" text-anchor="start">Same intent retained</text>
+</g>
+<path d="M352 1114 H435" class="edge"/>
+<text x="358" y="1107" class="mult" text-anchor="start">1</text>
+<text x="429" y="1107" class="mult" text-anchor="end">0..*</text>
+<text x="393" y="1136" class="label" text-anchor="middle">submits</text>
+<path d="M717 1114 H800" class="edge"/>
+<text x="723" y="1107" class="mult" text-anchor="start">1</text>
+<text x="794" y="1107" class="mult" text-anchor="end">0..1</text>
+<text x="758" y="1136" class="label" text-anchor="middle">produces</text>
+<path d="M575 1173 V1200 H1294 V1173" class="edge dependency"/>
+<text x="935" y="1223" class="label" text-anchor="middle">receipt may already exist after response loss</text>
+<text x="70" y="1250" class="body" text-anchor="start">An intent has 0..1 existing account at submission. Compatible submission can recover a preexisting receipt.</text>
+<text x="52" y="1315" class="subtitle" text-anchor="start">Associations have multiplicities   ·   Dashed lines show dependencies   ·   Cxx IDs refer to model and glossary</text>
+</svg>

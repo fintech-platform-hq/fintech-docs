@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1430" height="658" viewBox="0 0 1430 658" role="img" aria-labelledby="titulo">
+<title id="titulo">ME04 · Verification or recovery proof</title>
+<rect width="1430" height="658" fill="#fff"/>
+<g font-family="Arial, sans-serif">
+<text x="48" y="36" fill="#526f83" font-size="14" font-weight="700" text-anchor="start">LENVER / MF03.1     STATE MACHINE</text>
+<text x="48" y="76" fill="#162d43" font-size="30" font-weight="700" text-anchor="start">ME04 · Verification or recovery proof</text>
+<line x1="702" y1="101" x2="702" y2="620" stroke="#d9e4ed"/>
+<text x="725" y="106" fill="#162d43" font-size="17" font-weight="700" text-anchor="start">Transitions · event, conditions and outcome</text>
+<g id="ME04-01" data-from="i" data-to="p"><path d="M 275 153 V 223" fill="none" stroke="#12605c" stroke-width="2" /><polygon points="275,228 271,219 279,219" fill="#12605c"/><rect x="284" y="187" width="22" height="16" rx="3" fill="#fff"/><text x="286" y="200" fill="#12605c" font-size="12" font-weight="700" text-anchor="start">01</text></g>
+<g id="ME04-02" data-from="p" data-to="c"><path d="M 275 276 V 335" fill="none" stroke="#12605c" stroke-width="2" /><polygon points="275,340 271,331 279,331" fill="#12605c"/><rect x="284" y="299" width="22" height="16" rx="3" fill="#fff"/><text x="286" y="312" fill="#12605c" font-size="12" font-weight="700" text-anchor="start">02</text></g>
+<g id="ME04-03" data-from="p" data-to="e"><path d="M 470 258 H 528 V 476 H 475" fill="none" stroke="#536783" stroke-width="2" /><polygon points="470,476 479,472 479,480" fill="#536783"/><rect x="531" y="351" width="22" height="16" rx="3" fill="#fff"/><text x="533" y="364" fill="#536783" font-size="12" font-weight="700" text-anchor="start">03</text></g>
+<g id="ME04-04" data-from="p" data-to="p"><path d="M 470 241 H 506 V 263 H 475" fill="none" stroke="#536783" stroke-width="2" /><polygon points="470,263 479,259 479,267" fill="#536783"/><rect x="509" y="236" width="22" height="16" rx="3" fill="#fff"/><text x="511" y="249" fill="#536783" font-size="12" font-weight="700" text-anchor="start">04</text></g>
+<g id="ME04-05" data-from="c" data-to="f"><path d="M 470 370 H 550 V 588 H 293" fill="none" stroke="#536783" stroke-width="2" /><polygon points="288,588 297,584 297,592" fill="#536783"/><rect x="553" y="463" width="22" height="16" rx="3" fill="#fff"/><text x="555" y="476" fill="#536783" font-size="12" font-weight="700" text-anchor="start">05</text></g>
+<g id="ME04-06" data-from="e" data-to="f"><path d="M 275 500 V 569" fill="none" stroke="#12605c" stroke-width="2" /><polygon points="275,574 271,565 279,565" fill="#12605c"/><rect x="284" y="523" width="22" height="16" rx="3" fill="#fff"/><text x="286" y="536" fill="#12605c" font-size="12" font-weight="700" text-anchor="start">06</text></g>
+<g id="ME04-i" data-kind="initial">
+<circle cx="275" cy="140" r="12" fill="#162d43" stroke="#162d43" stroke-width="2"/>
+</g>
+<g id="ME04-p" data-kind="state">
+<rect x="80" y="228" width="390" height="48" rx="13" fill="#eff6fa" stroke="#355a71" stroke-width="2"/>
+<text x="275" y="257" fill="#162d43" font-size="15" font-weight="400" text-anchor="middle">Proof pending</text>
+</g>
+<g id="ME04-c" data-kind="state">
+<rect x="80" y="340" width="390" height="48" rx="13" fill="#eff6fa" stroke="#355a71" stroke-width="2"/>
+<text x="275" y="369" fill="#162d43" font-size="15" font-weight="400" text-anchor="middle">Consumed</text>
+</g>
+<g id="ME04-e" data-kind="state">
+<rect x="80" y="452" width="390" height="48" rx="13" fill="#eff6fa" stroke="#355a71" stroke-width="2"/>
+<text x="275" y="481" fill="#162d43" font-size="15" font-weight="400" text-anchor="middle">Expired</text>
+</g>
+<g id="ME04-f" data-kind="final">
+<circle cx="275" cy="588" r="12" fill="#ffffff" stroke="#162d43" stroke-width="2"/>
+<circle cx="275" cy="588" r="7" fill="#162d43"/>
+</g>
+<text x="725" y="137" fill="#162d43" font-size="15" font-weight="700" text-anchor="start">01  Request proof</text>
+<text x="739" y="157" fill="#162d43" font-size="15" font-weight="400" text-anchor="start">Limit proof to eligible holder, method and purpose. Recovery response is neutral.</text>
+<text x="725" y="188" fill="#162d43" font-size="15" font-weight="700" text-anchor="start">02  Present proof</text>
+<text x="739" y="208" fill="#162d43" font-size="15" font-weight="400" text-anchor="start">Valid, unexpired, unused, holder- and purpose-bound proof commits with the action.</text>
+<text x="739" y="227" fill="#162d43" font-size="15" font-weight="400" text-anchor="start">If recovering, validate new password and return to sign-in for the same holder.</text>
+<text x="725" y="258" fill="#162d43" font-size="15" font-weight="700" text-anchor="start">03  Expire proof</text>
+<text x="739" y="278" fill="#162d43" font-size="15" font-weight="400" text-anchor="start">No verification or recovery effect.</text>
+<text x="725" y="309" fill="#162d43" font-size="15" font-weight="700" text-anchor="start">04  Reject presentation</text>
+<text x="739" y="329" fill="#162d43" font-size="15" font-weight="400" text-anchor="start">Invalid, used, mismatched or unauthorized proof leaves pending state.</text>
+<text x="725" y="360" fill="#162d43" font-size="15" font-weight="700" text-anchor="start">05  End consumed lifecycle</text>
+<text x="739" y="380" fill="#162d43" font-size="15" font-weight="400" text-anchor="start">Refuse reuse. Retention and affected session policy belong to contract design.</text>
+<text x="725" y="411" fill="#162d43" font-size="15" font-weight="700" text-anchor="start">06  End expired lifecycle</text>
+<text x="739" y="431" fill="#162d43" font-size="15" font-weight="400" text-anchor="start">Preserve expiry and no effect. Reissued proof starts a separate lifecycle.</text>
+</g></svg>

@@ -1,0 +1,110 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1430" height="1313" viewBox="0 0 1430 1313" role="img" aria-labelledby="titulo">
+<title id="titulo">ME12 · Client knowledge of outcome</title>
+<rect width="1430" height="1313" fill="#fff"/>
+<g font-family="Arial, sans-serif">
+<text x="48" y="36" fill="#526f83" font-size="14" font-weight="700" text-anchor="start">LENVER / MF03.1     STATE MACHINE</text>
+<text x="48" y="76" fill="#162d43" font-size="30" font-weight="700" text-anchor="start">ME12 · Client knowledge of outcome</text>
+<line x1="799" y1="101" x2="799" y2="1275" stroke="#d9e4ed"/>
+<text x="822" y="106" fill="#162d43" font-size="17" font-weight="700" text-anchor="start">Transitions · event, conditions and outcome</text>
+<g id="ME12-01" data-from="i" data-to="h"><path d="M 275 153 V 223" fill="none" stroke="#12605c" stroke-width="2" /><polygon points="275,228 271,219 279,219" fill="#12605c"/><rect x="284" y="187" width="22" height="16" rx="3" fill="#fff"/><text x="286" y="200" fill="#12605c" font-size="12" font-weight="700" text-anchor="start">01</text></g>
+<g id="ME12-02" data-from="h" data-to="f"><path d="M 275 276 V 335" fill="none" stroke="#12605c" stroke-width="2" /><polygon points="275,340 271,331 279,331" fill="#12605c"/><rect x="284" y="299" width="22" height="16" rx="3" fill="#fff"/><text x="286" y="312" fill="#12605c" font-size="12" font-weight="700" text-anchor="start">02</text></g>
+<g id="ME12-03" data-from="h" data-to="p"><path d="M 470 258 H 616 V 476 H 475" fill="none" stroke="#536783" stroke-width="2" /><polygon points="470,476 479,472 479,480" fill="#536783"/><rect x="619" y="351" width="22" height="16" rx="3" fill="#fff"/><text x="621" y="364" fill="#536783" font-size="12" font-weight="700" text-anchor="start">03</text></g>
+<g id="ME12-04" data-from="f" data-to="p"><path d="M 275 388 V 447" fill="none" stroke="#12605c" stroke-width="2" /><polygon points="275,452 271,443 279,443" fill="#12605c"/><rect x="284" y="411" width="22" height="16" rx="3" fill="#fff"/><text x="286" y="424" fill="#12605c" font-size="12" font-weight="700" text-anchor="start">04</text></g>
+<g id="ME12-05" data-from="p" data-to="p"><path d="M 470 465 H 506 V 487 H 475" fill="none" stroke="#536783" stroke-width="2" /><polygon points="470,487 479,483 479,491" fill="#536783"/><rect x="509" y="460" width="22" height="16" rx="3" fill="#fff"/><text x="511" y="473" fill="#536783" font-size="12" font-weight="700" text-anchor="start">05</text></g>
+<g id="ME12-06" data-from="p" data-to="w"><path d="M 275 500 V 559" fill="none" stroke="#12605c" stroke-width="2" /><polygon points="275,564 271,555 279,555" fill="#12605c"/><rect x="284" y="523" width="22" height="16" rx="3" fill="#fff"/><text x="286" y="536" fill="#12605c" font-size="12" font-weight="700" text-anchor="start">06</text></g>
+<g id="ME12-07" data-from="p" data-to="u"><path d="M 470 486 H 638 V 700 H 475" fill="none" stroke="#536783" stroke-width="2" /><polygon points="470,700 479,696 479,704" fill="#536783"/><rect x="641" y="577" width="22" height="16" rx="3" fill="#fff"/><text x="643" y="590" fill="#536783" font-size="12" font-weight="700" text-anchor="start">07</text></g>
+<g id="ME12-08" data-from="w" data-to="u"><path d="M 275 612 V 671" fill="none" stroke="#12605c" stroke-width="2" /><polygon points="275,676 271,667 279,667" fill="#12605c"/><rect x="284" y="635" width="22" height="16" rx="3" fill="#fff"/><text x="286" y="648" fill="#12605c" font-size="12" font-weight="700" text-anchor="start">08</text></g>
+<g id="ME12-09" data-from="w" data-to="l"><path d="M 470 594 H 660 V 812 H 475" fill="none" stroke="#536783" stroke-width="2" /><polygon points="470,812 479,808 479,816" fill="#536783"/><rect x="663" y="687" width="22" height="16" rx="3" fill="#fff"/><text x="665" y="700" fill="#536783" font-size="12" font-weight="700" text-anchor="start">09</text></g>
+<g id="ME12-10" data-from="u" data-to="l"><path d="M 275 724 V 783" fill="none" stroke="#12605c" stroke-width="2" /><polygon points="275,788 271,779 279,779" fill="#12605c"/><rect x="284" y="747" width="22" height="16" rx="3" fill="#fff"/><text x="286" y="760" fill="#12605c" font-size="12" font-weight="700" text-anchor="start">10</text></g>
+<g id="ME12-11" data-from="l" data-to="u"><path d="M 470 818 H 572 V 695 H 475" fill="none" stroke="#536783" stroke-width="2" /><polygon points="470,695 479,691 479,699" fill="#536783"/><rect x="575" y="740" width="22" height="16" rx="3" fill="#fff"/><text x="577" y="753" fill="#536783" font-size="12" font-weight="700" text-anchor="start">11</text></g>
+<g id="ME12-12" data-from="u" data-to="u"><path d="M 470 689 H 528 V 711 H 475" fill="none" stroke="#536783" stroke-width="2" /><polygon points="470,711 479,707 479,715" fill="#536783"/><rect x="531" y="684" width="22" height="16" rx="3" fill="#fff"/><text x="533" y="697" fill="#536783" font-size="12" font-weight="700" text-anchor="start">12</text></g>
+<g id="ME12-13" data-from="u" data-to="u"><path d="M 470 689 H 550 V 711 H 475" fill="none" stroke="#536783" stroke-width="2" /><polygon points="470,711 479,707 479,715" fill="#536783"/><rect x="553" y="684" width="22" height="16" rx="3" fill="#fff"/><text x="555" y="697" fill="#536783" font-size="12" font-weight="700" text-anchor="start">13</text></g>
+<g id="ME12-14" data-from="u" data-to="w"><path d="M 470 714 H 594 V 588 H 475" fill="none" stroke="#536783" stroke-width="2" /><polygon points="470,588 479,584 479,592" fill="#536783"/><rect x="597" y="635" width="22" height="16" rx="3" fill="#fff"/><text x="599" y="648" fill="#536783" font-size="12" font-weight="700" text-anchor="start">14</text></g>
+<g id="ME12-15" data-from="w" data-to="k"><path d="M 470 598 H 726 V 924 H 475" fill="none" stroke="#536783" stroke-width="2" /><polygon points="470,924 479,920 479,928" fill="#536783"/><rect x="729" y="745" width="22" height="16" rx="3" fill="#fff"/><text x="731" y="758" fill="#536783" font-size="12" font-weight="700" text-anchor="start">15</text></g>
+<g id="ME12-16" data-from="u" data-to="k"><path d="M 470 718 H 682 V 919 H 475" fill="none" stroke="#536783" stroke-width="2" /><polygon points="470,919 479,915 479,923" fill="#536783"/><rect x="685" y="802" width="22" height="16" rx="3" fill="#fff"/><text x="687" y="815" fill="#536783" font-size="12" font-weight="700" text-anchor="start">16</text></g>
+<g id="ME12-17" data-from="l" data-to="k"><path d="M 275 836 V 895" fill="none" stroke="#12605c" stroke-width="2" /><polygon points="275,900 271,891 279,891" fill="#12605c"/><rect x="284" y="859" width="22" height="16" rx="3" fill="#fff"/><text x="286" y="872" fill="#12605c" font-size="12" font-weight="700" text-anchor="start">17</text></g>
+<g id="ME12-18" data-from="w" data-to="r"><path d="M 470 602 H 770 V 1036 H 475" fill="none" stroke="#536783" stroke-width="2" /><polygon points="470,1036 479,1032 479,1040" fill="#536783"/><rect x="773" y="803" width="22" height="16" rx="3" fill="#fff"/><text x="775" y="816" fill="#536783" font-size="12" font-weight="700" text-anchor="start">18</text></g>
+<g id="ME12-19" data-from="u" data-to="r"><path d="M 470 722 H 748 V 1031 H 475" fill="none" stroke="#536783" stroke-width="2" /><polygon points="470,1031 479,1027 479,1035" fill="#536783"/><rect x="751" y="860" width="22" height="16" rx="3" fill="#fff"/><text x="753" y="873" fill="#536783" font-size="12" font-weight="700" text-anchor="start">19</text></g>
+<g id="ME12-20" data-from="l" data-to="r"><path d="M 470 822 H 704 V 1026 H 475" fill="none" stroke="#536783" stroke-width="2" /><polygon points="470,1026 479,1022 479,1030" fill="#536783"/><rect x="707" y="908" width="22" height="16" rx="3" fill="#fff"/><text x="709" y="921" fill="#536783" font-size="12" font-weight="700" text-anchor="start">20</text></g>
+<g id="ME12-i" data-kind="initial">
+<circle cx="275" cy="140" r="12" fill="#162d43" stroke="#162d43" stroke-width="2"/>
+</g>
+<g id="ME12-h" data-kind="state">
+<rect x="80" y="228" width="390" height="48" rx="13" fill="#eff6fa" stroke="#355a71" stroke-width="2"/>
+<text x="275" y="257" fill="#162d43" font-size="15" font-weight="400" text-anchor="middle">Preparing</text>
+</g>
+<g id="ME12-f" data-kind="state">
+<rect x="80" y="340" width="390" height="48" rx="13" fill="#eff6fa" stroke="#355a71" stroke-width="2"/>
+<text x="275" y="369" fill="#162d43" font-size="15" font-weight="400" text-anchor="middle">Protection failed before network</text>
+</g>
+<g id="ME12-p" data-kind="state">
+<rect x="80" y="452" width="390" height="48" rx="13" fill="#eff6fa" stroke="#355a71" stroke-width="2"/>
+<text x="275" y="481" fill="#162d43" font-size="15" font-weight="400" text-anchor="middle">Protected original</text>
+</g>
+<g id="ME12-w" data-kind="state">
+<rect x="80" y="564" width="390" height="48" rx="13" fill="#eff6fa" stroke="#355a71" stroke-width="2"/>
+<text x="275" y="593" fill="#162d43" font-size="15" font-weight="400" text-anchor="middle">Sent and awaiting proof</text>
+</g>
+<g id="ME12-u" data-kind="state">
+<rect x="80" y="676" width="390" height="48" rx="13" fill="#eff6fa" stroke="#355a71" stroke-width="2"/>
+<text x="275" y="705" fill="#162d43" font-size="15" font-weight="400" text-anchor="middle">Uncertain</text>
+</g>
+<g id="ME12-l" data-kind="state">
+<rect x="80" y="788" width="390" height="48" rx="13" fill="#eff6fa" stroke="#355a71" stroke-width="2"/>
+<text x="275" y="817" fill="#162d43" font-size="15" font-weight="400" text-anchor="middle">Original lost</text>
+</g>
+<g id="ME12-k" data-kind="state">
+<rect x="80" y="900" width="390" height="48" rx="13" fill="#eff6fa" stroke="#355a71" stroke-width="2"/>
+<text x="275" y="929" fill="#162d43" font-size="15" font-weight="400" text-anchor="middle">Confirmed outcome known</text>
+</g>
+<g id="ME12-r" data-kind="state">
+<rect x="80" y="1012" width="390" height="48" rx="13" fill="#eff6fa" stroke="#355a71" stroke-width="2"/>
+<text x="275" y="1041" fill="#162d43" font-size="15" font-weight="400" text-anchor="middle">No-effect rejection known</text>
+</g>
+<text x="822" y="137" fill="#162d43" font-size="15" font-weight="700" text-anchor="start">01  Prepare intent</text>
+<text x="836" y="157" fill="#162d43" font-size="15" font-weight="400" text-anchor="start">Freeze original terms and scope before network.</text>
+<text x="822" y="188" fill="#162d43" font-size="15" font-weight="700" text-anchor="start">02  Fail before network</text>
+<text x="836" y="208" fill="#162d43" font-size="15" font-weight="400" text-anchor="start">No transmission. Allow fixing protection.</text>
+<text x="822" y="239" fill="#162d43" font-size="15" font-weight="700" text-anchor="start">03  Protect original terms</text>
+<text x="836" y="259" fill="#162d43" font-size="15" font-weight="400" text-anchor="start">Persist immutable scoped terms and intent identity.</text>
+<text x="822" y="290" fill="#162d43" font-size="15" font-weight="700" text-anchor="start">04  Repair protection</text>
+<text x="836" y="310" fill="#162d43" font-size="15" font-weight="400" text-anchor="start">Proved no network and successful protection permit an authorized first</text>
+<text x="836" y="329" fill="#162d43" font-size="15" font-weight="400" text-anchor="start">send.</text>
+<text x="822" y="360" fill="#162d43" font-size="15" font-weight="700" text-anchor="start">05  Restart before send</text>
+<text x="836" y="380" fill="#162d43" font-size="15" font-weight="400" text-anchor="start">With zero transmission proved, restore identical terms under the same</text>
+<text x="836" y="399" fill="#162d43" font-size="15" font-weight="400" text-anchor="start">holder, environment and target.</text>
+<text x="822" y="430" fill="#162d43" font-size="15" font-weight="700" text-anchor="start">06  Submit deliberately</text>
+<text x="836" y="450" fill="#162d43" font-size="15" font-weight="400" text-anchor="start">Verify context and protection before first transmission.</text>
+<text x="822" y="481" fill="#162d43" font-size="15" font-weight="700" text-anchor="start">07  Restart in an indeterminate position</text>
+<text x="836" y="501" fill="#162d43" font-size="15" font-weight="400" text-anchor="start">Possible transmission preserves uncertainty.</text>
+<text x="822" y="532" fill="#162d43" font-size="15" font-weight="700" text-anchor="start">08  Lose response or restart</text>
+<text x="836" y="552" fill="#162d43" font-size="15" font-weight="400" text-anchor="start">Maintain the same original and uncertainty. Block equivalent writes.</text>
+<text x="822" y="583" fill="#162d43" font-size="15" font-weight="700" text-anchor="start">09  Lose original after possible send</text>
+<text x="836" y="603" fill="#162d43" font-size="15" font-weight="400" text-anchor="start">Prevent equivalent attempt without original proof.</text>
+<text x="822" y="634" fill="#162d43" font-size="15" font-weight="700" text-anchor="start">10  Lose local intent while uncertain</text>
+<text x="836" y="654" fill="#162d43" font-size="15" font-weight="400" text-anchor="start">No implication of no effect.</text>
+<text x="822" y="685" fill="#162d43" font-size="15" font-weight="700" text-anchor="start">11  Restore original</text>
+<text x="836" y="705" fill="#162d43" font-size="15" font-weight="400" text-anchor="start">Check identical terms and scope. Keep uncertainty until proved.</text>
+<text x="822" y="736" fill="#162d43" font-size="15" font-weight="700" text-anchor="start">12  Lookup inconclusive or proof expired</text>
+<text x="836" y="756" fill="#162d43" font-size="15" font-weight="400" text-anchor="start">No mutation, duplication or demonstrated rejection.</text>
+<text x="822" y="787" fill="#162d43" font-size="15" font-weight="700" text-anchor="start">13  Sign out or change scope</text>
+<text x="836" y="807" fill="#162d43" font-size="15" font-weight="400" text-anchor="start">Isolate original from unauthorized access and keep eligible protected</text>
+<text x="836" y="826" fill="#162d43" font-size="15" font-weight="400" text-anchor="start">intent.</text>
+<text x="822" y="857" fill="#162d43" font-size="15" font-weight="700" text-anchor="start">14  Explicitly resubmit</text>
+<text x="836" y="877" fill="#162d43" font-size="15" font-weight="400" text-anchor="start">Require identical protected original, current authority and</text>
+<text x="836" y="896" fill="#162d43" font-size="15" font-weight="400" text-anchor="start">eligibility.</text>
+<text x="822" y="927" fill="#162d43" font-size="15" font-weight="700" text-anchor="start">15  Prove confirmation</text>
+<text x="836" y="947" fill="#162d43" font-size="15" font-weight="400" text-anchor="start">Accept demonstrated result for original and refresh separately.</text>
+<text x="822" y="978" fill="#162d43" font-size="15" font-weight="700" text-anchor="start">16  Recover confirmation while uncertain</text>
+<text x="836" y="998" fill="#162d43" font-size="15" font-weight="400" text-anchor="start">Verify canonical result and scope, then refresh separately.</text>
+<text x="822" y="1029" fill="#162d43" font-size="15" font-weight="700" text-anchor="start">17  Recover confirmation after local loss</text>
+<text x="836" y="1049" fill="#162d43" font-size="15" font-weight="400" text-anchor="start">Require independent proof linking original and effect, then refresh</text>
+<text x="836" y="1068" fill="#162d43" font-size="15" font-weight="400" text-anchor="start">separately.</text>
+<text x="822" y="1099" fill="#162d43" font-size="15" font-weight="700" text-anchor="start">18  Prove rejection</text>
+<text x="836" y="1119" fill="#162d43" font-size="15" font-weight="400" text-anchor="start">Require definitive no effect for this original before allowing</text>
+<text x="836" y="1138" fill="#162d43" font-size="15" font-weight="400" text-anchor="start">preparation of another intent.</text>
+<text x="822" y="1169" fill="#162d43" font-size="15" font-weight="700" text-anchor="start">19  Recover rejection while uncertain</text>
+<text x="836" y="1189" fill="#162d43" font-size="15" font-weight="400" text-anchor="start">Release preparation only with the proved original outcome.</text>
+<text x="822" y="1220" fill="#162d43" font-size="15" font-weight="700" text-anchor="start">20  Recover rejection after local loss</text>
+<text x="836" y="1240" fill="#162d43" font-size="15" font-weight="400" text-anchor="start">Require independently demonstrated no effect for the original.</text>
+</g></svg>

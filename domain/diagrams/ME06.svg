@@ -1,0 +1,99 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1430" height="1128" viewBox="0 0 1430 1128" role="img" aria-labelledby="titulo">
+<title id="titulo">ME06 · Original deletion request</title>
+<rect width="1430" height="1128" fill="#fff"/>
+<g font-family="Arial, sans-serif">
+<text x="48" y="36" fill="#526f83" font-size="14" font-weight="700" text-anchor="start">LENVER / MF03.1     STATE MACHINE</text>
+<text x="48" y="76" fill="#162d43" font-size="30" font-weight="700" text-anchor="start">ME06 · Original deletion request</text>
+<line x1="733" y1="101" x2="733" y2="1090" stroke="#d9e4ed"/>
+<text x="756" y="106" fill="#162d43" font-size="17" font-weight="700" text-anchor="start">Transitions · event, conditions and outcome</text>
+<g id="ME06-01" data-from="i" data-to="h"><path d="M 275 153 V 223" fill="none" stroke="#12605c" stroke-width="2" /><polygon points="275,228 271,219 279,219" fill="#12605c"/><rect x="284" y="187" width="22" height="16" rx="3" fill="#fff"/><text x="286" y="200" fill="#12605c" font-size="12" font-weight="700" text-anchor="start">01</text></g>
+<g id="ME06-02" data-from="h" data-to="p"><path d="M 275 276 V 335" fill="none" stroke="#12605c" stroke-width="2" /><polygon points="275,340 271,331 279,331" fill="#12605c"/><rect x="284" y="299" width="22" height="16" rx="3" fill="#fff"/><text x="286" y="312" fill="#12605c" font-size="12" font-weight="700" text-anchor="start">02</text></g>
+<g id="ME06-03" data-from="h" data-to="f"><path d="M 470 258 H 704 V 1036 H 293" fill="none" stroke="#536783" stroke-width="2" /><polygon points="288,1036 297,1032 297,1040" fill="#536783"/><rect x="707" y="631" width="22" height="16" rx="3" fill="#fff"/><text x="709" y="644" fill="#536783" font-size="12" font-weight="700" text-anchor="start">03</text></g>
+<g id="ME06-04" data-from="p" data-to="f"><path d="M 470 370 H 682 V 1031 H 288" fill="none" stroke="#536783" stroke-width="2" /><polygon points="283,1031 292,1027 292,1035" fill="#536783"/><rect x="685" y="684" width="22" height="16" rx="3" fill="#fff"/><text x="687" y="697" fill="#536783" font-size="12" font-weight="700" text-anchor="start">04</text></g>
+<g id="ME06-05" data-from="p" data-to="e"><path d="M 275 388 V 447" fill="none" stroke="#12605c" stroke-width="2" /><polygon points="275,452 271,443 279,443" fill="#12605c"/><rect x="284" y="411" width="22" height="16" rx="3" fill="#fff"/><text x="286" y="424" fill="#12605c" font-size="12" font-weight="700" text-anchor="start">05</text></g>
+<g id="ME06-06" data-from="e" data-to="a"><path d="M 275 500 V 559" fill="none" stroke="#12605c" stroke-width="2" /><polygon points="275,564 271,555 279,555" fill="#12605c"/><rect x="284" y="523" width="22" height="16" rx="3" fill="#fff"/><text x="286" y="536" fill="#12605c" font-size="12" font-weight="700" text-anchor="start">06</text></g>
+<g id="ME06-07" data-from="e" data-to="r"><path d="M 470 482 H 660 V 924 H 475" fill="none" stroke="#536783" stroke-width="2" /><polygon points="470,924 479,920 479,928" fill="#536783"/><rect x="663" y="687" width="22" height="16" rx="3" fill="#fff"/><text x="665" y="700" fill="#536783" font-size="12" font-weight="700" text-anchor="start">07</text></g>
+<g id="ME06-08" data-from="a" data-to="d"><path d="M 275 612 V 671" fill="none" stroke="#12605c" stroke-width="2" /><polygon points="275,676 271,667 279,667" fill="#12605c"/><rect x="284" y="635" width="22" height="16" rx="3" fill="#fff"/><text x="286" y="648" fill="#12605c" font-size="12" font-weight="700" text-anchor="start">08</text></g>
+<g id="ME06-09" data-from="d" data-to="a"><path d="M 470 706 H 616 V 588 H 475" fill="none" stroke="#536783" stroke-width="2" /><polygon points="470,588 479,584 479,592" fill="#536783"/><rect x="619" y="631" width="22" height="16" rx="3" fill="#fff"/><text x="621" y="644" fill="#536783" font-size="12" font-weight="700" text-anchor="start">09</text></g>
+<g id="ME06-10" data-from="a" data-to="c"><path d="M 470 594 H 638 V 812 H 475" fill="none" stroke="#536783" stroke-width="2" /><polygon points="470,812 479,808 479,816" fill="#536783"/><rect x="641" y="687" width="22" height="16" rx="3" fill="#fff"/><text x="643" y="700" fill="#536783" font-size="12" font-weight="700" text-anchor="start">10</text></g>
+<g id="ME06-11" data-from="d" data-to="c"><path d="M 275 724 V 783" fill="none" stroke="#12605c" stroke-width="2" /><polygon points="275,788 271,779 279,779" fill="#12605c"/><rect x="284" y="747" width="22" height="16" rx="3" fill="#fff"/><text x="286" y="760" fill="#12605c" font-size="12" font-weight="700" text-anchor="start">11</text></g>
+<g id="ME06-12" data-from="e" data-to="e"><path d="M 470 465 H 506 V 487 H 475" fill="none" stroke="#536783" stroke-width="2" /><polygon points="470,487 479,483 479,491" fill="#536783"/><rect x="509" y="460" width="22" height="16" rx="3" fill="#fff"/><text x="511" y="473" fill="#536783" font-size="12" font-weight="700" text-anchor="start">12</text></g>
+<g id="ME06-13" data-from="a" data-to="a"><path d="M 470 577 H 528 V 599 H 475" fill="none" stroke="#536783" stroke-width="2" /><polygon points="470,599 479,595 479,603" fill="#536783"/><rect x="531" y="572" width="22" height="16" rx="3" fill="#fff"/><text x="533" y="585" fill="#536783" font-size="12" font-weight="700" text-anchor="start">13</text></g>
+<g id="ME06-14" data-from="d" data-to="d"><path d="M 470 689 H 550 V 711 H 475" fill="none" stroke="#536783" stroke-width="2" /><polygon points="470,711 479,707 479,715" fill="#536783"/><rect x="553" y="684" width="22" height="16" rx="3" fill="#fff"/><text x="555" y="697" fill="#536783" font-size="12" font-weight="700" text-anchor="start">14</text></g>
+<g id="ME06-15" data-from="r" data-to="r"><path d="M 470 913 H 572 V 935 H 475" fill="none" stroke="#536783" stroke-width="2" /><polygon points="470,935 479,931 479,939" fill="#536783"/><rect x="575" y="908" width="22" height="16" rx="3" fill="#fff"/><text x="577" y="921" fill="#536783" font-size="12" font-weight="700" text-anchor="start">15</text></g>
+<g id="ME06-16" data-from="c" data-to="c"><path d="M 470 801 H 594 V 823 H 475" fill="none" stroke="#536783" stroke-width="2" /><polygon points="470,823 479,819 479,827" fill="#536783"/><rect x="597" y="796" width="22" height="16" rx="3" fill="#fff"/><text x="599" y="809" fill="#536783" font-size="12" font-weight="700" text-anchor="start">16</text></g>
+<g id="ME06-i" data-kind="initial">
+<circle cx="275" cy="140" r="12" fill="#162d43" stroke="#162d43" stroke-width="2"/>
+</g>
+<g id="ME06-h" data-kind="state">
+<rect x="80" y="228" width="390" height="48" rx="13" fill="#eff6fa" stroke="#355a71" stroke-width="2"/>
+<text x="275" y="257" fill="#162d43" font-size="15" font-weight="400" text-anchor="middle">Reviewing</text>
+</g>
+<g id="ME06-p" data-kind="state">
+<rect x="80" y="340" width="390" height="48" rx="13" fill="#eff6fa" stroke="#355a71" stroke-width="2"/>
+<text x="275" y="369" fill="#162d43" font-size="15" font-weight="400" text-anchor="middle">Protected request prepared</text>
+</g>
+<g id="ME06-e" data-kind="state">
+<rect x="80" y="452" width="390" height="48" rx="13" fill="#eff6fa" stroke="#355a71" stroke-width="2"/>
+<text x="275" y="481" fill="#162d43" font-size="15" font-weight="400" text-anchor="middle">Submitted without proved result</text>
+</g>
+<g id="ME06-a" data-kind="state">
+<rect x="80" y="564" width="390" height="48" rx="13" fill="#eff6fa" stroke="#355a71" stroke-width="2"/>
+<text x="275" y="593" fill="#162d43" font-size="15" font-weight="400" text-anchor="middle">In progress</text>
+</g>
+<g id="ME06-d" data-kind="state">
+<rect x="80" y="676" width="390" height="48" rx="13" fill="#eff6fa" stroke="#355a71" stroke-width="2"/>
+<text x="275" y="705" fill="#162d43" font-size="15" font-weight="400" text-anchor="middle">Partial</text>
+</g>
+<g id="ME06-c" data-kind="state">
+<rect x="80" y="788" width="390" height="48" rx="13" fill="#eff6fa" stroke="#355a71" stroke-width="2"/>
+<text x="275" y="817" fill="#162d43" font-size="15" font-weight="400" text-anchor="middle">Completed</text>
+</g>
+<g id="ME06-r" data-kind="state">
+<rect x="80" y="900" width="390" height="48" rx="13" fill="#eff6fa" stroke="#355a71" stroke-width="2"/>
+<text x="275" y="929" fill="#162d43" font-size="15" font-weight="400" text-anchor="middle">Rejected without effect</text>
+</g>
+<g id="ME06-f" data-kind="final">
+<circle cx="275" cy="1036" r="12" fill="#ffffff" stroke="#162d43" stroke-width="2"/>
+<circle cx="275" cy="1036" r="7" fill="#162d43"/>
+</g>
+<text x="756" y="137" fill="#162d43" font-size="15" font-weight="700" text-anchor="start">01  Choose deletion</text>
+<text x="770" y="157" fill="#162d43" font-size="15" font-weight="400" text-anchor="start">Review consequences in the authorized account.</text>
+<text x="756" y="188" fill="#162d43" font-size="15" font-weight="700" text-anchor="start">02  Prepare protected request</text>
+<text x="770" y="208" fill="#162d43" font-size="15" font-weight="400" text-anchor="start">Establish pre-network lookup authority bound to original, holder and</text>
+<text x="770" y="227" fill="#162d43" font-size="15" font-weight="400" text-anchor="start">environment. No account access is granted.</text>
+<text x="756" y="258" fill="#162d43" font-size="15" font-weight="700" text-anchor="start">03  Cancel or fail preparation</text>
+<text x="770" y="278" fill="#162d43" font-size="15" font-weight="400" text-anchor="start">No accepted request. Distinguish cancel from failed protection.</text>
+<text x="756" y="309" fill="#162d43" font-size="15" font-weight="700" text-anchor="start">04  Cancel protected preparation</text>
+<text x="770" y="329" fill="#162d43" font-size="15" font-weight="400" text-anchor="start">No network and no accepted deletion.</text>
+<text x="756" y="360" fill="#162d43" font-size="15" font-weight="700" text-anchor="start">05  Submit protected original</text>
+<text x="770" y="380" fill="#162d43" font-size="15" font-weight="400" text-anchor="start">Require reauthentication, explicit consent and original lookup authority.</text>
+<text x="770" y="399" fill="#162d43" font-size="15" font-weight="400" text-anchor="start">Submit only the original and keep uncertainty on reply loss.</text>
+<text x="756" y="430" fill="#162d43" font-size="15" font-weight="700" text-anchor="start">06  Accept</text>
+<text x="770" y="450" fill="#162d43" font-size="15" font-weight="400" text-anchor="start">Validate holder and admission. Accept and close admission together with ME01.</text>
+<text x="770" y="469" fill="#162d43" font-size="15" font-weight="400" text-anchor="start">Include earlier commits and deny later incompatible effects.</text>
+<text x="756" y="500" fill="#162d43" font-size="15" font-weight="700" text-anchor="start">07  Reject</text>
+<text x="770" y="520" fill="#162d43" font-size="15" font-weight="400" text-anchor="start">Demonstrate no effect of original and preserve existing admission.</text>
+<text x="756" y="551" fill="#162d43" font-size="15" font-weight="700" text-anchor="start">08  Record pending work</text>
+<text x="770" y="571" fill="#162d43" font-size="15" font-weight="400" text-anchor="start">Revocation or disposal remains unresolved. Expose partial outcome via protected</text>
+<text x="770" y="590" fill="#162d43" font-size="15" font-weight="400" text-anchor="start">proof.</text>
+<text x="756" y="621" fill="#162d43" font-size="15" font-weight="700" text-anchor="start">09  Resume work</text>
+<text x="770" y="641" fill="#162d43" font-size="15" font-weight="400" text-anchor="start">Coordinate outstanding effects without repeating completed effects or reopening</text>
+<text x="770" y="660" fill="#162d43" font-size="15" font-weight="400" text-anchor="start">admission.</text>
+<text x="756" y="691" fill="#162d43" font-size="15" font-weight="700" text-anchor="start">10  Complete in-progress handling</text>
+<text x="770" y="711" fill="#162d43" font-size="15" font-weight="400" text-anchor="start">All applicable effects are demonstrated and retention justified. Record minimum</text>
+<text x="770" y="730" fill="#162d43" font-size="15" font-weight="400" text-anchor="start">completion for the original.</text>
+<text x="756" y="761" fill="#162d43" font-size="15" font-weight="700" text-anchor="start">11  Resolve last partial item</text>
+<text x="770" y="781" fill="#162d43" font-size="15" font-weight="400" text-anchor="start">Complete after proving all applicable effects and justifying retention.</text>
+<text x="770" y="800" fill="#162d43" font-size="15" font-weight="400" text-anchor="start">Preserve original scope.</text>
+<text x="756" y="831" fill="#162d43" font-size="15" font-weight="700" text-anchor="start">12  Lookup before a result is available</text>
+<text x="770" y="851" fill="#162d43" font-size="15" font-weight="400" text-anchor="start">Validate original proof. Preserve uncertainty and perform no new request.</text>
+<text x="756" y="882" fill="#162d43" font-size="15" font-weight="700" text-anchor="start">13  Lookup in progress</text>
+<text x="770" y="902" fill="#162d43" font-size="15" font-weight="400" text-anchor="start">Reveal only the minimal authorized original status.</text>
+<text x="756" y="933" fill="#162d43" font-size="15" font-weight="700" text-anchor="start">14  Lookup partial</text>
+<text x="770" y="953" fill="#162d43" font-size="15" font-weight="400" text-anchor="start">Reveal the original partial state, no account information.</text>
+<text x="756" y="984" fill="#162d43" font-size="15" font-weight="700" text-anchor="start">15  Lookup rejected</text>
+<text x="770" y="1004" fill="#162d43" font-size="15" font-weight="400" text-anchor="start">Reveal definitive original rejection under proof.</text>
+<text x="756" y="1035" fill="#162d43" font-size="15" font-weight="700" text-anchor="start">16  Lookup completed</text>
+<text x="770" y="1055" fill="#162d43" font-size="15" font-weight="400" text-anchor="start">Reveal demonstrated completion with no account access.</text>
+</g></svg>

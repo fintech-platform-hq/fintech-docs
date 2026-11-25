@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1430" height="546" viewBox="0 0 1430 546" role="img" aria-labelledby="titulo">
+<title id="titulo">ME01 · Identity and admission</title>
+<rect width="1430" height="546" fill="#fff"/>
+<g font-family="Arial, sans-serif">
+<text x="48" y="36" fill="#526f83" font-size="14" font-weight="700" text-anchor="start">LENVER / MF03.1     STATE MACHINE</text>
+<text x="48" y="76" fill="#162d43" font-size="30" font-weight="700" text-anchor="start">ME01 · Identity and admission</text>
+<line x1="702" y1="101" x2="702" y2="508" stroke="#d9e4ed"/>
+<text x="725" y="106" fill="#162d43" font-size="17" font-weight="700" text-anchor="start">Transitions · event, conditions and outcome</text>
+<g id="ME01-01" data-from="i" data-to="a"><path d="M 275 153 V 223" fill="none" stroke="#12605c" stroke-width="2" /><polygon points="275,228 271,219 279,219" fill="#12605c"/><rect x="284" y="187" width="22" height="16" rx="3" fill="#fff"/><text x="286" y="200" fill="#12605c" font-size="12" font-weight="700" text-anchor="start">01</text></g>
+<g id="ME01-02" data-from="a" data-to="a"><path d="M 470 241 H 506 V 263 H 475" fill="none" stroke="#536783" stroke-width="2" /><polygon points="470,263 479,259 479,267" fill="#536783"/><rect x="509" y="236" width="22" height="16" rx="3" fill="#fff"/><text x="511" y="249" fill="#536783" font-size="12" font-weight="700" text-anchor="start">02</text></g>
+<g id="ME01-03" data-from="a" data-to="b"><path d="M 275 276 V 335" fill="none" stroke="#12605c" stroke-width="2" /><polygon points="275,340 271,331 279,331" fill="#12605c"/><rect x="284" y="299" width="22" height="16" rx="3" fill="#fff"/><text x="286" y="312" fill="#12605c" font-size="12" font-weight="700" text-anchor="start">03</text></g>
+<g id="ME01-04" data-from="b" data-to="f"><path d="M 275 388 V 457" fill="none" stroke="#12605c" stroke-width="2" /><polygon points="275,462 271,453 279,453" fill="#12605c"/><rect x="284" y="411" width="22" height="16" rx="3" fill="#fff"/><text x="286" y="424" fill="#12605c" font-size="12" font-weight="700" text-anchor="start">04</text></g>
+<g id="ME01-05" data-from="b" data-to="b"><path d="M 470 353 H 528 V 375 H 475" fill="none" stroke="#536783" stroke-width="2" /><polygon points="470,375 479,371 479,379" fill="#536783"/><rect x="531" y="348" width="22" height="16" rx="3" fill="#fff"/><text x="533" y="361" fill="#536783" font-size="12" font-weight="700" text-anchor="start">05</text></g>
+<g id="ME01-i" data-kind="initial">
+<circle cx="275" cy="140" r="12" fill="#162d43" stroke="#162d43" stroke-width="2"/>
+</g>
+<g id="ME01-a" data-kind="state">
+<rect x="80" y="228" width="390" height="48" rx="13" fill="#eff6fa" stroke="#355a71" stroke-width="2"/>
+<text x="275" y="257" fill="#162d43" font-size="15" font-weight="400" text-anchor="middle">Identity established</text>
+</g>
+<g id="ME01-b" data-kind="state">
+<rect x="80" y="340" width="390" height="48" rx="13" fill="#eff6fa" stroke="#355a71" stroke-width="2"/>
+<text x="275" y="369" fill="#162d43" font-size="15" font-weight="400" text-anchor="middle">Closure accepted</text>
+</g>
+<g id="ME01-f" data-kind="final">
+<circle cx="275" cy="476" r="12" fill="#ffffff" stroke="#162d43" stroke-width="2"/>
+<circle cx="275" cy="476" r="7" fill="#162d43"/>
+</g>
+<text x="725" y="137" fill="#162d43" font-size="15" font-weight="700" text-anchor="start">01  Establish identity</text>
+<text x="739" y="157" fill="#162d43" font-size="15" font-weight="400" text-anchor="start">Registration proof or valid Apple proof with an available external identity fixes</text>
+<text x="739" y="176" fill="#162d43" font-size="15" font-weight="400" text-anchor="start">the holder.</text>
+<text x="725" y="207" fill="#162d43" font-size="15" font-weight="700" text-anchor="start">02  Recognize access or recovery</text>
+<text x="739" y="227" fill="#162d43" font-size="15" font-weight="400" text-anchor="start">Valid proof grants appropriate authorization for this holder. Matching email alone</text>
+<text x="739" y="246" fill="#162d43" font-size="15" font-weight="400" text-anchor="start">creates no link.</text>
+<text x="725" y="277" fill="#162d43" font-size="15" font-weight="700" text-anchor="start">03  Accept deletion</text>
+<text x="739" y="297" fill="#162d43" font-size="15" font-weight="400" text-anchor="start">Reauthentication, explicit consent, same account and pre-established original</text>
+<text x="739" y="316" fill="#162d43" font-size="15" font-weight="400" text-anchor="start">lookup authority. Close admission and coordinate writes at acceptance.</text>
+<text x="725" y="347" fill="#162d43" font-size="15" font-weight="700" text-anchor="start">04  Complete deletion</text>
+<text x="739" y="367" fill="#162d43" font-size="15" font-weight="400" text-anchor="start">Resolve all applicable pending work and justify any exceptional retention. Retain</text>
+<text x="739" y="386" fill="#162d43" font-size="15" font-weight="400" text-anchor="start">only the protected lookup outcome and authorized retention.</text>
+<text x="725" y="417" fill="#162d43" font-size="15" font-weight="700" text-anchor="start">05  Request access or write after admission closes</text>
+<text x="739" y="437" fill="#162d43" font-size="15" font-weight="400" text-anchor="start">Refuse access or new financial effect. ME06 governs restricted lookup.</text>
+</g></svg>

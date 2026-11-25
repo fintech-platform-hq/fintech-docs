@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1430" height="658" viewBox="0 0 1430 658" role="img" aria-labelledby="titulo">
+<title id="titulo">ME14 · Sign-in management outcome</title>
+<rect width="1430" height="658" fill="#fff"/>
+<g font-family="Arial, sans-serif">
+<text x="48" y="36" fill="#526f83" font-size="14" font-weight="700" text-anchor="start">LENVER / MF03.1     STATE MACHINE</text>
+<text x="48" y="76" fill="#162d43" font-size="30" font-weight="700" text-anchor="start">ME14 · Sign-in management outcome</text>
+<line x1="702" y1="101" x2="702" y2="620" stroke="#d9e4ed"/>
+<text x="725" y="106" fill="#162d43" font-size="17" font-weight="700" text-anchor="start">Transitions · event, conditions and outcome</text>
+<g id="ME14-01" data-from="i" data-to="p"><path d="M 275 153 V 223" fill="none" stroke="#12605c" stroke-width="2" /><polygon points="275,228 271,219 279,219" fill="#12605c"/><rect x="284" y="187" width="22" height="16" rx="3" fill="#fff"/><text x="286" y="200" fill="#12605c" font-size="12" font-weight="700" text-anchor="start">01</text></g>
+<g id="ME14-02" data-from="p" data-to="c"><path d="M 470 258 H 528 V 476 H 475" fill="none" stroke="#536783" stroke-width="2" /><polygon points="470,476 479,472 479,480" fill="#536783"/><rect x="531" y="351" width="22" height="16" rx="3" fill="#fff"/><text x="533" y="364" fill="#536783" font-size="12" font-weight="700" text-anchor="start">02</text></g>
+<g id="ME14-03" data-from="p" data-to="r"><path d="M 470 262 H 572 V 588 H 475" fill="none" stroke="#536783" stroke-width="2" /><polygon points="470,588 479,584 479,592" fill="#536783"/><rect x="575" y="409" width="22" height="16" rx="3" fill="#fff"/><text x="577" y="422" fill="#536783" font-size="12" font-weight="700" text-anchor="start">03</text></g>
+<g id="ME14-04" data-from="p" data-to="u"><path d="M 275 276 V 335" fill="none" stroke="#12605c" stroke-width="2" /><polygon points="275,340 271,331 279,331" fill="#12605c"/><rect x="284" y="299" width="22" height="16" rx="3" fill="#fff"/><text x="286" y="312" fill="#12605c" font-size="12" font-weight="700" text-anchor="start">04</text></g>
+<g id="ME14-05" data-from="u" data-to="c"><path d="M 275 388 V 447" fill="none" stroke="#12605c" stroke-width="2" /><polygon points="275,452 271,443 279,443" fill="#12605c"/><rect x="284" y="411" width="22" height="16" rx="3" fill="#fff"/><text x="286" y="424" fill="#12605c" font-size="12" font-weight="700" text-anchor="start">05</text></g>
+<g id="ME14-06" data-from="u" data-to="r"><path d="M 470 370 H 550 V 583 H 475" fill="none" stroke="#536783" stroke-width="2" /><polygon points="470,583 479,579 479,587" fill="#536783"/><rect x="553" y="460" width="22" height="16" rx="3" fill="#fff"/><text x="555" y="473" fill="#536783" font-size="12" font-weight="700" text-anchor="start">06</text></g>
+<g id="ME14-07" data-from="u" data-to="u"><path d="M 470 353 H 506 V 375 H 475" fill="none" stroke="#536783" stroke-width="2" /><polygon points="470,375 479,371 479,379" fill="#536783"/><rect x="509" y="348" width="22" height="16" rx="3" fill="#fff"/><text x="511" y="361" fill="#536783" font-size="12" font-weight="700" text-anchor="start">07</text></g>
+<g id="ME14-i" data-kind="initial">
+<circle cx="275" cy="140" r="12" fill="#162d43" stroke="#162d43" stroke-width="2"/>
+</g>
+<g id="ME14-p" data-kind="state">
+<rect x="80" y="228" width="390" height="48" rx="13" fill="#eff6fa" stroke="#355a71" stroke-width="2"/>
+<text x="275" y="257" fill="#162d43" font-size="15" font-weight="400" text-anchor="middle">Management act selected</text>
+</g>
+<g id="ME14-u" data-kind="state">
+<rect x="80" y="340" width="390" height="48" rx="13" fill="#eff6fa" stroke="#355a71" stroke-width="2"/>
+<text x="275" y="369" fill="#162d43" font-size="15" font-weight="400" text-anchor="middle">Uncertain</text>
+</g>
+<g id="ME14-c" data-kind="state">
+<rect x="80" y="452" width="390" height="48" rx="13" fill="#eff6fa" stroke="#355a71" stroke-width="2"/>
+<text x="275" y="481" fill="#162d43" font-size="15" font-weight="400" text-anchor="middle">Confirmed</text>
+</g>
+<g id="ME14-r" data-kind="state">
+<rect x="80" y="564" width="390" height="48" rx="13" fill="#eff6fa" stroke="#355a71" stroke-width="2"/>
+<text x="275" y="593" fill="#162d43" font-size="15" font-weight="400" text-anchor="middle">Canceled or refused</text>
+</g>
+<text x="725" y="137" fill="#162d43" font-size="15" font-weight="700" text-anchor="start">01  Choose management act</text>
+<text x="739" y="157" fill="#162d43" font-size="15" font-weight="400" text-anchor="start">Request act-specific authority and confirmation for linking, removal or applicable</text>
+<text x="739" y="176" fill="#162d43" font-size="15" font-weight="400" text-anchor="start">password change.</text>
+<text x="725" y="207" fill="#162d43" font-size="15" font-weight="700" text-anchor="start">02  Confirm result</text>
+<text x="739" y="227" fill="#162d43" font-size="15" font-weight="400" text-anchor="start">Verified authority and demonstrated original outcome.</text>
+<text x="725" y="258" fill="#162d43" font-size="15" font-weight="700" text-anchor="start">03  Prove cancelation or refusal</text>
+<text x="739" y="278" fill="#162d43" font-size="15" font-weight="400" text-anchor="start">Preserve prior scope and links.</text>
+<text x="725" y="309" fill="#162d43" font-size="15" font-weight="700" text-anchor="start">04  Lose response</text>
+<text x="739" y="329" fill="#162d43" font-size="15" font-weight="400" text-anchor="start">Stay uncertain, no automatic repeat.</text>
+<text x="725" y="360" fill="#162d43" font-size="15" font-weight="700" text-anchor="start">05  Lookup demonstrates success</text>
+<text x="739" y="380" fill="#162d43" font-size="15" font-weight="400" text-anchor="start">Read only the original act for the same authorized holder.</text>
+<text x="725" y="411" fill="#162d43" font-size="15" font-weight="700" text-anchor="start">06  Lookup demonstrates refusal</text>
+<text x="739" y="431" fill="#162d43" font-size="15" font-weight="400" text-anchor="start">Read only the authorized original outcome.</text>
+<text x="725" y="462" fill="#162d43" font-size="15" font-weight="700" text-anchor="start">07  Lookup inconclusive</text>
+<text x="739" y="482" fill="#162d43" font-size="15" font-weight="400" text-anchor="start">Keep uncertainty without mutation.</text>
+</g></svg>

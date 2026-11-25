@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1430" height="682" viewBox="0 0 1430 682" role="img" aria-labelledby="titulo">
+<title id="titulo">ME07 · Financial baseline and versions</title>
+<rect width="1430" height="682" fill="#fff"/>
+<g font-family="Arial, sans-serif">
+<text x="48" y="36" fill="#526f83" font-size="14" font-weight="700" text-anchor="start">LENVER / MF03.1     STATE MACHINE</text>
+<text x="48" y="76" fill="#162d43" font-size="30" font-weight="700" text-anchor="start">ME07 · Financial baseline and versions</text>
+<line x1="702" y1="101" x2="702" y2="644" stroke="#d9e4ed"/>
+<text x="725" y="106" fill="#162d43" font-size="17" font-weight="700" text-anchor="start">Transitions · event, conditions and outcome</text>
+<g id="ME07-01" data-from="i" data-to="n"><path d="M 275 153 V 223" fill="none" stroke="#12605c" stroke-width="2" /><polygon points="275,228 271,219 279,219" fill="#12605c"/><rect x="284" y="187" width="22" height="16" rx="3" fill="#fff"/><text x="286" y="200" fill="#12605c" font-size="12" font-weight="700" text-anchor="start">01</text></g>
+<g id="ME07-02" data-from="n" data-to="a"><path d="M 275 276 V 335" fill="none" stroke="#12605c" stroke-width="2" /><polygon points="275,340 271,331 279,331" fill="#12605c"/><rect x="284" y="299" width="22" height="16" rx="3" fill="#fff"/><text x="286" y="312" fill="#12605c" font-size="12" font-weight="700" text-anchor="start">02</text></g>
+<g id="ME07-03" data-from="n" data-to="n"><path d="M 470 241 H 506 V 263 H 475" fill="none" stroke="#536783" stroke-width="2" /><polygon points="470,263 479,259 479,267" fill="#536783"/><rect x="509" y="236" width="22" height="16" rx="3" fill="#fff"/><text x="511" y="249" fill="#536783" font-size="12" font-weight="700" text-anchor="start">03</text></g>
+<g id="ME07-04" data-from="a" data-to="s"><path d="M 275 388 V 447" fill="none" stroke="#12605c" stroke-width="2" /><polygon points="275,452 271,443 279,443" fill="#12605c"/><rect x="284" y="411" width="22" height="16" rx="3" fill="#fff"/><text x="286" y="424" fill="#12605c" font-size="12" font-weight="700" text-anchor="start">04</text></g>
+<g id="ME07-05" data-from="a" data-to="a"><path d="M 470 353 H 528 V 375 H 475" fill="none" stroke="#536783" stroke-width="2" /><polygon points="470,375 479,371 479,379" fill="#536783"/><rect x="531" y="348" width="22" height="16" rx="3" fill="#fff"/><text x="533" y="361" fill="#536783" font-size="12" font-weight="700" text-anchor="start">05</text></g>
+<g id="ME07-06" data-from="s" data-to="a"><path d="M 470 482 H 594 V 359 H 475" fill="none" stroke="#536783" stroke-width="2" /><polygon points="470,359 479,355 479,363" fill="#536783"/><rect x="597" y="404" width="22" height="16" rx="3" fill="#fff"/><text x="599" y="417" fill="#536783" font-size="12" font-weight="700" text-anchor="start">06</text></g>
+<g id="ME07-07" data-from="s" data-to="s"><path d="M 470 465 H 550 V 487 H 475" fill="none" stroke="#536783" stroke-width="2" /><polygon points="470,487 479,483 479,491" fill="#536783"/><rect x="553" y="460" width="22" height="16" rx="3" fill="#fff"/><text x="555" y="473" fill="#536783" font-size="12" font-weight="700" text-anchor="start">07</text></g>
+<g id="ME07-08" data-from="s" data-to="s"><path d="M 470 465 H 572 V 487 H 475" fill="none" stroke="#536783" stroke-width="2" /><polygon points="470,487 479,483 479,491" fill="#536783"/><rect x="575" y="460" width="22" height="16" rx="3" fill="#fff"/><text x="577" y="473" fill="#536783" font-size="12" font-weight="700" text-anchor="start">08</text></g>
+<g id="ME07-i" data-kind="initial">
+<circle cx="275" cy="140" r="12" fill="#162d43" stroke="#162d43" stroke-width="2"/>
+</g>
+<g id="ME07-n" data-kind="state">
+<rect x="80" y="228" width="390" height="48" rx="13" fill="#eff6fa" stroke="#355a71" stroke-width="2"/>
+<text x="275" y="257" fill="#162d43" font-size="15" font-weight="400" text-anchor="middle">Missing baseline</text>
+</g>
+<g id="ME07-a" data-kind="state">
+<rect x="80" y="340" width="390" height="48" rx="13" fill="#eff6fa" stroke="#355a71" stroke-width="2"/>
+<text x="275" y="369" fill="#162d43" font-size="15" font-weight="400" text-anchor="middle">Active terms</text>
+</g>
+<g id="ME07-s" data-kind="state">
+<rect x="80" y="452" width="390" height="48" rx="13" fill="#eff6fa" stroke="#355a71" stroke-width="2"/>
+<text x="275" y="481" fill="#162d43" font-size="15" font-weight="400" text-anchor="middle">Suspended terms</text>
+</g>
+<text x="725" y="137" fill="#162d43" font-size="15" font-weight="700" text-anchor="start">01  Assess financial context</text>
+<text x="739" y="157" fill="#162d43" font-size="15" font-weight="400" text-anchor="start">Verify authorized new or legacy context without a baseline. A new account may not</text>
+<text x="739" y="176" fill="#162d43" font-size="15" font-weight="400" text-anchor="start">exist yet. Preserve readable legacy history.</text>
+<text x="725" y="207" fill="#162d43" font-size="15" font-weight="700" text-anchor="start">02  Establish baseline</text>
+<text x="739" y="227" fill="#162d43" font-size="15" font-weight="400" text-anchor="start">Eligible preview and commitment. New account and terms commit together or</text>
+<text x="739" y="246" fill="#162d43" font-size="15" font-weight="400" text-anchor="start">authorized adoption preserves IDs and pre-coverage history.</text>
+<text x="725" y="277" fill="#162d43" font-size="15" font-weight="700" text-anchor="start">03  Reject or defer opening</text>
+<text x="739" y="297" fill="#162d43" font-size="15" font-weight="400" text-anchor="start">Preserve prior history and unavailable amounts. Legacy requires ownership,</text>
+<text x="739" y="316" fill="#162d43" font-size="15" font-weight="400" text-anchor="start">integrity and compatible writers.</text>
+<text x="725" y="347" fill="#162d43" font-size="15" font-weight="700" text-anchor="start">04  Suspend</text>
+<text x="739" y="367" fill="#162d43" font-size="15" font-weight="400" text-anchor="start">G09 requires reason and reauthentication. Retain terms and originals, suppress</text>
+<text x="739" y="386" fill="#162d43" font-size="15" font-weight="400" text-anchor="start">calculations and dependent writes.</text>
+<text x="725" y="417" fill="#162d43" font-size="15" font-weight="700" text-anchor="start">05  Correct active terms</text>
+<text x="739" y="437" fill="#162d43" font-size="15" font-weight="400" text-anchor="start">G09, corresponding declaration and unambiguous fresh preview produce audited new</text>
+<text x="739" y="456" fill="#162d43" font-size="15" font-weight="400" text-anchor="start">version.</text>
+<text x="725" y="487" fill="#162d43" font-size="15" font-weight="700" text-anchor="start">06  Restore from suspension</text>
+<text x="739" y="507" fill="#162d43" font-size="15" font-weight="400" text-anchor="start">G09 and resolved boundaries allow new terms and only eligible figures.</text>
+<text x="725" y="538" fill="#162d43" font-size="15" font-weight="700" text-anchor="start">07  Refine existing occurrence</text>
+<text x="739" y="558" fill="#162d43" font-size="15" font-weight="400" text-anchor="start">G03/G09 allow precision-only change. Keep suspension and replace dependent preview.</text>
+<text x="725" y="589" fill="#162d43" font-size="15" font-weight="700" text-anchor="start">08  Refuse new opening while suspended</text>
+<text x="739" y="609" fill="#162d43" font-size="15" font-weight="400" text-anchor="start">Use correction rather than a second baseline.</text>
+</g></svg>
