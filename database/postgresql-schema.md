@@ -1,6 +1,6 @@
 # PostgreSQL Schema
 
-The canonical schema is `fintech-api/db.sql` plus its versioned migrations. This page summarizes the shared architecture and does not duplicate the SQL.
+The canonical schema is `lenver-backend/db.sql` plus its versioned migrations. This page summarizes the shared architecture and does not duplicate the SQL.
 
 ## Implemented tables
 
@@ -10,7 +10,7 @@ The canonical schema is `fintech-api/db.sql` plus its versioned migrations. This
 - `transactions`: user-owned financial records with composite ownership and account-currency foreign keys.
 - `idempotency_keys`: request hash and canonical response, unique per user and idempotency key.
 - `auth_identities`: Apple subject, metadata, encrypted provider refresh token, validation timestamp, and revocation state.
-- `refresh_sessions`: hashed rotating Fintech refresh tokens, families, expiry, and revocation.
+- `refresh_sessions`: hashed rotating Lenver refresh tokens, families, expiry, and revocation.
 
 The `20260910_add_accounts_categories_ownership_auth.sql` and `20260911_add_apple_auth_identity_schema.sql` migrations define the ownership and Apple additions. Whether these migrations are applied in production is an operational question and is not inferred here.
 

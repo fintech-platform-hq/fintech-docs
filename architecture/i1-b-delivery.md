@@ -2,7 +2,7 @@
 
 O incremento liga o formulário SwiftUI à conta pessoal BRL confirmada no I1-A. A pessoa registra receitas e despesas com hora de ocorrência e consulta o saldo e os movimentos confirmados. A abertura e o registro podem ser retomados após perda de resposta ou encerramento do app. A área integrada continua no opt-in Debug do I1-A.
 
-Referências de escopo e aceite. [Arquitetura](https://ghcferrari75.atlassian.net/wiki/spaces/Fintech/pages/5898244) · [Requisitos v0.2](https://ghcferrari75.atlassian.net/wiki/spaces/Fintech/pages/4391010) · [Decisões aprovadas](https://ghcferrari75.atlassian.net/wiki/spaces/Fintech/pages/98326) · [ADR 0004](../adr/0004-idempotency-transactions.md) · [ADR 0006](../adr/0006-mvp-account-revision-and-coverage.md)
+Referências de escopo e aceite. [Arquitetura](https://ghcferrari75.atlassian.net/wiki/spaces/Lenver/pages/5898244) · [Requisitos v0.2](https://ghcferrari75.atlassian.net/wiki/spaces/Lenver/pages/4391010) · [Decisões aprovadas](https://ghcferrari75.atlassian.net/wiki/spaces/Lenver/pages/98326) · [ADR 0004](../adr/0004-idempotency-transactions.md) · [ADR 0006](../adr/0006-mvp-account-revision-and-coverage.md)
 
 ## Contrato
 

@@ -2,7 +2,7 @@
 
 A pessoa abre uma conferência com divergência, informa valor e dia, revisa possíveis despesas e escolhe vincular um lançamento, confirmar uma despesa distinta ou adiar. A descrição ajuda a ordenar as sugestões. A escolha pelo histórico continua disponível quando o valor ou a data informados não encontram o lançamento correto. Uma única sugestão também exige confirmação.
 
-[Arquitetura](https://ghcferrari75.atlassian.net/wiki/spaces/Fintech/pages/5898244) · [Baseline v0.2](https://ghcferrari75.atlassian.net/wiki/spaces/Fintech/pages/4391010) · [Decisões D1–D3](https://ghcferrari75.atlassian.net/wiki/spaces/Fintech/pages/98326) · [Entrega I2](i2-delivery.md)
+[Arquitetura](https://ghcferrari75.atlassian.net/wiki/spaces/Lenver/pages/5898244) · [Baseline v0.2](https://ghcferrari75.atlassian.net/wiki/spaces/Lenver/pages/4391010) · [Decisões D1–D3](https://ghcferrari75.atlassian.net/wiki/spaces/Lenver/pages/98326) · [Entrega I2](i2-delivery.md)
 
 ## Contrato
 

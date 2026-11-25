@@ -1,6 +1,6 @@
 # I4 · Correções, invalidações e substituição de conferências
 
-Referências de produto e implementação. [Baseline v0.2](https://ghcferrari75.atlassian.net/wiki/spaces/Fintech/pages/4391010) · [Arquitetura](https://ghcferrari75.atlassian.net/wiki/spaces/Fintech/pages/5898244) · [ADR 0006](../adr/0006-mvp-account-revision-and-coverage.md) · [Entrega I3](i3-delivery.md)
+Referências de produto e implementação. [Baseline v0.2](https://ghcferrari75.atlassian.net/wiki/spaces/Lenver/pages/4391010) · [Arquitetura](https://ghcferrari75.atlassian.net/wiki/spaces/Lenver/pages/5898244) · [ADR 0006](../adr/0006-mvp-account-revision-and-coverage.md) · [Entrega I3](i3-delivery.md)
 
 ## Contrato e persistência
 

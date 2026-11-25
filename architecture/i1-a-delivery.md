@@ -2,7 +2,7 @@
 
 A pessoa autenticada consulta a conta pessoal do MVP ou abre uma conta BRL nova. Ela informa o saldo anterior ao início da cobertura, revisa os termos devolvidos pela API e confirma a abertura. A API grava conta, base e recibo na mesma transação. A consulta devolve saldo, revisão e instante de referência. Uma conta própria antiga pode ser consultada por seleção explícita. Sem base confirmada, a API devolve `base_required` com `balanceMinor: null`.
 
-As decisões constam no [ADR 0006](../adr/0006-mvp-account-revision-and-coverage.md) e no [adendo ao ADR 0004](../adr/0004-idempotency-transactions.md). A [arquitetura proposta](https://ghcferrari75.atlassian.net/wiki/spaces/Fintech/pages/5898244), os [requisitos v0.2](https://ghcferrari75.atlassian.net/wiki/spaces/Fintech/pages/4391010) e as [decisões de produto](https://ghcferrari75.atlassian.net/wiki/spaces/Fintech/pages/98326) orientam o recorte.
+As decisões constam no [ADR 0006](../adr/0006-mvp-account-revision-and-coverage.md) e no [adendo ao ADR 0004](../adr/0004-idempotency-transactions.md). A [arquitetura proposta](https://ghcferrari75.atlassian.net/wiki/spaces/Lenver/pages/5898244), os [requisitos v0.2](https://ghcferrari75.atlassian.net/wiki/spaces/Lenver/pages/4391010) e as [decisões de produto](https://ghcferrari75.atlassian.net/wiki/spaces/Lenver/pages/98326) orientam o recorte.
 
 ## Contrato e ativação
 
@@ -15,7 +15,7 @@ As decisões constam no [ADR 0006](../adr/0006-mvp-account-revision-and-coverage
 
 ## Verificação reproduzível
 
-Em `fintech-api`, rode `npm run build`, `npm test -- --runInBand`, `npm run test:e2e -- --runInBand` e `TEST_DATABASE_URL=<URL_DO_BANCO_DESCARTÁVEL_TEST> npm run test:integration`. A suíte de integração recria o schema e exige que o banco termine em `_test`. O teste I1-A semeia conta, movimento e recibo antes de aplicar a migração.
+No checkout do Lenver Backend, rode `npm run build`, `npm test -- --runInBand`, `npm run test:e2e -- --runInBand` e `TEST_DATABASE_URL=<URL_DO_BANCO_DESCARTÁVEL_TEST> npm run test:integration`. A suíte de integração recria o schema e exige que o banco termine em `_test`. O teste I1-A semeia conta, movimento e recibo antes de aplicar a migração.
 
 Para o iOS/API, use um segundo banco descartável com `db.sql` e sirva a API em `https://localhost:55440` com uma CA de teste confiável somente no simulador dedicado. Cadastre `i1a-a@example.test` e `i1a-b@example.test` com a senha fictícia `i1a disposable password`. Deixe A sem conta e crie para B uma conta BRL pela rota anterior `POST /accounts` com nome `Conta antiga fictícia`. Execute no diretório do projeto iOS com `<UDID_DESCARTÁVEL>` substituído pelo simulador criado para o teste.
 

@@ -2,7 +2,7 @@
 
 A base é o saldo imediatamente anterior ao início da cobertura (T0). Na revisão vigente, o PostgreSQL soma a base assinada às entradas e subtrai as despesas válidas entre T0 e o corte, com as duas fronteiras inclusivas. A conta continua em BRL e mantém a zona de referência informada na abertura. A base e os valores em centavos são transportados em strings decimais, inclusive quando a soma ultrapassa Int64.
 
-[Baseline v0.2](https://ghcferrari75.atlassian.net/wiki/spaces/Fintech/pages/4391010) · [Decisões D1–D3](https://ghcferrari75.atlassian.net/wiki/spaces/Fintech/pages/98326) · [Proposta de arquitetura](https://ghcferrari75.atlassian.net/wiki/spaces/Fintech/pages/5898244) · [ADR 0006](../adr/0006-mvp-account-revision-and-coverage.md) · [Entrega I4](i4-delivery.md)
+[Baseline v0.2](https://ghcferrari75.atlassian.net/wiki/spaces/Lenver/pages/4391010) · [Decisões D1–D3](https://ghcferrari75.atlassian.net/wiki/spaces/Lenver/pages/98326) · [Proposta de arquitetura](https://ghcferrari75.atlassian.net/wiki/spaces/Lenver/pages/5898244) · [ADR 0006](../adr/0006-mvp-account-revision-and-coverage.md) · [Entrega I4](i4-delivery.md)
 
 ## Contratos
 

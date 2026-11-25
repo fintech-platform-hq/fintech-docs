@@ -2,7 +2,7 @@
 
 A pessoa informa o saldo que observou e a data e hora da observação. O app consulta o cálculo da API no mesmo corte, mostra o sinal da diferença e pede confirmação. Ao confirmar, a pessoa pode registrar uma despesa pelo formulário existente. A tela **Conferências e pendências** permite consultar todas as observações ou só as divergências em aberto, inclusive depois de reabrir o app.
 
-[Arquitetura](https://ghcferrari75.atlassian.net/wiki/spaces/Fintech/pages/5898244) · [Baseline v0.2](https://ghcferrari75.atlassian.net/wiki/spaces/Fintech/pages/4391010) · [Decisões aprovadas](https://ghcferrari75.atlassian.net/wiki/spaces/Fintech/pages/98326) · [Entrega I1-B](i1-b-delivery.md)
+[Arquitetura](https://ghcferrari75.atlassian.net/wiki/spaces/Lenver/pages/5898244) · [Baseline v0.2](https://ghcferrari75.atlassian.net/wiki/spaces/Lenver/pages/4391010) · [Decisões aprovadas](https://ghcferrari75.atlassian.net/wiki/spaces/Lenver/pages/98326) · [Entrega I1-B](i1-b-delivery.md)
 
 ## Contrato e invariantes
 

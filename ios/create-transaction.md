@@ -4,4 +4,4 @@ The iOS client records Expense or Income through the authenticated backend. It s
 
 The backend is authoritative for ownership, validation, persistence, and confirmed results. iOS shows `-R$` for Expense and `+R$` for Income; the sign is presentation only.
 
-The current composition uses a disposable demo account ID and has no account selection or account-provisioning UI. Native layout, accessibility, and SwiftUI implementation details remain in fintech-ios.
+The initial implementation used a disposable demo account ID. The published iOS source also includes a separate BRL account flow behind a Debug opt-in. Native layout, accessibility, and SwiftUI implementation details live in [Lenver iOS](https://github.com/lenver-hq/lenver-ios).

@@ -1,6 +1,6 @@
 # Transactions API
 
-The canonical public contract is [fintech-api/openapi.yaml](https://github.com/fintech-platform-hq/fintech-api/blob/main/openapi.yaml). This page keeps only shared behavior.
+The canonical public contract is [lenver-backend/openapi.yaml](https://github.com/lenver-hq/lenver-backend/blob/main/openapi.yaml). This page keeps only shared behavior.
 
 `POST /transactions` requires a Bearer access token and a UUID `Idempotency-Key`. The request uses camelCase fields, positive integer `amountMinor`, `expense` or `income`, and a stable `clientMutationId`.
 
@@ -8,4 +8,4 @@ The backend derives `userId` from the JWT, verifies account and category ownersh
 
 Authentication failures return `401`. A missing account or category, or one that belongs to another user, returns `404`. A currency that does not match the account returns `400`.
 
-The transaction and idempotency record are committed atomically in PostgreSQL. The request hash includes the complete logical payload. Client retry behavior and UI details remain documented in fintech-ios.
+The transaction and idempotency record are committed atomically in PostgreSQL. The request hash includes the complete logical payload. Client retry behavior and UI details remain documented in [Lenver iOS](https://github.com/lenver-hq/lenver-ios).
