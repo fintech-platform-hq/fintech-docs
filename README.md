@@ -24,6 +24,7 @@ The models record approved product behavior. The technical documents below descr
 
 ## Technical and historical documents
 
+- [ENG01 engineering baseline · v1.0 consolidated](architecture/eng01/README.md)
 - [Authentication architecture](architecture/authentication.md)
 - [Transactions API](api/transactions.md)
 - [PostgreSQL schema and ownership](database/postgresql-schema.md)

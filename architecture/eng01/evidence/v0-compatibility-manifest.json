@@ -1,0 +1,174 @@
+{
+  "formatVersion": 1,
+  "result": "passed",
+  "durationSeconds": 163,
+  "runtime": {
+    "node": "v24.22.2",
+    "postgres": "16.14 (Homebrew)",
+    "xcode": "Xcode 27.2\nBuild version 27B52",
+    "swift": "Apple Swift version 6.4.2 (swiftlang-6.4.2.1.9 clang-2100.4.1.1)\nTarget: arm64-apple-macosx27.2.0"
+  },
+  "schema": {
+    "compatibilityVersion": "20261126_v0",
+    "cleanBootstrapSha256": "8ef26a2901ae9bf927364728b52c2c813db095b3ea32cb33ee77c9e145f2fb74",
+    "structuralComparison": {
+      "status": "passed",
+      "cleanBootstrapSha256": "499dab6711a6811f87ba03fd637c980592355d351765e0df7a762a32d45679b4",
+      "upgradedSchemaSha256": "499dab6711a6811f87ba03fd637c980592355d351765e0df7a762a32d45679b4",
+      "cleanObjectCounts": {
+        "tables": "14",
+        "constraints": "108",
+        "indexes": "48",
+        "functions": "27",
+        "triggers": "23"
+      },
+      "upgradedObjectCounts": {
+        "tables": "14",
+        "constraints": "108",
+        "indexes": "48",
+        "functions": "27",
+        "triggers": "23"
+      }
+    },
+    "preI1Fixture": {
+      "sourceCommit": "3d9460708100339774eba811e8c7f21510211cb8",
+      "sha256": "caf1027d2f3f435257f16dd9083337d20371f70496754a5a41edc65a0f934a19"
+    },
+    "migrations": [
+      {
+        "file": "migrations/20261123_add_mvp_account_base.sql",
+        "sha256": "36d478a5b887b92f8fd33083869660a0debfac7231b3e517321fcaa977d34d5c"
+      },
+      {
+        "file": "migrations/20261123_enable_mvp_transaction_registration.sql",
+        "sha256": "5fbf3cb9b15fd1f59a6da675d4233e3f6b7369d374dc4a72a73097cdcf046719"
+      },
+      {
+        "file": "migrations/20261123_record_mvp_balance_checks.sql",
+        "sha256": "9cfee80b0b26bdf8a062dc0c07934c6bf9220ce30f360708f0864a648939df60"
+      },
+      {
+        "file": "migrations/20261123_recover_mvp_expenses.sql",
+        "sha256": "47474878b6e62d9519dc27eed4c0d837c82084091d7d0bb653854f93d002e0a6"
+      },
+      {
+        "file": "migrations/20261123_audit_mvp_corrections.sql",
+        "sha256": "63875364a6be9610099d048a1977bbe67f4f90023ed73ac9b1ef18c6076acc44"
+      },
+      {
+        "file": "migrations/20261123_correct_mvp_opening_balance.sql",
+        "sha256": "4ad9bb7427232a7f9635488f56d1f934fcdd297e2fa104bb4d95adddece466f3"
+      },
+      {
+        "file": "migrations/20261126_compatibility_schema_version.sql",
+        "sha256": "33885c12a79486e1537d18fd28135dea2ecf41aaea2164d5f86a96c173a5f602"
+      }
+    ]
+  },
+  "contracts": {
+    "openapiSha256": "d9b094b7638895c89ee7254e53c5cad93db28ebeedfb12aa9fdd63d7e5d1db1f"
+  },
+  "docker": {
+    "engineVersion": "29.5.3",
+    "node24ImageStatus": "passed",
+    "imageNodeVersion": "v24.22.3"
+  },
+  "simulator": {
+    "destination": "iPhone 17 Simulator, iOS 27.0 (isolated test clone)",
+    "unitTests": "passed",
+    "unitTestSummary": {
+      "result": "Passed",
+      "total": 126,
+      "passed": 125,
+      "failed": 0,
+      "skipped": 1
+    }
+  },
+  "repositories": {
+    "backend": {
+      "revision": "e5b0804de1c7fce1478e153e08269701a21161fe",
+      "workingTreeClean": false
+    },
+    "ios": {
+      "revision": "91dde88c77d72e0b3061b2f2f2013f2901e394b0",
+      "workingTreeClean": false
+    },
+    "docs": {
+      "revision": "2a6cea91ffe2ff516394324929542f77b63e43af",
+      "workingTreeClean": false
+    }
+  },
+  "fileSha256": {
+    "backend": {
+      "Dockerfile": "562ffc49f3e1adb53c0855240b3800c128aa6e5b9ed4c7d4e463bc8b9b83217f",
+      "package-lock.json": "2846d883e2969559066cc54524be73b74c05c16db7c98a60ca175ad6b45320d5",
+      "db.sql": "8ef26a2901ae9bf927364728b52c2c813db095b3ea32cb33ee77c9e145f2fb74",
+      "openapi.yaml": "d9b094b7638895c89ee7254e53c5cad93db28ebeedfb12aa9fdd63d7e5d1db1f",
+      "scripts/verify-compatibility.sh": "9fafca895b8cbd32d4d1f815eb0c38ba3c3711fc41999b74572c81b5f11a030b",
+      "src/app.controller.ts": "a536f26d072dadf274718012b2bc038e6d0cd09349454a3714c837532ed2b0ae",
+      "src/app.controller.spec.ts": "d3dedef7ed37d362cefe2ad9535ce74ac456188ea39eb251dfb08b3209f4d90e",
+      "src/common/database/database.service.ts": "403276a208ae30c0732ca26f9824ae84fc375700d13795142c7bf31ba49a283c",
+      "src/common/database/schema-compatibility.ts": "2cedcda88a969719ec7f272dde28e7e292af6bbf99d4c6176a615c301a16a035",
+      "test/app.e2e-spec.ts": "d890a4b69110f1043a34939acd6925269377eb6d38e2cd616222d21d885e07f0",
+      "test/compatibility-upgrade.spec.ts": "979f027e505d615b23efdce1fe0f093a8ad67ec22401f2c7f78279146ac27539",
+      "test/jest-upgrade.json": "377256d83626b3b87e1baae9dc1b7bac29f05a46809fea54d52d31ae971a1f62",
+      "test/fixtures/compatibility/legacy-data.sql": "a077831314155d7f2de4ae59599c854c6fd19b80e5c1c78d633dc0dd3f52b23a",
+      "test/fixtures/compatibility/bootstrap-invariants.sql": "0a5256db58e2b6a9853ff45c4323505da7b846b7215430140973ce07662e1ef2",
+      "test/fixtures/compatibility/missing-schema-marker.sql": "4f17b6ec7e8a6e68a0dfb94114be5546dfac086f2593b83e036517ee06c99480",
+      "test/fixtures/compatibility/upgrade-account.sql": "7990a3de800851af7a247082895c98a30b3c3b39737aa0b6b3178123d99d23b1",
+      "test/fixtures/compatibility/upgrade-assertions.sql": "93193e52a249dce7be2c3d2fd43267806e0798bd122114292ae683c35a32c22f"
+    },
+    "ios": {
+      "Fintech.xcodeproj/project.pbxproj": "964683d6ce319d91faca17946dc411715eae7e583034cd3395be6a53423b0b43",
+      "StagingRelease-Info.plist": "9bcbe5a5e7fe1dec6ae24d40735be49b41a8cf7a32f4a0ac0af79f67628a9b47",
+      "Fintech/AppEnvironment.swift": "d0611786604959d27b64e9aaabbe01697e8549a71f91f400a17c404c53e6ac99",
+      "Fintech/FintechApp.swift": "1f386bdb77ea34a84e428a53081b17396e08c22e3a8e50007d7eae71a46c2d9e",
+      "FintechTests/AppEnvironmentTests.swift": "fc4f80bbbde7a4634ad2a1c7e57f4885e4a10c726fec8a72f9812c7a5bbb2412",
+      "FintechTests/Authentication/AuthenticationTests.swift": "f6c73a3002b692a2e0742cace23347277622a81c30f9b3cb294eb404b18c860c"
+    },
+    "docs": {
+      "README.md": "0b501f79392ccf386871160e850a824563eac1a9ebeb8a06c77c50b920b6342c",
+      "architecture/eng01/README.md": "2752240311a8df1475966cdc1dc4ec30b1d6af0d9bd46daa4f56108fb670d5a9",
+      "architecture/eng01/architecture.md": "48cb203680c54cae31301d3ed8032dba936719144b578f87fda00d22fd88a114",
+      "architecture/eng01/data-and-contracts.md": "3ff9aaf918f889256c5aab6bdc13f8e397692bc1709daeec40861789bed758cc",
+      "architecture/eng01/delivery-and-verification.md": "a317b3de6e0025e134345258c6851171224d8c2ff569fd10c804b50af5a54425",
+      "architecture/eng01/security-and-privacy.md": "acf0dc96fcac64bdc1738953c85a4f27593a8dbea987d9c145d413375ff07271",
+      "architecture/eng01/v0.1-compatibility-closure.pt-BR.md": "1e38239da723a66fac8d1e5558086061b72ac94398f8ee9920ffcb7490f5256b"
+    }
+  },
+  "checks": {
+    "backendUnit": "passed",
+    "backendBuild": "passed",
+    "backendChangedFileLint": "passed",
+    "backendHttp": "passed",
+    "iosStagingGenericBuild": "passed",
+    "iosTestTargetsCompile": "passed",
+    "iosUnitTests": "passed",
+    "dockerNode24Image": "passed",
+    "cleanBootstrap": "passed",
+    "representativeUpgrade": "passed",
+    "schemaParity": "passed",
+    "upgradedSchemaIntegration": "passed",
+    "postgresIntegration": "passed"
+  },
+  "closure": {
+    "V0-01": {
+      "status": "passed",
+      "evidence": "normalized structural schema parity; upgraded-schema integration without recreation; absent/NULL marker checks"
+    },
+    "V0-02": {
+      "status": "passed",
+      "evidence": "StagingRelease fails closed; endpoint-scoped Keychain namespace; negative tests; normal Release behavior preserved"
+    },
+    "V0-03": {
+      "status": "passed",
+      "evidence": "Node 24 Docker image; Simulator unit tests; bounded readiness timeout; sanitized final log and package-lock hash"
+    },
+    "documentaryRQ008": {
+      "status": "accepted",
+      "evidence": "preserved prior ER04 documentary acceptance; operational evidence remains a separate gate"
+    },
+    "reviewState": "awaiting user review and acceptance",
+    "publication": "Confluence updates saved as drafts; not published"
+  }
+}
